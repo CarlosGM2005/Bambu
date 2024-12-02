@@ -1,6 +1,25 @@
-
 .nav-link{
     background-color: #58A681;
     color: white;
     border-radius: 8px;
+    padding: 1rem 2rem; /* Incrementa el espaciado interno */
+    min-width: 160px;
+    text-align: center;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+#barra{
+    background-color: #3D3D3D;
+    display: flex;
+}
+
+#logo{
+    max-width: 65%;
+    height: auto;
+}
+
+
+.navbar-nav .nav-item {
+    margin: 0 15px; /* Espaciado horizontal entre los enlaces */
 }

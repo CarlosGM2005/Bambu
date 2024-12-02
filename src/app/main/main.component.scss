@@ -1,0 +1,60 @@
+.carousel-inner {
+    height: 550px; /* Altura fija */
+}
+
+/* Ajuste de las imágenes dentro del carrusel */
+.carousel-inner img {
+    width: 100%; /* Escala la imagen al 100% del ancho del contenedor */
+    height: 550px;  /* Redimensiona a la altura que deseas */
+    object-fit: cover;  /* Opcional: recorta la imagen si no se ajusta */
+}
+
+
+@media (max-width: 767px) {
+    .carousel-inner {
+        height: auto; /* Elimina la altura fija en pantallas pequeñas */
+    }
+
+    .carousel-inner img {
+        width: 100%; /* Asegura que la imagen ocupe el 100% del ancho */
+        height: auto; /* Ajusta la altura según la proporción de la imagen */
+        object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+    }
+}
+
+
+#seccion{
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+h2{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+h3{
+    font-weight: bold;
+    text-align: center;
+}
+
+#icono{
+    margin-right: 1.5%;
+}
+
+.datosLocales{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restaurante{
+    display: block;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+p{
+    margin-bottom: 0;
+}

@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    font-weight: 20px;
+}
