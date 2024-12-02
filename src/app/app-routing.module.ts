@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'header', component:HeaderComponent},
   {path: 'footer', component:FooterComponent},
   { path: 'carta', component: CartaComponent },
-  { path: 'carrito', component: CarritoCompraComponent },
+  { path: 'carrito-compra', component: CarritoCompraComponent },
   { path: 'registrarse', component: RegistrarseComponent },
   { path: 'login', component: LoginComponent }, 
   { path: 'reservar', component: ReservarComponent }, 
