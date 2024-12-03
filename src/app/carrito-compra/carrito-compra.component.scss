@@ -20,6 +20,28 @@ $terciary-color: #F96D50;
     color: $primary-color;
     font-weight: bold;
     margin-top: 2%;
+    position: relative;
+}
+
+.enlaces ul a::after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: $terciary-color;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.enlaces ul a:hover:after{
+    width: 100%; 
+    left: 0;
+}
+
+.enlaces ul a:hover {
+    color: $terciary-color;
 }
 
 #titulo {
@@ -54,8 +76,12 @@ $terciary-color: #F96D50;
 
 .imagenes__productos img {
     border-radius: 10%;
+    transition: transform 0.3s ease;
 }
 
+.imagenes__productos img:hover {
+    transform: scale(1.05);
+}
 
 .precio__producto {
     color: $primary-color;
