@@ -2,10 +2,12 @@
 *{
     font-family: 'TT Norms Pro', sans-serif;;
 }
+
 body{
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
     width: 100%;
     font-weight: 20px;
+    background-image: url('assets/images/fondoEditadoBlancoYNegro.jpg');
 }
