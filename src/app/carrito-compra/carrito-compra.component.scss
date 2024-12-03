@@ -73,15 +73,21 @@ $terciary-color: #F96D50;
 }
 
 
+
 .mensajeInicial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
     margin-top: 3%;
-    text-align: center;
 }
 
 .btnComprar {
     width: 100%;
 
 }
+
+
 
 .button {
     background-color: $primary-color;
@@ -93,3 +99,4 @@ $terciary-color: #F96D50;
     cursor: pointer;
     text-decoration: none;
 }
+
