@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Header con Navbar */
+header {
+    width: 100%; /* Asegura que el header ocupe todo el ancho de la página */
+}
+
+/* Menú de navegación */
+.navbar {
+    padding-top: 1rem;
+    width: 100%; /* Asegura que la barra de navegación ocupe todo el ancho */
+}
+
+.navbar .nav-link {
+    color: #27ae60 !important;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+}
+
+.navbar .nav-item {
+    margin-right: 80px; /* Aumenta la distancia entre los elementos de la navbar */
+}
+
+.navbar .nav-link{
+    color: #e74c3c;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.navbar .nav-link:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #e74c3c;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.navbar .nav-link:hover:after{
+    width: 100%; 
+    left: 0;
+
+}
+.navbar .nav-link:hover {
+    color: #e74c3c !important;
+}
+
+/* Título de la sección */
+h1 {
+    color: #e74c3c;
+    margin: 3rem 0 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Contenedor de surtidos */
+.menu-grid {
+    padding: 2rem 0;
+}
+
+/* Elementos del menú */
+.menu-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover img {
+    transform: scale(1.05);
+}
+
+.menu-item h2 {
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+}
+
+.menu-item p {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+.modal-body p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+

@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Restaurante</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header con Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#surtidos">Surtidos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Entrantes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Arroz y Noodles</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Nigiris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Rolls</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Makis</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Bebidas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Postres</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Surtidos Section -->
+    <div class="container menu-grid">
+        <h1>SURTIDOS</h1>
+        <div class="row">
+            <!-- Surtido 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="menu-item" data-toggle="modal" data-target="#surtidoModal" onclick="showInfo('1.jpg','SurtidoNº1','Este surtido incluye 8 piezas de sushi variado con salmón, atún y aguacate.', '18.50 €','Alergenos: Arroz')">
+                    <img src="1.jpg" alt="Surtido Nº1">
+                    <h2>Surtido Nº1</h2>
+                    <p>18.50 €</p>
+                </div>
+            </div>
+            <!-- Surtido 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="menu-item" data-toggle="modal" data-target="#surtidoModal" onclick="showInfo('https://via.placeholder.com/200','Surtido Nº2','Este surtido incluye 10 piezas de makis con ingredientes frescos.', '18.50 €','Alergenos: Pescado')">
+                    <img src="https://via.placeholder.com/200" alt="Surtido Nº2">
+                    <h2>Surtido Nº2</h2>
+                    <p>18.50 €</p>
+                </div>
+            </div>
+            <!-- Surtido 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="menu-item" data-toggle="modal" data-target="#surtidoModal" onclick="showInfo('https://via.placeholder.com/200','Surtido Nº3','Incluye una mezcla de rolls y nigiris perfectos para compartir.', '18.50 €','Alergenos: Soja, Pescado')">
+                    <img src="https://via.placeholder.com/200" alt="Surtido Nº3">
+                    <h2>Surtido Nº3</h2>
+                    <p>18.50 €</p>
+                </div>
+            </div>
+            <!-- Surtido 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="menu-item" data-toggle="modal" data-target="#surtidoModal" onclick="showInfo('https://via.placeholder.com/200','Surtido Nº4','Incluye una mezcla de rolls y nigiris perfectos para compartir.', '22.50 €','Alergenos: Pescado, Mariscos')">
+                    <img src="https://via.placeholder.com/200" alt="Surtido Nº4">
+                    <h2>Surtido Nº4</h2>
+                    <p>22.50 €</p>
+                </div>
+            </div>
+            <!-- Surtido 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="menu-item" data-toggle="modal" data-target="#surtidoModal" onclick="showInfo('https://via.placeholder.com/200','Surtido Nº5','Incluye una mezcla de rolls y nigiris perfectos para compartir.', '16.90 €','Alergenos: Soja')">
+                    <img src="https://via.placeholder.com/200" alt="Surtido Nº5">
+                    <h2>Surtido Nº5</h2>
+                    <p>16.90 €</p>
+                </div>
+            </div>
+            <!-- Surtido 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="menu-item" data-toggle="modal" data-target="#surtidoModal" onclick="showInfo('https://via.placeholder.com/200','Surtido Nº6','Incluye una mezcla de rolls y nigiris perfectos para compartir.', '18.50 €','Alergenos: Gluten, Pescado')">
+                    <img src="https://via.placeholder.com/200" alt="Surtido Nº6">
+                    <h2>Surtido Nº6</h2>
+                    <p>18.50 €</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="surtidoModal" tabindex="-1" aria-labelledby="surtidoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- Imagen del surtido -->
+                    <img id="modalImage" src="" alt="Imagen del surtido" class="rounded mx-auto d-block" style="max-height: 200px;">
+                </div>
+                <div class="modal-body">
+                    <p id="surtidoTitulo">titulo</p>
+                    <p id="surtidoPrice" class="font-weight-bold text-success">Precio aquí</p>
+                    <p id="surtidoDescription">Descripción del surtido aquí.</p>
+                    <p id="surtidoAlergenos"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script para manejar el modal -->
+    <script>
+        function showInfo(imageUrl, titulo, description, price, Alergenos) {
+            // Establecer la imagen en el modal
+            document.getElementById('modalImage').src = imageUrl;
+            document.getElementById('surtidoTitulo').innerText = titulo;
+            document.getElementById('surtidoDescription').innerText = description;
+            document.getElementById('surtidoPrice').innerText = price;
+            document.getElementById('surtidoAlergenos').innerText = Alergenos;
+        }
+    </script>
+</body>
+</html>
 
