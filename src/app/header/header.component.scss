@@ -3,6 +3,11 @@
     display: flex;
 }
 
+#logo{
+    max-width: 65%;
+    height: auto;
+}
+
 .nav-link{
     background-color: #58A681;
     color: white;
@@ -18,15 +23,11 @@
     transition: all .5s;
     box-shadow: 0px 1px 2px rgba(0,0,0,.2);
     outline: none;
-}
-
-#logo{
-    max-width: 65%;
-    height: auto;
+    font-weight: bold;
 }
 
 .navbar-nav .nav-item {
-    margin: 0 15px; /* Espaciado horizontal entre los enlaces */
+    margin: 0 15px; 
 }
 
 //Animación de los enlaces
