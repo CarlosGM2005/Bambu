@@ -3,7 +3,9 @@
     <h2>Haz tu reserva</h2>
     <div class="opcionesReserva">
         <form action="#">
-            <label for="local"><h5>¿Dónde deseas reservar?</h5></label><br>
+            <label for="local">
+                <h5>¿Dónde deseas reservar?</h5>
+            </label><br>
             <select class="form-select" id="local" required>
                 <option value="">--Selecciona una opción--</option>
                 <option value="opcion1">Bambú Sevilla</option>
@@ -13,13 +15,17 @@
     </div>
     <div class="opcionesReserva">
         <form action="#">
-            <label for="fecha" class="form-label"><h5>¿Qué día deseas reservar?</h5></label>
+            <label for="fecha" class="form-label">
+                <h5>¿Qué día deseas reservar?</h5>
+            </label>
             <input type="date" id="fecha" name="fecha" class="form-control" required>
         </form>
     </div>
     <div class="opcionesReserva">
         <form action="#">
-            <label for="local"><h5>¿A qué hora deseas reservar?</h5></label><br>
+            <label for="local">
+                <h5>¿A qué hora deseas reservar?</h5>
+            </label><br>
             <select class="form-select" required>
                 <option value="">--Selecciona una opción--</option>
                 <option value="opcion1">13:30</option>
@@ -43,9 +49,8 @@
     <!-- Mensaje de Confirmación -->
     <div *ngIf="mensajeVisible" class="mensaje-confirmacion">
         <p><strong>Hemos enviado un SMS a tu número de teléfono para confirmar la reserva. <br>
-
             ¡Muchas gracias!</strong></p>
     </div>
 
-    
+
 </div>

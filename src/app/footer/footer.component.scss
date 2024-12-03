@@ -1,5 +1,10 @@
+//Variables
+$primary-color: #58A681;
+$secondary-color: #3D3D3D;
+$terciary-color: #F96D50;
+
 #piePagina{
-    background-color: #3D3D3D;
+    background-color: $secondary-color;
     color: white;
 }
 
