@@ -1,13 +1,12 @@
+#seccion{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
 label{
     font-weight: bold;
     font-size: 20px;
-}
-
-.btn{
-    background-color: #58A681;
-    color: white;
-    padding: 1rem 2rem;
-    margin-bottom: 2%;
+    white-space: nowrap; 
 }
 
 input{
@@ -21,7 +20,15 @@ input{
 
 .required-asterisk{
     color: #FF7247;
-    margin-left: 0.5%;
+    margin-left: 5%;
+}
+
+.btn{
+    background-color: #58A681;
+    color: white;
+    padding: 1rem 2rem;
+    margin-bottom: 2%;
+    font-weight: bold;
 }
 
 .opcionRegistrar{
