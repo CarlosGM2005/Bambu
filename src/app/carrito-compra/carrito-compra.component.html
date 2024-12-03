@@ -1,7 +1,7 @@
 <div class="container">
     <div class="enlaces">
         <ul>
-            <a href="/carrito-compra" class="enlaces">
+            <a href="/carrito-compra" class="enlaces" (click)="filtrarPorCategoria($event, 'surtidos')">
                 <li>SURTIDOS</li>
             </a>
 
@@ -9,7 +9,7 @@
                 <li>ENTRANTES</li>
             </a>
 
-            <a href="/carrito-compra" class="enlaces">
+            <a href="/carrito-compra" class="enlaces" (click)="filtrarPorCategoria($event, 'arrozNoodles')">
                 <li>ARROZ Y NOODLES</li>
             </a>
 
@@ -36,84 +36,25 @@
         <div class="row">
             <div class="col-12 col-md-8 text-center">
                 <div class="row">
-                    <div class="col12 col-md-6 text-center">
+                    <!-- Genero dinámicamente los productos -->
+                    <div class="col-12 col-md-6 text-center" *ngFor="let producto of productos">
                         <div class="imagenes__productos">
-                            <img src="assets/images/productos/SURTIDO1-300x300.jpg" alt="">
+                            <img [src]="producto.urlImg" [alt]="producto.nombre" />
                         </div>
-                        <div class="infoPoducto">
-                            <p>SURTIDO Nº1</p>
-                            <p class="precio__producto">18.50€</p>
-                            <img src="assets/images/iconos/carrito-aniadir.png" alt="" class="iconos"
-                                id="btnAddCarrito">
-                        </div>
-                    </div>
-
-                    <div class="col12 col-md-6 text-center">
-                        <div class="imagenes__productos">
-                            <img src="assets/images/productos/SURTIDO2-300x300.jpg" alt="">
-                        </div>
-                        <div class="infoPoducto">
-                            <p>SURTIDO Nº2</p>
-                            <p class="precio__producto">18.50€</p>
-                            <img src="assets/images/iconos/carrito-aniadir.png" alt="" class="iconos">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col12 col-md-6 text-center">
-                        <div class="imagenes__productos">
-                            <img src="assets/images/productos/SURTIDO3-300x300.jpg" alt="">
-                        </div>
-                        <div class="infoPoducto">
-                            <p>SURTIDO Nº3</p>
-                            <p class="precio__producto">18.50€</p>
-                            <img src="assets/images/iconos/carrito-aniadir.png" alt="" class="iconos">
-                        </div>
-                    </div>
-
-                    <div class="col12 col-md-6 text-center">
-                        <div class="imagenes__productos">
-                            <img src="assets/images/productos/SURTIDO4-300x300.jpg" alt="">
-                        </div>
-                        <div class="infoPoducto">
-                            <p>SURTIDO Nº4</p>
-                            <p class="precio__producto">22.50€</p>
-                            <img src="assets/images/iconos/carrito-aniadir.png" alt="" class="iconos">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col12 col-md-6 text-center">
-                        <div class="imagenes__productos">
-                            <img src="assets/images/productos/SURTIDO5-300x300.jpg" alt="">
-                        </div>
-                        <div class="infoPoducto">
-                            <p>SURTIDO Nº5</p>
-                            <p class="precio__producto">16.90€</p>
-                            <img src="assets/images/iconos/carrito-aniadir.png" alt="" class="iconos">
-                        </div>
-                    </div>
-
-                    <div class="col12 col-md-6 text-center">
-                        <div class="imagenes__productos">
-                            <img src="assets/images/productos/SURTIDO6-300x300.jpg" alt="">
-                        </div>
-                        <div class="infoPoducto">
-                            <p>SURTIDO Nº6</p>
-                            <p class="precio__producto">18.50€</p>
-                            <img src="assets/images/iconos/carrito-aniadir.png" alt="" class="iconos">
+                        <div class="infoProducto">
+                            <p>{{ producto.nombre }}</p>
+                            <p class="precio__producto">{{ producto.precio }}</p>
+                            <img [src]="producto.urlIcono" alt="Añadir al carrito" class="iconos" />
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
-
                 <div class="encabezado">
                     <p>TU PEDIDO</p>
                 </div>
+
                 <div class="mensajeInicial">
                     <div>SURTIDO Nº1</div>
                     <img src="assets/images/iconos/signo más.png" alt="">
@@ -126,25 +67,15 @@
 
                 <div id="precios">
                     <div class="precio__final">
-                        <p>
-                            Subtotal:
-                        </p>
-                        <p>
-                            18.50€
-                        </p>
+                        <p>Subtotal:</p>
+                        <p>18.50€</p>
                     </div>
                     <div class="precio__final">
-                        <p>
-                            Total:
-                        </p>
-                        <p>
-                            18.50€
-                        </p>
+                        <p>Total:</p>
+                        <p>18.50€</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
 </div>
