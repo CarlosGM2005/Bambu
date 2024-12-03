@@ -1,16 +1,95 @@
-.iconos{
+//Variables
+$primary-color: #58A681;
+$secondary-color: #3D3D3D;
+$terciary-color: #F96D50;
+
+
+#disposicion {
+    margin: 2%;
+}
+
+//Estilos barra navegación
+.enlaces ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin-top: 1%;
+    list-style-type: none;
+    gap: 3%;
+
+}
+
+.enlaces ul a {
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: bold;
+}
+
+#titulo {
+    padding: 1%;
+    color: $terciary-color;
+    font-weight: bold;
+}
+
+//Estilos pruductos
+.iconos {
     width: 41px;
     height: 41px;
 }
 
-.col-md-6{
+.col-md-6 {
     display: flex;
     padding: 1%;
     align-items: center;
 }
 
-.infoPoducto{
-    padding: 5%;
-    background-color: red;
+.infoPoducto {
+    padding: 3%;
+    font-weight: bold;
+    text-align: left;
+}
+
+.imagenes__productos img {
+    border-radius: 10%;
+}
+
+.precio__producto {
+    color: $primary-color;
+}
+
+
+//Estilos parte del resumen de la compra
+
+#alineador {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.encabezado {
+    background-color: $secondary-color;
+    color: white;
+    padding: 1%;
+    font-size: 120%;
+}
+
+
+.mensajeInicial {
+    margin-top: 3%;
     text-align: center;
+}
+
+.btnComprar {
+    width: 100%;
+
+}
+
+.button {
+    background-color: $primary-color;
+    color: white;
+    margin-top: 5%;
+    padding: 3%;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
 }
