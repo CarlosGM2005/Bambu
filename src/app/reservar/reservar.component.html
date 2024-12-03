@@ -1,1 +1,51 @@
-<p>reservar works!</p>
+<div class="container">
+    <h2>¡Bienvenido a Bambú!</h2>
+    <h2>Haz tu reserva</h2>
+    <div class="opcionesReserva">
+        <form action="#">
+            <label for="local"><h5>¿Dónde deseas reservar?</h5></label><br>
+            <select class="form-select" id="local" required>
+                <option value="">--Selecciona una opción--</option>
+                <option value="opcion1">Bambú Sevilla</option>
+                <option value="opcion2">Bambú Utrera</option>
+            </select>
+        </form>
+    </div>
+    <div class="opcionesReserva">
+        <form action="#">
+            <label for="fecha" class="form-label"><h5>¿Qué día deseas reservar?</h5></label>
+            <input type="date" id="fecha" name="fecha" class="form-control" required>
+        </form>
+    </div>
+    <div class="opcionesReserva">
+        <form action="#">
+            <label for="local"><h5>¿A qué hora deseas reservar?</h5></label><br>
+            <select class="form-select" required>
+                <option value="">--Selecciona una opción--</option>
+                <option value="opcion1">13:30</option>
+                <option value="opcion2">14:00</option>
+                <option value="opcion2">14:30</option>
+                <option value="opcion2">15:00</option>
+                <option value="opcion2">15:30</option>
+                <option value="opcion2">20:30</option>
+                <option value="opcion2">21:00</option>
+                <option value="opcion2">21:30</option>
+                <option value="opcion2">22:00</option>
+                <option value="opcion2">22:30</option>
+            </select>
+        </form>
+    </div>
+
+    <div class="text-end" style="margin-bottom: 2%;">
+        <button class="btn" (click)="finalizarReserva()">FINALIZAR</button>
+    </div>
+
+    <!-- Mensaje de Confirmación -->
+    <div *ngIf="mensajeVisible" class="mensaje-confirmacion">
+        <p><strong>Hemos enviado un SMS a tu número de teléfono para confirmar la reserva. <br>
+
+            ¡Muchas gracias!</strong></p>
+    </div>
+
+    
+</div>

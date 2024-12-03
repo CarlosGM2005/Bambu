@@ -1,0 +1,41 @@
+label{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn{
+    background-color: #58A681;
+    color: white;
+    padding: 1rem 2rem;
+    margin-bottom: 2%;
+}
+
+input{
+    margin-bottom: 2%;
+}
+
+.login{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.required-asterisk{
+    color: #FF7247;
+    margin-left: 0.5%;
+}
+
+.opcionRegistrar{
+    text-decoration: none;
+    color: #FF7247;
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 2%;
+    transition: border-color 0.3s ease; /* Animación suave solo para el borde */
+}
+input:focus{
+    outline: none; 
+    border: 2px solid #58A681;
+    box-shadow: 0 0 5px rgba(88, 166, 129, 0.8); 
+}
