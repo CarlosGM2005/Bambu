@@ -4,9 +4,7 @@ $secondary-color: #3D3D3D;
 $terciary-color: #F96D50;
 
 
-#disposicion {
-    margin: 2%;
-}
+
 
 //Estilos barra navegación
 .enlaces ul {
@@ -23,6 +21,7 @@ $terciary-color: #F96D50;
     text-decoration: none;
     color: $primary-color;
     font-weight: bold;
+    margin-top: 2%;
 }
 
 #titulo {
@@ -31,10 +30,16 @@ $terciary-color: #F96D50;
     font-weight: bold;
 }
 
+
 //Estilos pruductos
 .iconos {
     width: 41px;
     height: 41px;
+    transition: all 0.3s ease;
+}
+
+.iconos:hover{
+    content: url(../../assets/images/iconos/carrito-de-compras-añadir-naranja.png);
 }
 
 .col-md-6 {
@@ -53,6 +58,7 @@ $terciary-color: #F96D50;
     border-radius: 10%;
 }
 
+
 .precio__producto {
     color: $primary-color;
 }
@@ -60,31 +66,27 @@ $terciary-color: #F96D50;
 
 //Estilos parte del resumen de la compra
 
-#alineador {
-    margin-left: 25%;
-    margin-right: 25%;
+hr{
+    opacity: 1;
+    background-color: black;
 }
+
 
 .encabezado {
     background-color: $secondary-color;
     color: white;
     padding: 1%;
     font-size: 120%;
+    text-align: center;
 }
-
-
 
 .mensajeInicial {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4%;
+    gap: 5%;
     margin-top: 3%;
-}
-
-.btnComprar {
-    width: 100%;
-
+    font-weight: bold;
 }
 
 
@@ -100,3 +102,15 @@ $terciary-color: #F96D50;
     text-decoration: none;
 }
 
+
+#precios{
+    display: grid;
+    
+}
+
+.precio__final{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+    margin-left: 10%;
+}
