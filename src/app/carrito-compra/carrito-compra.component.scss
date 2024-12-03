@@ -4,8 +4,6 @@ $secondary-color: #3D3D3D;
 $terciary-color: #F96D50;
 
 
-
-
 //Estilos barra navegación
 .enlaces ul {
     display: flex;
@@ -65,12 +63,10 @@ $terciary-color: #F96D50;
 
 
 //Estilos parte del resumen de la compra
-
 hr{
     opacity: 1;
     background-color: black;
 }
-
 
 .encabezado {
     background-color: $secondary-color;
@@ -89,8 +85,6 @@ hr{
     font-weight: bold;
 }
 
-
-
 .button {
     background-color: $primary-color;
     color: white;
@@ -101,7 +95,6 @@ hr{
     cursor: pointer;
     text-decoration: none;
 }
-
 
 #precios{
     display: grid;
