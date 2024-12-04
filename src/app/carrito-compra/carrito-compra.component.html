@@ -39,7 +39,7 @@
                     <!-- Genero dinámicamente los productos -->
                     <div class="col-12 col-md-6 text-center" *ngFor="let producto of productos">
                         <div class="imagenes__productos">
-                            <img [src]="producto.urlImg" [alt]="producto.nombre" />
+                            <img [src]="producto.urlImg" [alt]="producto.nombre" [title]="producto.nombre" />
                         </div>
                         <div class="infoProducto">
                             <p>{{ producto.nombre }}</p>
