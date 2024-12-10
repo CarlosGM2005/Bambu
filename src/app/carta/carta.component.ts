@@ -11,7 +11,7 @@ export class CartaComponent {
       nombre: 'SURTIDO Nº1',
       tipo: 'SURTIDOS',
       precio: '18.50€',
-      urlImg: 'assets/images/productos/SURTIDO1.jpg',
+      urlImg: 'assets/images/productos/SURTIDO1.png',
       descripcion: '4 unid de Sésamo Roll Salmón , 4 Makis de Salmón, 2 Nigiris Salmón y 2 Nigiris de Atún.',
       alergenos: 'Crustáceos, Huevos, Moluscos, Pescado, Sésamo, Sulfitos',
     },
