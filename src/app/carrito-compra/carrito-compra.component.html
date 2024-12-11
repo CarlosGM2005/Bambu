@@ -35,9 +35,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-8 text-center">
-                <div class="row">
+                <div class="row" id="espaciador">
                     <!-- Genero dinámicamente los productos -->
-                    <div class="col-12 col-md-6 text-center" *ngFor="let producto of productos">
+                    <div class="col-12 col-md-6 text-center" *ngFor="let producto of productos" >
                         <div class="imagenes__productos">
                             <img [src]="producto.urlImg" [alt]="producto.nombre" [title]="producto.nombre" />
                         </div>

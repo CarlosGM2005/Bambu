@@ -62,11 +62,15 @@ $terciary-color: #F96D50;
     content: url(../../assets/images/iconos/carrito-de-compras-añadir-naranja.png);
 }
 
+
+
 .col-md-6 {
+    margin-bottom: 3%;
     display: flex;
     padding: 1%;
     align-items: center;
 }
+
 
 .infoProducto {
     padding: 3%;
@@ -74,13 +78,18 @@ $terciary-color: #F96D50;
     text-align: left;
 }
 
-
-.imagenes__productos img {
-    border-radius: 10%;
+.imagenes__productos{
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease;
 }
 
-.imagenes__productos img:hover {
+.imagenes__productos img {
+    border-radius: 10%;
+}
+
+.imagenes__productos:hover {
     transform: scale(1.05);
 }
 
