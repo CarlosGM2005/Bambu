@@ -14,8 +14,8 @@ export class CarritoCompraComponent {
     { nombre: 'SURTIDO Nº5', tipo: 'SURTIDOS', precio: '16.90€', urlImg: 'assets/images/productos/surtidos/SURTIDO5.jpg', urlIcono: 'assets/images/iconos/carrito-aniadir.png' },
     { nombre: 'SURTIDO Nº6', tipo: 'SURTIDOS', precio: '18.50€', urlImg: 'assets/images/productos/surtidos/SURTIDO6.jpg', urlIcono: 'assets/images/iconos/carrito-aniadir.png' },
     { nombre: 'ARROZ CON SOJA', tipo: 'ARROZ Y NOODLES', precio: '5.90€', urlImg: 'assets/images/productos/arrozYNoodles/Arroz_con_Soja.png', urlIcono: 'assets/images/iconos/carrito-aniadir.png' },
-    { nombre: 'ARROZ VEGETAL', tipo: 'ARROZ Y NOODLES', precio: '5.90€', urlImg: 'assets/images/productos/arrozYNoodles/Arroz_Vegetal.jpg', urlIcono: 'assets/images/iconos/carrito-aniadir.png' },
-    { nombre: 'NOODLES VEGETAL', tipo: 'ARROZ Y NOODLES', precio: '5.90€', urlImg: 'assets/images/productos/arrozYNoodles/Noodles.jpg', urlIcono: 'assets/images/iconos/carrito-aniadir.png' },
+    { nombre: 'ARROZ VEGETAL', tipo: 'ARROZ Y NOODLES', precio: '5.90€', urlImg: 'assets/images/productos/arrozYNoodles/Arroz_Vegetal.png', urlIcono: 'assets/images/iconos/carrito-aniadir.png' },
+    { nombre: 'NOODLES VEGETAL', tipo: 'ARROZ Y NOODLES', precio: '5.90€', urlImg: 'assets/images/productos/arrozYNoodles/Noodles.png', urlIcono: 'assets/images/iconos/carrito-aniadir.png' },
     { nombre: 'RAMEN CERDO', tipo: 'ARROZ Y NOODLES', precio: '8.90€', urlImg: 'assets/images/productos/arrozYNoodles/Ramen_Cerdo.png', urlIcono: 'assets/images/iconos/carrito-aniadir.png' },
     { nombre: 'RAMEN YASAI VEGETAL', tipo: 'ARROZ Y NOODLES', precio: '7.95€', urlImg: 'assets/images/productos/arrozYNoodles/Ramen_Yasai.png', urlIcono: 'assets/images/iconos/carrito-aniadir.png' },
   ];
