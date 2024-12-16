@@ -61,42 +61,42 @@ export class CartaComponent {
     {
       nombre: 'Edamame',
       tipo:'ENTRANTES',
-      precio: '',
+      precio: '4.20€',
       urlImg: 'assets/images/productos/entrantes/Edamame.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'SOJA'
     },
     {
       nombre: 'Gyozas de pollo',
       tipo:'ENTRANTES',
-      precio: '',
+      precio: '7.90€',
       urlImg: 'assets/images/productos/entrantes/Gyozas.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CEREALES CON GLUTEN, SÉSAMO Y SOJA'
     },
     {
       nombre: 'Gyozas de cerdo',
       tipo:'ENTRANTES',
-      precio: '',
+      precio: '7.90€',
       urlImg: 'assets/images/productos/entrantes/Gyozas.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CEREALES CON GLUTEN, SÉSAMO Y SOJA'
     },
     {
       nombre: 'Gyozas de ternera',
       tipo:'ENTRANTES',
-      precio: '',
+      precio: '7.90€',
       urlImg: 'assets/images/productos/entrantes/Gyozas.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CEREALES CON GLUTEN, SÉSAMO Y SOJA'
     },
     {
       nombre: 'Rollitos mango langostinos',
       tipo:'ENTRANTES',
-      precio: '',
+      precio: '7.90€',
       urlImg: 'assets/images/productos/entrantes/Rollitos_Mango_Langostinos.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CEREALES CON GLUTEN, SÉSAMO Y SOJA'
     },
   
     //Arroz y noodles
@@ -145,187 +145,187 @@ export class CartaComponent {
     {
       nombre: 'Nigiri Anguila',
       tipo:'NIGIRIS',
-      precio: '',
+      precio: '4.90€ ',
       urlImg: 'assets/images/productos/nigiris/Nigiri_Anguila.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CEREALES CON GLUTEN, PESCADO, SÉSAMO, SOJA Y SULFITOS'
     },
     {
       nombre: 'Nigiri Atún Flambeado',
       tipo:'NIGIRIS',
-      precio: '',
+      precio: '4.50€',
       urlImg: 'assets/images/productos/nigiris/Nigiri_Atun_Flambeado.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'PESCADO Y SULFITOS'
     },
     {
       nombre: 'Nigiri Atún',
       tipo:'NIGIRIS',
-      precio: '',
+      precio: '4.50€',
       urlImg: 'assets/images/productos/nigiris/Nigiri_Atun.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CRUSTÁCEOS Y SULFITOS'
     },
     {
       nombre: 'Nigiri Ebi',
       tipo:'NIGIRIS',
-      precio: '',
-      urlImg: 'assets/images/productos/nigiris/Nigiri_',
+      precio: '4.90€',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_Ebi.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'NO TIENE'
     },
     {
       nombre: 'Nigiri Pez Mantequilla Flambeado',
       tipo:'NIGIRIS',
-      precio: '',
-      urlImg: 'assets/images/productos/nigiris/Nigiri_',
+      precio: '4.50€',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_Pez_Mantequilla_Flambeado.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'PESCADO Y SULFITOS'
     },
     {
       nombre: 'Nigiri Pez Mantequilla',
       tipo:'NIGIRIS',
-      precio: '',
-      urlImg: 'assets/images/productos/nigiris/Nigiri_',
+      precio: '4.50€',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_Pez_Mantequilla.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'PESCADO Y SULFITOS'
     },
     {
       nombre: 'Nigiri Salmón flambeado',
       tipo:'NIGIRIS',
-      precio: '',
-      urlImg: 'assets/images/productos/nigiris/Nigiri_',
+      precio: '4.50€',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_Salmon_Flambeado.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'PESCADO Y SULFITOS'
     },
     {
       nombre: 'Nigiri Salmón',
       tipo:'NIGIRIS',
-      precio: '',
-      urlImg: 'assets/images/productos/nigiris/Nigiri_',
+      precio: '4.50€',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_Salmon.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'PESCADO Y SULFITOS'
     },
 
     //Rolls
     {
       nombre: 'Roll Almadraba',
       tipo:'ROLLS',
-      precio: '',
+      precio: '10.50€',
       urlImg: 'assets/images/productos/rolls/Almadraba_Roll.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'LÁCTEOS, PESCADO, SOJA, GLUTEN, SÉSAMO'
     },
     {
       nombre: 'Roll Anguila',
       tipo:'ROLLS',
-      precio: '',
+      precio: '9.50€',
       urlImg: 'assets/images/productos/rolls/Anguila_Roll.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CEREALES CON GLUTEN, LÁCTEOS, PESCADO, SÉSAMO, SOJA Y SULFITOS'
     },
     {
       nombre: 'Roll Hawai',
       tipo:'ROLLS',
-      precio: '',
+      precio: '8.90€',
       urlImg: 'assets/images/productos/rolls/Hawai_Roll.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CEREALES CON GLUTEN, HUEVOS, MOSTAZA, PESCADO, SOJA Y SULFITOS'
     },
     {
       nombre: 'Roll Kazan',
       tipo:'ROLLS',
-      precio: '',
+      precio: '9.20€',
       urlImg: 'assets/images/productos/rolls/Kazan_Roll.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'HUEVOS, LÁCTEOS, MOSTAZA, PESCADO, SÉSAMO Y SULFITO'
     },
     {
       nombre: 'Roll Pollo Crispy',
       tipo:'ROLLS',
-      precio: '',
+      precio: '7.90€',
       urlImg: 'assets/images/productos/rolls/Pollo_Crispy_Roll.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CEREALES CON GLUTEN, HUEVOS, LÁCTEOS, SÉSAMO, SOJA Y SULFITOS'
     },
     {
       nombre: 'Roll Street',
       tipo:'ROLLS',
-      precio: '',
+      precio: '8.90€',
       urlImg: 'assets/images/productos/rolls/Street_Roll.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CEREALES CON GLUTEN, HUEVOS, LÁCTEOS, MOSTAZA, PESCADO, SOJA Y SULFITOS'
     },
     {
       nombre: 'Roll Tropical',
       tipo:'ROLLS',
-      precio: '',
+      precio: '8.50€',
       urlImg: 'assets/images/productos/rolls/Tropical_Roll.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'NO TIENE'
     },
     {
       nombre: 'Roll Uramaki Atún',
       tipo:'ROLLS',
-      precio: '',
+      precio: '8.95€',
       urlImg: 'assets/images/productos/rolls/Uramaki_Atun_Roll.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'NO TIENE'
     },
 
     //Makis
     {
       nombre: 'Maki Aguacate Mango',
       tipo:'MAKIS',
-      precio: '',
+      precio: '4.50€',
       urlImg: 'assets/images/productos/maki/Maki_Aguacate_Mango.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'NO TIENE'
     },
     {
       nombre: 'Maki Aguacate',
       tipo:'MAKIS',
-      precio: '',
+      precio: '5.90€',
       urlImg: 'assets/images/productos/maki/Maki_Aguacate.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'NO TIENE'
     },
     {
       nombre: 'Maki Anguila Aguacate',
       tipo:'MAKIS',
-      precio: '',
+      precio: '4.90€',
       urlImg: 'assets/images/productos/maki/Maki_Anguila_Aguacate.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'NO TIENE'
     },
     {
       nombre: 'Maki Ebi Aguacate',
       tipo:'MAKIS',
-      precio: '',
+      precio: '4.90€',
       urlImg: 'assets/images/productos/maki/Maki_Ebi_Aguacate.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CRUSTÁCEOS Y SULFITOS'
     },
     {
-      nombre: 'Maki Pez Mantequilla',
+      nombre: 'Maki Pez Mantequilla Trufa',
       tipo:'MAKIS',
-      precio: '',
-      urlImg: 'assets/images/productos/maki/Maki_Pez_Mantequilla.png',
+      precio: '4.90€',
+      urlImg: 'assets/images/productos/maki/Maki_Pez_Mantequilla_Trufa.png',
       descripcion: '',
       alergenos: ''
     },
     {
       nombre: 'Maki Salmón Philadelphia',
       tipo:'MAKIS',
-      precio: '',
+      precio: '5.60€',
       urlImg: 'assets/images/productos/maki/Maki_Salmon_Philadelphia.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'LÁCTEOS, PESCADO Y SULFITOS'
     },
     {
       nombre: 'Maki Salmón',
       tipo:'MAKIS',
-      precio: '',
+      precio: '4.90€',
       urlImg: 'assets/images/productos/maki/Maki_Salmon.png',
       descripcion: '',
       alergenos: ''
@@ -333,94 +333,94 @@ export class CartaComponent {
     {
       nombre: 'Maki Surimi',
       tipo:'MAKIS',
-      precio: '',
+      precio: '7 €',
       urlImg: 'assets/images/productos/maki/Maki_Surimi.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CRUSTÁCEOS, HUEVOS, MOLUSCOS, PESCADO Y SULFITOS'
     },
     {
       nombre: 'Maki Atún',
       tipo:'MAKIS',
-      precio: '',
+      precio: '7 €',
       urlImg: 'assets/images/productos/maki/Maki_Atun.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'PESCADO Y SULFITOS'
     },
 
     //Bebidas 
     {
       nombre: 'Agua con gas',
       tipo:'BEBIDAS',
-      precio: '',
+      precio: '1.80€',
       urlImg: 'assets/images/productos/bebidas/Agua_Con_Gas.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'NO TIENE'
     },
     {
       nombre: 'Agua natural',
       tipo:'BEBIDAS',
-      precio: '',
+      precio: '1.99€',
       urlImg: 'assets/images/productos/bebidas/Agua_Natural.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'NO TIENE'
     },
     {
       nombre: 'Cerveza estrella galicia',
       tipo:'BEBIDAS',
-      precio: '',
+      precio: '1.80€',
       urlImg: 'assets/images/productos/bebidas/Cerveza_Estrella_Galicia_Quinto.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'NO TIENE'
     },
     {
       nombre: 'Cerveza kirin',
       tipo:'BEBIDAS',
-      precio: '',
+      precio: '1.80€',
       urlImg: 'assets/images/productos/bebidas/Cerveza_Kirin.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'NO TIENE'
     },
     {
       nombre: 'Fanta White Peach',
       tipo:'BEBIDAS',
-      precio: '',
+      precio: '2.20€',
       urlImg: 'assets/images/productos/bebidas/Fanta_White_Peach.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'NO TIENE'
     },
 
     //Postres
     {
       nombre: 'Mochi de cheesecake',
       tipo:'POSTRES',
-      precio: '',
+      precio: '4.60€',
       urlImg: 'assets/images/productos/postres/Mochi_De_Cheesecake.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'LÁCTEOS'
     },
     {
       nombre: 'Mochi de mango',
       tipo:'POSTRES',
-      precio: '',
+      precio: '4.60€',
       urlImg: 'assets/images/productos/postres/Mochi_De_Mango.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CEREALES CON GLUTEN, FRUTOS SECOS, HUEVOS, LÁCTEOS Y SULFITOS'
     },
     {
       nombre: 'Mochi de té verde',
       tipo:'POSTRES',
-      precio: '',
+      precio: '4.60€',
       urlImg: 'assets/images/productos/postres/Mochi_De_Té_Verde.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'CEREALES CON GLUTEN, FRUTOS SECOS, HUEVOS, LÁCTEOS Y SULFITOS'
     },
     {
       nombre: 'Tarta de queso y pistacho',
       tipo:'POSTRES',
-      precio: '',
+      precio: '4.60€',
       urlImg: 'assets/images/productos/postres/Tarta_De_Queso_Y_Pistachos.png',
       descripcion: '',
-      alergenos: ''
+      alergenos: 'GLUTEN, LACTOSA, FRUTOS SECOS, HUEVOS'
     },
 
   ];
