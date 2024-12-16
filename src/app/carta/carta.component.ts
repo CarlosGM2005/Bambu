@@ -307,10 +307,10 @@ export class CartaComponent {
       alergenos: 'CRUSTÁCEOS Y SULFITOS'
     },
     {
-      nombre: 'Maki Pez Mantequilla',
+      nombre: 'Maki Pez Mantequilla Trufa',
       tipo:'MAKIS',
       precio: '4.90€',
-      urlImg: 'assets/images/productos/maki/Maki_Pez_Mantequilla.png',
+      urlImg: 'assets/images/productos/maki/Maki_Pez_Mantequilla_Trufa.png',
       descripcion: '',
       alergenos: ''
     },
