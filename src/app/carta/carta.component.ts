@@ -146,7 +146,7 @@ export class CartaComponent {
       nombre: 'Nigiri Anguila',
       tipo:'NIGIRIS',
       precio: '',
-      urlImg: 'assets/images/productos/nigiris/',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_Anguila.png',
       descripcion: '',
       alergenos: ''
     },
@@ -154,7 +154,7 @@ export class CartaComponent {
       nombre: 'Nigiri Atún Flambeado',
       tipo:'NIGIRIS',
       precio: '',
-      urlImg: 'assets/images/productos/nigiris/',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_Atun_Flambeado.png',
       descripcion: '',
       alergenos: ''
     },
@@ -162,7 +162,7 @@ export class CartaComponent {
       nombre: 'Nigiri Atún',
       tipo:'NIGIRIS',
       precio: '',
-      urlImg: 'assets/images/productos/nigiris/',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_Atun.png',
       descripcion: '',
       alergenos: ''
     },
@@ -170,7 +170,7 @@ export class CartaComponent {
       nombre: 'Nigiri Ebi',
       tipo:'NIGIRIS',
       precio: '',
-      urlImg: 'assets/images/productos/nigiris/',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_',
       descripcion: '',
       alergenos: ''
     },
@@ -178,7 +178,7 @@ export class CartaComponent {
       nombre: 'Nigiri Pez Mantequilla Flambeado',
       tipo:'NIGIRIS',
       precio: '',
-      urlImg: 'assets/images/productos/nigiris/',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_',
       descripcion: '',
       alergenos: ''
     },
@@ -186,7 +186,7 @@ export class CartaComponent {
       nombre: 'Nigiri Pez Mantequilla',
       tipo:'NIGIRIS',
       precio: '',
-      urlImg: 'assets/images/productos/nigiris/',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_',
       descripcion: '',
       alergenos: ''
     },
@@ -194,7 +194,7 @@ export class CartaComponent {
       nombre: 'Nigiri Salmón flambeado',
       tipo:'NIGIRIS',
       precio: '',
-      urlImg: 'assets/images/productos/nigiris/',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_',
       descripcion: '',
       alergenos: ''
     },
@@ -202,7 +202,7 @@ export class CartaComponent {
       nombre: 'Nigiri Salmón',
       tipo:'NIGIRIS',
       precio: '',
-      urlImg: 'assets/images/productos/nigiris/',
+      urlImg: 'assets/images/productos/nigiris/Nigiri_',
       descripcion: '',
       alergenos: ''
     },
@@ -212,7 +212,7 @@ export class CartaComponent {
       nombre: 'Roll Almadraba',
       tipo:'ROLLS',
       precio: '',
-      urlImg: 'assets/images/productos/rolls/',
+      urlImg: 'assets/images/productos/rolls/Almadraba_Roll.png',
       descripcion: '',
       alergenos: ''
     },
@@ -220,7 +220,7 @@ export class CartaComponent {
       nombre: 'Roll Anguila',
       tipo:'ROLLS',
       precio: '',
-      urlImg: 'assets/images/productos/rolls/',
+      urlImg: 'assets/images/productos/rolls/Anguila_Roll.png',
       descripcion: '',
       alergenos: ''
     },
@@ -228,7 +228,7 @@ export class CartaComponent {
       nombre: 'Roll Hawai',
       tipo:'ROLLS',
       precio: '',
-      urlImg: 'assets/images/productos/rolls/',
+      urlImg: 'assets/images/productos/rolls/Hawai_Roll.png',
       descripcion: '',
       alergenos: ''
     },
@@ -236,7 +236,7 @@ export class CartaComponent {
       nombre: 'Roll Kazan',
       tipo:'ROLLS',
       precio: '',
-      urlImg: 'assets/images/productos/rolls/',
+      urlImg: 'assets/images/productos/rolls/Kazan_Roll.png',
       descripcion: '',
       alergenos: ''
     },
@@ -244,7 +244,7 @@ export class CartaComponent {
       nombre: 'Roll Pollo Crispy',
       tipo:'ROLLS',
       precio: '',
-      urlImg: 'assets/images/productos/rolls/',
+      urlImg: 'assets/images/productos/rolls/Pollo_Crispy_Roll.png',
       descripcion: '',
       alergenos: ''
     },
@@ -252,7 +252,7 @@ export class CartaComponent {
       nombre: 'Roll Street',
       tipo:'ROLLS',
       precio: '',
-      urlImg: 'assets/images/productos/rolls/',
+      urlImg: 'assets/images/productos/rolls/Street_Roll.png',
       descripcion: '',
       alergenos: ''
     },
@@ -260,7 +260,7 @@ export class CartaComponent {
       nombre: 'Roll Tropical',
       tipo:'ROLLS',
       precio: '',
-      urlImg: 'assets/images/productos/rolls/',
+      urlImg: 'assets/images/productos/rolls/Tropical_Roll.png',
       descripcion: '',
       alergenos: ''
     },
@@ -268,7 +268,7 @@ export class CartaComponent {
       nombre: 'Roll Uramaki Atún',
       tipo:'ROLLS',
       precio: '',
-      urlImg: 'assets/images/productos/rolls/',
+      urlImg: 'assets/images/productos/rolls/Uramaki_Atun_Roll.png',
       descripcion: '',
       alergenos: ''
     },
@@ -278,7 +278,7 @@ export class CartaComponent {
       nombre: 'Maki Aguacate Mango',
       tipo:'MAKIS',
       precio: '',
-      urlImg: 'assets/images/productos/maki/',
+      urlImg: 'assets/images/productos/maki/Maki_Aguacate_Mango.png',
       descripcion: '',
       alergenos: ''
     },
@@ -286,7 +286,7 @@ export class CartaComponent {
       nombre: 'Maki Aguacate',
       tipo:'MAKIS',
       precio: '',
-      urlImg: 'assets/images/productos/maki/',
+      urlImg: 'assets/images/productos/maki/Maki_Aguacate.png',
       descripcion: '',
       alergenos: ''
     },
@@ -294,7 +294,7 @@ export class CartaComponent {
       nombre: 'Maki Anguila Aguacate',
       tipo:'MAKIS',
       precio: '',
-      urlImg: 'assets/images/productos/maki/',
+      urlImg: 'assets/images/productos/maki/Maki_Anguila_Aguacate.png',
       descripcion: '',
       alergenos: ''
     },
@@ -302,7 +302,7 @@ export class CartaComponent {
       nombre: 'Maki Ebi Aguacate',
       tipo:'MAKIS',
       precio: '',
-      urlImg: 'assets/images/productos/maki/',
+      urlImg: 'assets/images/productos/maki/Maki_Ebi_Aguacate.png',
       descripcion: '',
       alergenos: ''
     },
@@ -310,15 +310,15 @@ export class CartaComponent {
       nombre: 'Maki Pez Mantequilla',
       tipo:'MAKIS',
       precio: '',
-      urlImg: 'assets/images/productos/maki/',
+      urlImg: 'assets/images/productos/maki/Maki_Pez_Mantequilla.png',
       descripcion: '',
       alergenos: ''
     },
     {
-      nombre: 'Maki Salmón Philadephia',
+      nombre: 'Maki Salmón Philadelphia',
       tipo:'MAKIS',
       precio: '',
-      urlImg: 'assets/images/productos/maki/',
+      urlImg: 'assets/images/productos/maki/Maki_Salmon_Philadelphia.png',
       descripcion: '',
       alergenos: ''
     },
@@ -326,7 +326,7 @@ export class CartaComponent {
       nombre: 'Maki Salmón',
       tipo:'MAKIS',
       precio: '',
-      urlImg: 'assets/images/productos/maki/',
+      urlImg: 'assets/images/productos/maki/Maki_Salmon.png',
       descripcion: '',
       alergenos: ''
     },
@@ -334,7 +334,7 @@ export class CartaComponent {
       nombre: 'Maki Surimi',
       tipo:'MAKIS',
       precio: '',
-      urlImg: 'assets/images/productos/maki/',
+      urlImg: 'assets/images/productos/maki/Maki_Surimi.png',
       descripcion: '',
       alergenos: ''
     },
@@ -342,17 +342,17 @@ export class CartaComponent {
       nombre: 'Maki Atún',
       tipo:'MAKIS',
       precio: '',
-      urlImg: 'assets/images/productos/maki/',
+      urlImg: 'assets/images/productos/maki/Maki_Atun.png',
       descripcion: '',
       alergenos: ''
     },
 
-    //Bebidas
+    //Bebidas 
     {
       nombre: 'Agua con gas',
       tipo:'BEBIDAS',
       precio: '',
-      urlImg: 'assets/images/productos/bebidas/',
+      urlImg: 'assets/images/productos/bebidas/Agua_Con_Gas.png',
       descripcion: '',
       alergenos: ''
     },
@@ -360,7 +360,7 @@ export class CartaComponent {
       nombre: 'Agua natural',
       tipo:'BEBIDAS',
       precio: '',
-      urlImg: 'assets/images/productos/bebidas/',
+      urlImg: 'assets/images/productos/bebidas/Agua_Natural.png',
       descripcion: '',
       alergenos: ''
     },
@@ -368,7 +368,7 @@ export class CartaComponent {
       nombre: 'Cerveza estrella galicia',
       tipo:'BEBIDAS',
       precio: '',
-      urlImg: 'assets/images/productos/bebidas/',
+      urlImg: 'assets/images/productos/bebidas/Cerveza_Estrella_Galicia_Quinto.png',
       descripcion: '',
       alergenos: ''
     },
@@ -376,7 +376,7 @@ export class CartaComponent {
       nombre: 'Cerveza kirin',
       tipo:'BEBIDAS',
       precio: '',
-      urlImg: 'assets/images/productos/bebidas/',
+      urlImg: 'assets/images/productos/bebidas/Cerveza_Kirin.png',
       descripcion: '',
       alergenos: ''
     },
@@ -384,17 +384,17 @@ export class CartaComponent {
       nombre: 'Fanta White Peach',
       tipo:'BEBIDAS',
       precio: '',
-      urlImg: 'assets/images/productos/bebidas/',
+      urlImg: 'assets/images/productos/bebidas/Fanta_White_Peach.png',
       descripcion: '',
       alergenos: ''
     },
 
     //Postres
     {
-      nombre: 'Mochi de fresa',
+      nombre: 'Mochi de cheesecake',
       tipo:'POSTRES',
       precio: '',
-      urlImg: 'assets/images/productos/postres/',
+      urlImg: 'assets/images/productos/postres/Mochi_De_Cheesecake.png',
       descripcion: '',
       alergenos: ''
     },
@@ -402,15 +402,15 @@ export class CartaComponent {
       nombre: 'Mochi de mango',
       tipo:'POSTRES',
       precio: '',
-      urlImg: 'assets/images/productos/postres/',
+      urlImg: 'assets/images/productos/postres/Mochi_De_Mango.png',
       descripcion: '',
       alergenos: ''
     },
     {
-      nombre: 'Mochi de cheesecake',
+      nombre: 'Mochi de té verde',
       tipo:'POSTRES',
       precio: '',
-      urlImg: 'assets/images/productos/postres/',
+      urlImg: 'assets/images/productos/postres/Mochi_De_Té_Verde.png',
       descripcion: '',
       alergenos: ''
     },
@@ -418,7 +418,7 @@ export class CartaComponent {
       nombre: 'Tarta de queso y pistacho',
       tipo:'POSTRES',
       precio: '',
-      urlImg: 'assets/images/productos/postres/',
+      urlImg: 'assets/images/productos/postres/Tarta_De_Queso_Y_Pistachos.png',
       descripcion: '',
       alergenos: ''
     },
