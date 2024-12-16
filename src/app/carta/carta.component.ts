@@ -59,14 +59,45 @@ export class CartaComponent {
 
     //Entrantes
     {
-      nombre: '',
-      tipo:'',
+      nombre: 'Edamame',
+      tipo:'ENTRANTES',
       precio: '',
-      urlImg: '',
+      urlImg: 'assets/images/productos/entrantes/Edamame.png',
       descripcion: '',
       alergenos: ''
     },
-
+    {
+      nombre: 'Gyozas de pollo',
+      tipo:'ENTRANTES',
+      precio: '',
+      urlImg: 'assets/images/productos/entrantes/Gyozas.png',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Gyozas de cerdo',
+      tipo:'ENTRANTES',
+      precio: '',
+      urlImg: 'assets/images/productos/entrantes/Gyozas.png',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Gyozas de ternera',
+      tipo:'ENTRANTES',
+      precio: '',
+      urlImg: 'assets/images/productos/entrantes/Gyozas.png',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Rollitos mango langostinos',
+      tipo:'ENTRANTES',
+      precio: '',
+      urlImg: 'assets/images/productos/entrantes/Rollitos_Mango_Langostinos.png',
+      descripcion: '',
+      alergenos: ''
+    },
   
     //Arroz y noodles
     {
@@ -108,6 +139,288 @@ export class CartaComponent {
       urlImg: 'assets/images/productos/arrozYNoodles/Ramen_Yasai.png',
       descripcion: 'Sopa japonesa de fideos de trigo, con base de miso, salsa curry, bambú, setas y alga nori.',
       alergenos: 'Apio, Cereales con gluten, Huevos, Lácteos, Mostaza, Pescado, Soja',
+    },
+
+    //Nigiris
+    {
+      nombre: 'Nigiri Anguila',
+      tipo:'NIGIRIS',
+      precio: '',
+      urlImg: 'assets/images/productos/nigiris/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Nigiri Atún Flambeado',
+      tipo:'NIGIRIS',
+      precio: '',
+      urlImg: 'assets/images/productos/nigiris/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Nigiri Atún',
+      tipo:'NIGIRIS',
+      precio: '',
+      urlImg: 'assets/images/productos/nigiris/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Nigiri Ebi',
+      tipo:'NIGIRIS',
+      precio: '',
+      urlImg: 'assets/images/productos/nigiris/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Nigiri Pez Mantequilla Flambeado',
+      tipo:'NIGIRIS',
+      precio: '',
+      urlImg: 'assets/images/productos/nigiris/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Nigiri Pez Mantequilla',
+      tipo:'NIGIRIS',
+      precio: '',
+      urlImg: 'assets/images/productos/nigiris/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Nigiri Salmón flambeado',
+      tipo:'NIGIRIS',
+      precio: '',
+      urlImg: 'assets/images/productos/nigiris/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Nigiri Salmón',
+      tipo:'NIGIRIS',
+      precio: '',
+      urlImg: 'assets/images/productos/nigiris/',
+      descripcion: '',
+      alergenos: ''
+    },
+
+    //Rolls
+    {
+      nombre: 'Roll Almadraba',
+      tipo:'ROLLS',
+      precio: '',
+      urlImg: 'assets/images/productos/rolls/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Roll Anguila',
+      tipo:'ROLLS',
+      precio: '',
+      urlImg: 'assets/images/productos/rolls/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Roll Hawai',
+      tipo:'ROLLS',
+      precio: '',
+      urlImg: 'assets/images/productos/rolls/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Roll Kazan',
+      tipo:'ROLLS',
+      precio: '',
+      urlImg: 'assets/images/productos/rolls/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Roll Pollo Crispy',
+      tipo:'ROLLS',
+      precio: '',
+      urlImg: 'assets/images/productos/rolls/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Roll Street',
+      tipo:'ROLLS',
+      precio: '',
+      urlImg: 'assets/images/productos/rolls/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Roll Tropical',
+      tipo:'ROLLS',
+      precio: '',
+      urlImg: 'assets/images/productos/rolls/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Roll Uramaki Atún',
+      tipo:'ROLLS',
+      precio: '',
+      urlImg: 'assets/images/productos/rolls/',
+      descripcion: '',
+      alergenos: ''
+    },
+
+    //Makis
+    {
+      nombre: 'Maki Aguacate Mango',
+      tipo:'MAKIS',
+      precio: '',
+      urlImg: 'assets/images/productos/maki/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Maki Aguacate',
+      tipo:'MAKIS',
+      precio: '',
+      urlImg: 'assets/images/productos/maki/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Maki Anguila Aguacate',
+      tipo:'MAKIS',
+      precio: '',
+      urlImg: 'assets/images/productos/maki/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Maki Ebi Aguacate',
+      tipo:'MAKIS',
+      precio: '',
+      urlImg: 'assets/images/productos/maki/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Maki Pez Mantequilla',
+      tipo:'MAKIS',
+      precio: '',
+      urlImg: 'assets/images/productos/maki/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Maki Salmón Philadephia',
+      tipo:'MAKIS',
+      precio: '',
+      urlImg: 'assets/images/productos/maki/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Maki Salmón',
+      tipo:'MAKIS',
+      precio: '',
+      urlImg: 'assets/images/productos/maki/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Maki Surimi',
+      tipo:'MAKIS',
+      precio: '',
+      urlImg: 'assets/images/productos/maki/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Maki Atún',
+      tipo:'MAKIS',
+      precio: '',
+      urlImg: 'assets/images/productos/maki/',
+      descripcion: '',
+      alergenos: ''
+    },
+
+    //Bebidas
+    {
+      nombre: 'Agua con gas',
+      tipo:'BEBIDAS',
+      precio: '',
+      urlImg: 'assets/images/productos/bebidas/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Agua natural',
+      tipo:'BEBIDAS',
+      precio: '',
+      urlImg: 'assets/images/productos/bebidas/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Cerveza estrella galicia',
+      tipo:'BEBIDAS',
+      precio: '',
+      urlImg: 'assets/images/productos/bebidas/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Cerveza kirin',
+      tipo:'BEBIDAS',
+      precio: '',
+      urlImg: 'assets/images/productos/bebidas/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Fanta White Peach',
+      tipo:'BEBIDAS',
+      precio: '',
+      urlImg: 'assets/images/productos/bebidas/',
+      descripcion: '',
+      alergenos: ''
+    },
+
+    //Postres
+    {
+      nombre: 'Mochi de fresa',
+      tipo:'POSTRES',
+      precio: '',
+      urlImg: 'assets/images/productos/postres/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Mochi de mango',
+      tipo:'POSTRES',
+      precio: '',
+      urlImg: 'assets/images/productos/postres/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Mochi de cheesecake',
+      tipo:'POSTRES',
+      precio: '',
+      urlImg: 'assets/images/productos/postres/',
+      descripcion: '',
+      alergenos: ''
+    },
+    {
+      nombre: 'Tarta de queso y pistacho',
+      tipo:'POSTRES',
+      precio: '',
+      urlImg: 'assets/images/productos/postres/',
+      descripcion: '',
+      alergenos: ''
     },
 
   ];
