@@ -20,7 +20,7 @@ export class CartaComponent {
       nombre: 'SURTIDO Nº2',
       tipo: 'SURTIDOS',
       precio: '18.50€',
-      urlImg: 'assets/images/productos/surtidos/SURTIDO2.jpg',
+      urlImg: 'assets/images/productos/surtidos/SURTIDO2.png',
       descripcion: '4 unidades de Makis de salmón, 2 de Nigiris Pez mantequilla, 2 Nigiris atún y 2 Nigiris Salmón',
       alergenos: 'Pescado, Sulfitos',
     },
@@ -28,7 +28,7 @@ export class CartaComponent {
       nombre: 'SURTIDO Nº3',
       tipo: 'SURTIDOS',
       precio: '18.50€',
-      urlImg: 'assets/images/productos/surtidos/SURTIDO3.jpg',
+      urlImg: 'assets/images/productos/surtidos/SURTIDO3.png',
       descripcion: '4 unidades de Sésamo de Atún, 4 de Salmón Roll, 2 Nigiris de Salmón y 2 Nigiris Pez Mantequilla',
       alergenos: 'Pescado, Sésamo, Soja, Sulfitos',
     },
@@ -36,7 +36,7 @@ export class CartaComponent {
       nombre: 'SURTIDO Nº4',
       tipo: 'SURTIDOS',
       precio: '22.50€',
-      urlImg: 'assets/images/productos/surtidos/SURTIDO4.jpg',
+      urlImg: 'assets/images/productos/surtidos/SURTIDO4.png',
       descripcion: '4 unidades de Salmón Roll, 4 de Maki de Atún y 3 de Sashimi de Salmón',
       alergenos: 'Pescado, Soja, Sulfitos',
     },
@@ -44,7 +44,7 @@ export class CartaComponent {
       nombre: 'SURTIDO Nº5',
       tipo: 'SURTIDOS',
       precio: '16.90€',
-      urlImg: 'assets/images/productos/surtidos/SURTIDO5.jpg',
+      urlImg: 'assets/images/productos/surtidos/SURTIDO5.png',
       descripcion: '4 unidades de Ebi Roll, 4 de Sésamo Salmón, 2 Nigiris Salmón y 2 Nigiris Gambas',
       alergenos: 'Cereales con gluten, Crustáceos, Huevos, Moluscos, Mostaza, Pescado, Soja, Sulfitos',
     },
@@ -52,7 +52,7 @@ export class CartaComponent {
       nombre: 'SURTIDO Nº6',
       tipo: 'SURTIDOS',
       precio: '18.50€',
-      urlImg: 'assets/images/productos/surtidos/SURTIDO6.jpg',
+      urlImg: 'assets/images/productos/surtidos/SURTIDO6.png',
       descripcion: '4 unidades de Surimi Roll, 4 de Maki Salmón y 4 Maki atún',
       alergenos: 'Crustáceos, Huevos, Moluscos, Pescado, Sulfitos',
     },
@@ -63,7 +63,7 @@ export class CartaComponent {
       tipo:'ENTRANTES',
       precio: '4.20€',
       urlImg: 'assets/images/productos/entrantes/Edamame.png',
-      descripcion: '',
+      descripcion: 'Habas de soja verde cocidas.',
       alergenos: 'SOJA'
     },
     {
@@ -71,7 +71,7 @@ export class CartaComponent {
       tipo:'ENTRANTES',
       precio: '7.90€',
       urlImg: 'assets/images/productos/entrantes/Gyozas.png',
-      descripcion: '',
+      descripcion: 'Empanadillas rellenas de pollo y verduras.',
       alergenos: 'CEREALES CON GLUTEN, SÉSAMO Y SOJA'
     },
     {
@@ -79,7 +79,7 @@ export class CartaComponent {
       tipo:'ENTRANTES',
       precio: '7.90€',
       urlImg: 'assets/images/productos/entrantes/Gyozas.png',
-      descripcion: '',
+      descripcion: 'Empanadillas rellenas de carne de cerdo y verduras.',
       alergenos: 'CEREALES CON GLUTEN, SÉSAMO Y SOJA'
     },
     {
@@ -87,7 +87,7 @@ export class CartaComponent {
       tipo:'ENTRANTES',
       precio: '7.90€',
       urlImg: 'assets/images/productos/entrantes/Gyozas.png',
-      descripcion: '',
+      descripcion: 'Empanadillas rellenas de carne de ternera y verduras.',
       alergenos: 'CEREALES CON GLUTEN, SÉSAMO Y SOJA'
     },
     {
@@ -95,7 +95,7 @@ export class CartaComponent {
       tipo:'ENTRANTES',
       precio: '7.90€',
       urlImg: 'assets/images/productos/entrantes/Rollitos_Mango_Langostinos.png',
-      descripcion: '',
+      descripcion: 'Rollito relleno de langostino y mango.',
       alergenos: 'CEREALES CON GLUTEN, SÉSAMO Y SOJA'
     },
   
@@ -147,7 +147,7 @@ export class CartaComponent {
       tipo:'NIGIRIS',
       precio: '4.90€ ',
       urlImg: 'assets/images/productos/nigiris/Nigiri_Anguila.png',
-      descripcion: '',
+      descripcion: 'Dos piezas de arroz de sushi cubiertos de filetes de anguila.',
       alergenos: 'CEREALES CON GLUTEN, PESCADO, SÉSAMO, SOJA Y SULFITOS'
     },
     {
@@ -163,21 +163,21 @@ export class CartaComponent {
       tipo:'NIGIRIS',
       precio: '4.50€',
       urlImg: 'assets/images/productos/nigiris/Nigiri_Atun.png',
-      descripcion: '',
+      descripcion: 'Dos piezas de arroz de sushi cubiertos de filetes de atún rojo de almadraba.',
       alergenos: 'CRUSTÁCEOS Y SULFITOS'
     },
     {
       nombre: 'Nigiri Ebi',
       tipo:'NIGIRIS',
-      precio: '4.90€',
+      precio: '4.20€',
       urlImg: 'assets/images/productos/nigiris/Nigiri_Ebi.png',
-      descripcion: '',
-      alergenos: 'NO TIENE'
+      descripcion: 'Dos piezas de arroz de sushi cubiertos de dos piezas de gambas.',
+      alergenos: 'CRUSTÁCEOS, SULFITOS'
     },
     {
       nombre: 'Nigiri Pez Mantequilla Flambeado',
       tipo:'NIGIRIS',
-      precio: '4.50€',
+      precio: '4.90€',
       urlImg: 'assets/images/productos/nigiris/Nigiri_Pez_Mantequilla_Flambeado.png',
       descripcion: '',
       alergenos: 'PESCADO Y SULFITOS'
@@ -185,9 +185,9 @@ export class CartaComponent {
     {
       nombre: 'Nigiri Pez Mantequilla',
       tipo:'NIGIRIS',
-      precio: '4.50€',
+      precio: '3.90€',
       urlImg: 'assets/images/productos/nigiris/Nigiri_Pez_Mantequilla.png',
-      descripcion: '',
+      descripcion: 'Dos piezas de arroz de sushi cubiertos de filetes de pez mantequilla.',
       alergenos: 'PESCADO Y SULFITOS'
     },
     {
@@ -203,7 +203,7 @@ export class CartaComponent {
       tipo:'NIGIRIS',
       precio: '4.50€',
       urlImg: 'assets/images/productos/nigiris/Nigiri_Salmon.png',
-      descripcion: '',
+      descripcion: 'Dos piezas de arroz de sushi cubiertos de filetes de salmón',
       alergenos: 'PESCADO Y SULFITOS'
     },
 
@@ -213,7 +213,7 @@ export class CartaComponent {
       tipo:'ROLLS',
       precio: '10.50€',
       urlImg: 'assets/images/productos/rolls/Almadraba_Roll.png',
-      descripcion: '',
+      descripcion: 'Atún en tempura con queso crema, envuelto en arroz de sushi cubierto de atún flambeado, salsa kazan y salsa teriyaki.',
       alergenos: 'LÁCTEOS, PESCADO, SOJA, GLUTEN, SÉSAMO'
     },
     {
@@ -221,7 +221,7 @@ export class CartaComponent {
       tipo:'ROLLS',
       precio: '9.50€',
       urlImg: 'assets/images/productos/rolls/Anguila_Roll.png',
-      descripcion: '',
+      descripcion: 'Anguila, aguacate y philadelphia enrollado con arroz de sushi y cubierto de cebolla frita y salsa anguila.',
       alergenos: 'CEREALES CON GLUTEN, LÁCTEOS, PESCADO, SÉSAMO, SOJA Y SULFITOS'
     },
     {
@@ -229,7 +229,7 @@ export class CartaComponent {
       tipo:'ROLLS',
       precio: '8.90€',
       urlImg: 'assets/images/productos/rolls/Hawai_Roll.png',
-      descripcion: '',
+      descripcion: 'Pez mantequilla rebozado, enrollado en arroz de sushi y cubierto de salsa Japonesa, sriracha y azúcar moreno flameada.',
       alergenos: 'CEREALES CON GLUTEN, HUEVOS, MOSTAZA, PESCADO, SOJA Y SULFITOS'
     },
     {
@@ -237,7 +237,7 @@ export class CartaComponent {
       tipo:'ROLLS',
       precio: '9.20€',
       urlImg: 'assets/images/productos/rolls/Kazan_Roll.png',
-      descripcion: '',
+      descripcion: 'Aguacate y salmón enrollado en arroz de sushi y cubierto de salmón flameado y salsa picante de miel y mostaza.',
       alergenos: 'HUEVOS, LÁCTEOS, MOSTAZA, PESCADO, SÉSAMO Y SULFITO'
     },
     {
@@ -245,15 +245,15 @@ export class CartaComponent {
       tipo:'ROLLS',
       precio: '7.90€',
       urlImg: 'assets/images/productos/rolls/Pollo_Crispy_Roll.png',
-      descripcion: '',
+      descripcion: 'Pollo crujiente y philadelphia enrollado de arroz de sushi y cubierto de salsa teriyaki.',
       alergenos: 'CEREALES CON GLUTEN, HUEVOS, LÁCTEOS, SÉSAMO, SOJA Y SULFITOS'
     },
     {
       nombre: 'Roll Street',
       tipo:'ROLLS',
-      precio: '8.90€',
+      precio: '8.95€',
       urlImg: 'assets/images/productos/rolls/Street_Roll.png',
-      descripcion: '',
+      descripcion: 'Roll de pato en tempura y queso Philadelphia cubierto de cebolla en tempura y salsa street',
       alergenos: 'CEREALES CON GLUTEN, HUEVOS, LÁCTEOS, MOSTAZA, PESCADO, SOJA Y SULFITOS'
     },
     {
@@ -261,7 +261,7 @@ export class CartaComponent {
       tipo:'ROLLS',
       precio: '8.50€',
       urlImg: 'assets/images/productos/rolls/Tropical_Roll.png',
-      descripcion: '',
+      descripcion: 'Salmón, aguacate envuelto en arroz de sushi, cubierto de mango, cacahuete y fideo kadafi crujiente.',
       alergenos: 'NO TIENE'
     },
     {
@@ -269,26 +269,26 @@ export class CartaComponent {
       tipo:'ROLLS',
       precio: '8.95€',
       urlImg: 'assets/images/productos/rolls/Uramaki_Atun_Roll.png',
-      descripcion: '',
-      alergenos: 'NO TIENE'
+      descripcion: 'Atún cocido y philadelphia enrollado en arroz de sushi y rebozado, cubierto de cebolla crujiente y salsa Kimchi',
+      alergenos: 'CEREALES CON GLUTEN, HUEVOS, LÁCTEOS, MOSTAZA, PESCADO, SOJA, SULFITOS'
     },
 
     //Makis
     {
-      nombre: 'Maki Aguacate Mango',
+      nombre: 'Maki Aguacate y Mango',
       tipo:'MAKIS',
       precio: '4.50€',
       urlImg: 'assets/images/productos/maki/Maki_Aguacate_Mango.png',
       descripcion: '',
-      alergenos: 'NO TIENE'
+      alergenos: 'SULFITOS'
     },
     {
       nombre: 'Maki Aguacate',
       tipo:'MAKIS',
       precio: '5.90€',
       urlImg: 'assets/images/productos/maki/Maki_Aguacate.png',
-      descripcion: '',
-      alergenos: 'NO TIENE'
+      descripcion: 'Arroz de sushi con aguacate envuelto en alga nori.',
+      alergenos: 'SULFITOS'
     },
     {
       nombre: 'Maki Anguila Aguacate',
@@ -303,7 +303,7 @@ export class CartaComponent {
       tipo:'MAKIS',
       precio: '4.90€',
       urlImg: 'assets/images/productos/maki/Maki_Ebi_Aguacate.png',
-      descripcion: '',
+      descripcion: 'Arroz de sushi con gambas y aguacate envuelto en alga nori.',
       alergenos: 'CRUSTÁCEOS Y SULFITOS'
     },
     {
@@ -311,15 +311,15 @@ export class CartaComponent {
       tipo:'MAKIS',
       precio: '4.90€',
       urlImg: 'assets/images/productos/maki/Maki_Pez_Mantequilla_Trufa.png',
-      descripcion: '',
-      alergenos: ''
+      descripcion: 'Arroz de sushi con pez mantequilla y trufa envuelto en alga nori.',
+      alergenos: 'PESCADO, SULFITOS'
     },
     {
       nombre: 'Maki Salmón Philadelphia',
       tipo:'MAKIS',
       precio: '5.60€',
       urlImg: 'assets/images/productos/maki/Maki_Salmon_Philadelphia.png',
-      descripcion: '',
+      descripcion: 'Arroz de sushi con salmón y philadelphia envuelto en alga nori.',
       alergenos: 'LÁCTEOS, PESCADO Y SULFITOS'
     },
     {
@@ -327,23 +327,23 @@ export class CartaComponent {
       tipo:'MAKIS',
       precio: '4.90€',
       urlImg: 'assets/images/productos/maki/Maki_Salmon.png',
-      descripcion: '',
-      alergenos: ''
+      descripcion: 'Arroz de sushi con salmón envuelto en alga nori.',
+      alergenos: 'PESCADO, SULFITOS'
     },
     {
       nombre: 'Maki Surimi',
       tipo:'MAKIS',
-      precio: '7 €',
+      precio: '4.90 €',
       urlImg: 'assets/images/productos/maki/Maki_Surimi.png',
-      descripcion: '',
+      descripcion: 'Arroz de sushi con surimi envuelto en alga nori.',
       alergenos: 'CRUSTÁCEOS, HUEVOS, MOLUSCOS, PESCADO Y SULFITOS'
     },
     {
       nombre: 'Maki Atún',
       tipo:'MAKIS',
-      precio: '7 €',
+      precio: '5.90 €',
       urlImg: 'assets/images/productos/maki/Maki_Atun.png',
-      descripcion: '',
+      descripcion: 'Arroz de sushi con atún rojo de almadraba envuelto en alga nori.',
       alergenos: 'PESCADO Y SULFITOS'
     },
 
@@ -395,32 +395,32 @@ export class CartaComponent {
       tipo:'POSTRES',
       precio: '4.60€',
       urlImg: 'assets/images/productos/postres/Mochi_De_Cheesecake.png',
-      descripcion: '',
-      alergenos: 'LÁCTEOS'
+      descripcion: 'Pastel japonés hecho de mochigome, con sabor a tarta de queso y frutos rojos.',
+      alergenos: 'FRUTOS SECOS, LÁCTEOS, SOJA, SULFITOS'
     },
     {
       nombre: 'Mochi de mango',
       tipo:'POSTRES',
       precio: '4.60€',
       urlImg: 'assets/images/productos/postres/Mochi_De_Mango.png',
-      descripcion: '',
-      alergenos: 'CEREALES CON GLUTEN, FRUTOS SECOS, HUEVOS, LÁCTEOS Y SULFITOS'
+      descripcion: 'Pastel japonés hecho de mochigome, con sabor a mango',
+      alergenos: 'CEREALES CON GLUTEN, FRUTOS SECOS, HUEVOS, SULFITOS'
     },
     {
-      nombre: 'Mochi de té verde',
+      nombre: 'Mochi de té matcha',
       tipo:'POSTRES',
       precio: '4.60€',
       urlImg: 'assets/images/productos/postres/Mochi_De_Té_Verde.png',
       descripcion: '',
-      alergenos: 'CEREALES CON GLUTEN, FRUTOS SECOS, HUEVOS, LÁCTEOS Y SULFITOS'
+      alergenos: 'FRUTOS SECOS, LÁCTEOS, SOJA, SULFITOS'
     },
     {
       nombre: 'Tarta de queso y pistacho',
       tipo:'POSTRES',
-      precio: '4.60€',
+      precio: '4.50€',
       urlImg: 'assets/images/productos/postres/Tarta_De_Queso_Y_Pistachos.png',
       descripcion: '',
-      alergenos: 'GLUTEN, LACTOSA, FRUTOS SECOS, HUEVOS'
+      alergenos: 'CEREALES CON GLUTEN, FRUTOS SECOS, HUEVOS, LÁCTEOS, PESCADO, SOJA, SULFITOS'
     },
 
   ];
