@@ -101,7 +101,7 @@ export class CartaComponent {
   
     //Arroz y noodles
     {
-      nombre: 'ARROZ CON SOJA',
+      nombre: 'Arroz con soja',
       tipo: 'ARROZ Y NOODLES',
       precio: '5.90€',
       urlImg: 'assets/images/productos/arrozYNoodles/Arroz_con_Soja.png',
@@ -109,7 +109,7 @@ export class CartaComponent {
       alergenos: 'Apio, Cereales con gluten, Crustáceos, Huevos, Lácteos, Moluscos, Pescado, Soja',
     },
     {
-      nombre: 'ARROZ VEGETAL',
+      nombre: 'Arroz vegetal',
       tipo: 'ARROZ Y NOODLES',
       precio: '5.90€',
       urlImg: 'assets/images/productos/arrozYNoodles/Arroz_Vegetal.png',
@@ -117,7 +117,7 @@ export class CartaComponent {
       alergenos: 'Apio, Cereales con gluten, Crustáceos, Huevos, Lácteos, Moluscos, Pescado, Soja',
     },
     {
-      nombre: 'NOODLES VEGETAL',
+      nombre: 'Noodles vegetales',
       tipo: 'ARROZ Y NOODLES',
       precio: '5.90€',
       urlImg: 'assets/images/productos/arrozYNoodles/Noodles.png',
@@ -125,7 +125,7 @@ export class CartaComponent {
       alergenos: 'Cereales con gluten, Huevos, Soja, Sulfitos',
     },
     {
-      nombre: 'RAMEN CERDO',
+      nombre: 'Ramen cerdo',
       tipo: 'ARROZ Y NOODLES',
       precio: '8.90€',
       urlImg: 'assets/images/productos/arrozYNoodles/Ramen_Cerdo.png',
@@ -133,7 +133,7 @@ export class CartaComponent {
       alergenos: 'Cacahuetes, Huevos, Pescado, Sésamo, Soja',
     },
     {
-      nombre: 'RAMEN YASAI VEGETAL',
+      nombre: 'Ramen Yasai vegetal',
       tipo: 'ARROZ Y NOODLES',
       precio: '7.95€',
       urlImg: 'assets/images/productos/arrozYNoodles/Ramen_Yasai.png',
