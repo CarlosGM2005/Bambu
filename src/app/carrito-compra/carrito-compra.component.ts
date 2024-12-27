@@ -9,7 +9,7 @@ export class CarritoCompraComponent {
   listaProductos = [
     //Surtidos
     {
-      nombre: 'SURTIDO Nº1',
+      nombre: 'Surtido Nº1',
       tipo: 'SURTIDOS',
       precio: '18.50€',
       urlImg: 'assets/images/productos/surtidos/SURTIDO1.png',
@@ -18,7 +18,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'SURTIDO Nº2',
+      nombre: 'Surtido Nº2',
       tipo: 'SURTIDOS',
       precio: '18.50€',
       urlImg: 'assets/images/productos/surtidos/SURTIDO2.png',
@@ -27,7 +27,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'SURTIDO Nº3',
+      nombre: 'Surtido Nº3',
       tipo: 'SURTIDOS',
       precio: '18.50€',
       urlImg: 'assets/images/productos/surtidos/SURTIDO3.png',
@@ -36,7 +36,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'SURTIDO Nº4',
+      nombre: 'Surtido Nº4',
       tipo: 'SURTIDOS',
       precio: '22.50€',
       urlImg: 'assets/images/productos/surtidos/SURTIDO4.png',
@@ -45,7 +45,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'SURTIDO Nº5',
+      nombre: 'Surtido Nº5',
       tipo: 'SURTIDOS',
       precio: '16.90€',
       urlImg: 'assets/images/productos/surtidos/SURTIDO5.png',
@@ -54,7 +54,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'SURTIDO Nº6',
+      nombre: 'Surtido Nº6',
       tipo: 'SURTIDOS',
       precio: '18.50€',
       urlImg: 'assets/images/productos/surtidos/SURTIDO6.png',
@@ -74,7 +74,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Gyozas de pollo',
+      nombre: 'Gyozas de Pollo',
       tipo:'ENTRANTES',
       precio: '7.90€',
       urlImg: 'assets/images/productos/entrantes/Gyozas.png',
@@ -83,7 +83,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Gyozas de cerdo',
+      nombre: 'Gyozas de Cerdo',
       tipo:'ENTRANTES',
       precio: '7.90€',
       urlImg: 'assets/images/productos/entrantes/Gyozas.png',
@@ -92,7 +92,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Gyozas de ternera',
+      nombre: 'Gyozas de Ternera',
       tipo:'ENTRANTES',
       precio: '7.90€',
       urlImg: 'assets/images/productos/entrantes/Gyozas.png',
@@ -101,7 +101,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Rollitos mango langostinos',
+      nombre: 'Rollitos Mango Langostinos',
       tipo:'ENTRANTES',
       precio: '7.90€',
       urlImg: 'assets/images/productos/entrantes/Rollitos_Mango_Langostinos.png',
@@ -112,7 +112,7 @@ export class CarritoCompraComponent {
   
     //Arroz y noodles
     {
-      nombre: 'Arroz con soja',
+      nombre: 'Arroz con Soja',
       tipo: 'ARROZ Y NOODLES',
       precio: '5.90€',
       urlImg: 'assets/images/productos/arrozYNoodles/Arroz_con_Soja.png',
@@ -121,7 +121,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Arroz vegetal',
+      nombre: 'Arroz Vegetal',
       tipo: 'ARROZ Y NOODLES',
       precio: '5.90€',
       urlImg: 'assets/images/productos/arrozYNoodles/Arroz_Vegetal.png',
@@ -130,7 +130,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Noodles vegetales',
+      nombre: 'Noodles Vegetales',
       tipo: 'ARROZ Y NOODLES',
       precio: '5.90€',
       urlImg: 'assets/images/productos/arrozYNoodles/Noodles.png',
@@ -139,7 +139,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Ramen cerdo',
+      nombre: 'Ramen Cerdo',
       tipo: 'ARROZ Y NOODLES',
       precio: '8.90€',
       urlImg: 'assets/images/productos/arrozYNoodles/Ramen_Cerdo.png',
@@ -148,7 +148,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Ramen Yasai vegetal',
+      nombre: 'Ramen Yasai Vegetal',
       tipo: 'ARROZ Y NOODLES',
       precio: '7.95€',
       urlImg: 'assets/images/productos/arrozYNoodles/Ramen_Yasai.png',
@@ -390,36 +390,36 @@ export class CarritoCompraComponent {
 
     //Bebidas 
     {
-      nombre: 'Agua con gas',
+      nombre: 'Sake Tanrei',
       tipo:'BEBIDAS',
-      precio: '1.80€',
+      precio: '4.99€',
       urlImg: 'assets/images/productos/bebidas/Agua_Con_Gas.png',
       descripcion: '',
       alergenos: 'NO TIENE',
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Agua natural',
+      nombre: 'Sake Kakumasume',
       tipo:'BEBIDAS',
-      precio: '1.99€',
+      precio: '19.20€',
       urlImg: 'assets/images/productos/bebidas/Agua_Natural.png',
       descripcion: '',
       alergenos: 'NO TIENE',
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Cerveza estrella galicia',
+      nombre: 'Cerveza Estrella Galicia',
       tipo:'BEBIDAS',
-      precio: '1.80€',
+      precio: '2.00€',
       urlImg: 'assets/images/productos/bebidas/Cerveza_Estrella_Galicia_Quinto.png',
       descripcion: '',
       alergenos: 'NO TIENE',
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Cerveza kirin',
+      nombre: 'Cerveza Kirin Ichiban',
       tipo:'BEBIDAS',
-      precio: '1.80€',
+      precio: '3.90€',
       urlImg: 'assets/images/productos/bebidas/Cerveza_Kirin.png',
       descripcion: '',
       alergenos: 'NO TIENE',
@@ -428,7 +428,7 @@ export class CarritoCompraComponent {
     {
       nombre: 'Fanta White Peach',
       tipo:'BEBIDAS',
-      precio: '2.20€',
+      precio: '2.00€',
       urlImg: 'assets/images/productos/bebidas/Fanta_White_Peach.png',
       descripcion: '',
       alergenos: 'NO TIENE',
@@ -437,7 +437,7 @@ export class CarritoCompraComponent {
 
     //Postres
     {
-      nombre: 'Mochi de cheesecake',
+      nombre: 'Mochi de Cheesecake',
       tipo:'POSTRES',
       precio: '4.60€',
       urlImg: 'assets/images/productos/postres/Mochi_De_Cheesecake.png',
@@ -446,7 +446,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Mochi de mango',
+      nombre: 'Mochi de Mango',
       tipo:'POSTRES',
       precio: '4.60€',
       urlImg: 'assets/images/productos/postres/Mochi_De_Mango.png',
@@ -455,7 +455,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Mochi de té matcha',
+      nombre: 'Mochi de Té Matcha',
       tipo:'POSTRES',
       precio: '4.60€',
       urlImg: 'assets/images/productos/postres/Mochi_De_Té_Verde.png',
@@ -464,7 +464,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png"
     },
     {
-      nombre: 'Tarta de queso y pistacho',
+      nombre: 'Tarta de Queso y Pistacho',
       tipo:'POSTRES',
       precio: '4.50€',
       urlImg: 'assets/images/productos/postres/Tarta_De_Queso_Y_Pistachos.png',

@@ -13,19 +13,13 @@ $terciary-color: #F96D50;
     justify-content: space-evenly;
 }
 
-.nav-link {
-    color: $primary-color;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-
 .nav-link{
     color: $primary-color;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
     position: relative;
+    font-weight: bold;
 }
 
 .nav-link:after{
@@ -52,9 +46,10 @@ $terciary-color: #F96D50;
 /* Título de la sección */
 h1 {
     color: $terciary-color;
-    margin: 3rem 0 2rem;
+    margin: 1rem 0 1rem;
     text-align: center;
     font-size: 2rem;
+    font-weight: bold;
 }
 
 /* Contenedor de surtidos */
@@ -64,7 +59,6 @@ h1 {
 
 
 /* Elementos del menú */
-
 .menu-item {
     text-align: center;
     transition: transform 0.3s ease;
@@ -113,6 +107,10 @@ h1 {
     text-align: center;
 }
 
+.modal-body .precio{
+    font-weight: bold;
+    color: $primary-color;
+}
 
 .btn-secondary{
     background-color: $primary-color;

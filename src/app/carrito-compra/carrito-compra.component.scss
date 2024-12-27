@@ -5,25 +5,25 @@ $terciary-color: #F96D50;
 
 
 //Estilos barra navegación
-.enlaces ul {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    margin-top: 1%;
-    list-style-type: none;
-    gap: 3%;
-
-}
-
-.enlaces ul a {
-    text-decoration: none;
-    color: $primary-color;
-    font-weight: bold;
+.navbar-nav {
     margin-top: 2%;
-    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly;
 }
 
-.enlaces ul a::after {
+.nav-link{
+    color: $primary-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+}
+
+.nav-link:after{
     bottom: 0;
     content: "";
     display: block;
@@ -35,12 +35,12 @@ $terciary-color: #F96D50;
     width: 0;
 }
 
-.enlaces ul a:hover:after{
+.nav-link:hover:after{
     width: 100%; 
     left: 0;
 }
 
-.enlaces ul a:hover {
+.nav-link:hover {
     color: $terciary-color;
 }
 
@@ -48,10 +48,15 @@ $terciary-color: #F96D50;
     padding: 1%;
     color: $terciary-color;
     font-weight: bold;
+    text-align: center;
 }
 
+#filaGrande{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
 
-//Estilos pruductos
+//Estilos productos
 .iconos {
     width: 41px;
     height: 41px;
@@ -62,15 +67,12 @@ $terciary-color: #F96D50;
     content: url(../../assets/images/iconos/carrito-de-compras-añadir-naranja.png);
 }
 
-
-
 .col-md-6 {
     margin-bottom: 3%;
     display: flex;
     padding: 1%;
     align-items: center;
 }
-
 
 .infoProducto {
     padding: 3%;
