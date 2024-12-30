@@ -3,17 +3,20 @@ $primary-color: #58A681;
 $secondary-color: #3D3D3D;
 $terciary-color: #F96D50;
 
+nav{
+    background-color: $secondary-color;
+}
 
 #barra{
-    background-color: $secondary-color;
     display: flex;
 }
+
 
 .nav-link{
     background-color: $primary-color;
     color: white;
     border-radius: 7.5px;
-    padding: 1rem 2rem; 
+    padding: 1rem; 
     min-width: 160px;
     text-align: center;
     font-size: 20px;
@@ -27,15 +30,25 @@ $terciary-color: #F96D50;
     font-weight: bold;
 }
 
+//Media para botones de navegacion
+@media (max-width: 1199px){
+    .nav-link{
+        max-width: 50%;
+        margin-left: 25%;
+    }
+}
+
+
 .navbar-nav .nav-item {
     margin: 0 15px; 
 }
 
+//Media para logo y navegacion
 @media (max-width: 576px) {
     #logo {
         max-width: 75%; 
     }
-    .nav-link {
+    .nav-link{
         font-size: 16px;
     }
 }
