@@ -32,8 +32,8 @@
 <!-- Surtidos Section -->
 <div class="container menu-grid">
     <h1>{{ categoria }}</h1>
-    <div class="row">
-        <div class="col-6 col-md-4 mb-4" *ngFor="let producto of productos">
+    <div class="row g-0">
+        <div class="col-md-6 col-lg-4 mb-4" *ngFor="let producto of productos">
             <div class="menu-item">
                 <img [src]="producto.urlImg" [alt]="producto.nombre" [title]="producto.title">
                 <h2>{{ producto.nombre }}</h2>
