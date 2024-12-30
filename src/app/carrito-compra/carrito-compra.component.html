@@ -28,13 +28,13 @@
 
     <div class="container-fluid">
         <div class="row" id="filaGrande">
-            <div class="col-12 col-md-8 text-center">
+            <div class="col-12 col-lg-8">
                 <h3 id="titulo">{{ categoria }}</h3>
                 <div class="row">
                     <!-- Genero dinámicamente los productos -->
-                    <div class="col-12 col-md-6 text-center" *ngFor="let producto of productos">
+                    <div class="col-6 col-md-6" *ngFor="let producto of productos">
                         <div class="imagenes__productos">
-                            <img [src]="producto.urlImg" [alt]="producto.nombre" [title]="producto.nombre" />
+                            <img [src]="producto.urlImg" [alt]="producto.nombre" [title]="producto.title" />
                         </div>
                         <div class="infoProducto">
                             <p>{{ producto.nombre }}</p>
@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-lg-4">
                 <div class="encabezado">
                     <p><strong>TU PEDIDO</strong></p>
                 </div>
