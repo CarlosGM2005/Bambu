@@ -86,8 +86,16 @@ $terciary-color: #F96D50;
     }
 
     .infoProducto{
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
         text-align: center !important;
         font-weight: bold;
+    }
+
+    .infoProducto p{
+        margin: 0 !important;
     }
   }
   
