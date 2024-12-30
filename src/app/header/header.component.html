@@ -5,11 +5,15 @@
     <div class="container">
         <!-- Contenedor del logo alineado a la izquierda -->
         <a class="navbar-brand" routerLink="/">
-            <img src="assets/images/logo/logo.png" id="logo" alt="Logo de nuestra empresa Bambú">
+            <img src="assets/images/logo/logoFinal.png" id="logo" alt="Logo de nuestra empresa Bambú">
         </a>
+        <!-- Botón de hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <!-- Enlaces alineados a la derecha -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav d-flex gap-5">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav d-flex gap-4">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/carta">CARTA</a>
                 </li>

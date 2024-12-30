@@ -18,7 +18,7 @@
     .carousel-inner img {
         width: 100%; 
         height: auto; 
-        object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+        object-fit: contain;
     }
 }
 
@@ -47,6 +47,7 @@ h3{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .restaurante{
