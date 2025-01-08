@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## MEJORAR
+
+- Focus de btones aceptar e ingresar.
+- Cuando se haga el pedido, el usuario pueda elegir donde recogerlo.
+- Botones añadir al carrito ( cambiar ).
+- Cuando inicie sesion "quitar boton iniciar sesion" por desplegable con su informacion.
+- Ordenar y comentar el codigo .
+- En movil, añadir icono con cantidad de carrito y mensaje de producto añadido.
