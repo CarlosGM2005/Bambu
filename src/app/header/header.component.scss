@@ -3,6 +3,7 @@ $primary-color: #58A681;
 $secondary-color: #3D3D3D;
 $terciary-color: #F96D50;
 
+//Estilo de la barra de navegación
 nav{
     background-color: $secondary-color;
 }
@@ -10,8 +11,6 @@ nav{
 #barra{
     display: flex;
 }
-
-//Navbar
 
 .nav-link{
     background-color: $primary-color;
@@ -31,50 +30,15 @@ nav{
     font-weight: bold;
 }
 
-//Media para botones de navegacion
-@media (max-width: 1199px){
-    .nav-link{
-        max-width: 50%;
-        margin-left: 25%;
-    }
-}
-
-
 .navbar-nav .nav-item {
     margin: 0 15px; 
 }
-
-//Media para logo y navegacion
-@media (max-width: 576px) {
-    #logo {
-        max-width: 75%; 
-    }
-    .nav-link{
-        font-size: 16px;
-    }
-}
-
-
-/* Estilo del botón de hamburguesa */
-.navbar-toggler {
-    border-color: white; /* Borde blanco */
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-.navbar-toggler:focus{
-    color: white;
-}
-
 
 //Animación de los enlaces
 .nav-link span{
     position: absolute;
     display: block;
 }
-
 
 .nav-link:hover{
     transition: all .5s;
@@ -85,3 +49,39 @@ nav{
 .nav-link:hover span{
     animation-play-state: paused;
 }
+
+//Estilo del botón de hamburguesa
+.navbar-toggler {
+    border-color: white;
+}
+
+//Estilo del botón hamburguesa
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus{
+    color: white;
+}
+
+//Media querie para botones de navegación
+@media (max-width: 1199px){
+    .nav-link{
+        max-width: 50%;
+        margin-left: 25%;
+    }
+}
+
+//Media querie para logo y navegación
+@media (max-width: 576px) {
+    #logo {
+        max-width: 75%; 
+    }
+    .nav-link{
+        font-size: 16px;
+    }
+}
+
+
+
+

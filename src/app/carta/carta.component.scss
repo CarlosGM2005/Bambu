@@ -11,7 +11,7 @@ $terciary-color: #F96D50;
     font-style: normal;
 }
 
-/* Header con Navbar */
+/* Estilo de Barra de navegación de Categorías */
 .navbar-nav {
     margin-top: 2%;
     width: 100%;
@@ -33,6 +33,7 @@ $terciary-color: #F96D50;
     font-weight: bold;
 }
 
+//Animación Barra de Navegación de Categorías
 .nav-link:after{
     bottom: 0;
     content: "";
@@ -54,7 +55,7 @@ $terciary-color: #F96D50;
     color: $terciary-color;
 }
 
-/* Título de la sección */
+// Estilo de un Producto
 h1 {
     color: $terciary-color;
     margin: 1rem 0 1rem;
@@ -63,13 +64,10 @@ h1 {
     font-weight: bold;
 }
 
-/* Contenedor de surtidos */
 .menu-grid {
     padding: 2rem 0;
 }
 
-
-/* Elementos del menú */
 .menu-item {
     text-align: center;
     transition: transform 0.3s ease;
@@ -111,7 +109,7 @@ h1 {
     background-color: $terciary-color;
 }
 
-//Estilos modal
+//Estilos del modal
 .modal-body p {
     font-size: 1rem;
     line-height: 1.5;
