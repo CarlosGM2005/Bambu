@@ -22,6 +22,7 @@ h2{
     margin-bottom: 2%;
 }
 
+//Estilo del focus de los select y de los inputs
 .opcionesReserva select:focus, 
 .opcionesReserva input:focus {
     outline: none; 
@@ -34,6 +35,7 @@ h2{
     color: white;
 }
 
+//Estilo Mensaje de Confirmación
 .mensaje-confirmacion {
     position: fixed;
     top: 50%;

@@ -4,7 +4,7 @@ $secondary-color: #3D3D3D;
 $terciary-color: #F96D50;
 
 
-//Estilos barra navegación
+//Estilos barra navegación de categorías
 .navbar-nav {
     margin-top: 2%;
     width: 100%;
@@ -14,11 +14,9 @@ $terciary-color: #F96D50;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: space-evenly;
-
 }
 
-//Animaciones del navbar
-
+//Animaciones barra navegación de categorías
 .nav-link{
     color: $primary-color;
     text-transform: uppercase;
@@ -49,6 +47,7 @@ $terciary-color: #F96D50;
     color: $terciary-color;
 }
 
+//Estilo de los Productos
 #titulo {
     padding: 1%;
     color: $terciary-color;
@@ -79,29 +78,7 @@ $terciary-color: #F96D50;
     align-items: center;
 }
 
-
-@media (max-width: 992px) {
-    .col-md-6{
-        display: block;
-        align-items: center;
-        
-    }
-
-    .infoProducto{
-        display: flex;
-        gap: 15px;
-        justify-content: center;
-        align-items: center;
-        text-align: center !important;
-        font-weight: bold;
-    }
-
-    .infoProducto p{
-        margin: 0 !important;
-    }
-  }
-  
-
+//Estilo de los Productos
 .infoProducto {
     padding: 3%;
     font-weight: bold;
@@ -120,14 +97,14 @@ $terciary-color: #F96D50;
     border-radius: 10%;
 }
 
-.imagenes__productos:hover {
-    transform: scale(1.05);
-}
-
 .precio__producto {
     color: $primary-color;
 }
 
+//Animación de la imagen de cada producto
+.imagenes__productos:hover {
+    transform: scale(1.05);
+}
 
 //Estilos parte del resumen de la compra
 hr{
@@ -188,3 +165,25 @@ a{
     text-decoration: none;
     color: white;
 }
+
+//Media querie para dispositivos móviles
+@media (max-width: 992px) {
+    .col-md-6{
+        display: block;
+        align-items: center;     
+    }
+
+    .infoProducto{
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        text-align: center !important;
+        font-weight: bold;
+    }
+
+    .infoProducto p{
+        margin: 0 !important;
+    }
+  }
+  
