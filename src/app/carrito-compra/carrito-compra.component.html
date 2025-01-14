@@ -68,21 +68,21 @@
                         <img [src]="item.urlImgMenos" alt="" (click)="reducirCantidad(item)" class="iconosCarrito">
                         <div>{{ item.cantidad }}</div>
                         <img [src]="item.urlImgMas" alt="" (click)="incrementarCantidad(item)" class="iconosCarrito">
-                        <div class="pedido-precio">{{ item.total }}</div>
+                        <div class="pedido-precio">{{ item.total }}€</div>
                     </div>
                     <p *ngIf="contenedor.length === 0" class="mensaje-vacio">El contenedor está vacío.</p>
                 </div>
 
-                <hr />
+                <hr/>
 
                 <div class="infoFinal">
                     <div class="precio__subtotal">
-                        <p>Subtotal:</p>
-                        <p>{{ calcularSubtotal() }}</p>
+                        <p><b>Subtotal:</b></p>
+                        <p>{{ calcularSubtotal() }}€</p>
                     </div>
                     <div class="precio__final">
-                        <p>Total:</p>
-                        <p>{{ calcularTotal() }}</p>
+                        <p><b>Total:</b></p>
+                        <p>{{ calcularTotal() }}€</p>
                     </div>
                 </div>
 

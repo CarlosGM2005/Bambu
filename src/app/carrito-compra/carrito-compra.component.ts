@@ -183,7 +183,7 @@ export class CarritoCompraComponent {
     {
       nombre: 'Nigiri Anguila',
       tipo: 'NIGIRIS',
-      precio: 4.90 ,
+      precio: 4.90,
       urlImg: 'assets/images/productos/nigiris/Nigiri_Anguila.png',
       descripcion: 'Dos piezas de arroz de sushi cubiertos de filetes de anguila.',
       alergenos: 'CEREALES CON GLUTEN, PESCADO, SÉSAMO, SOJA Y SULFITOS',
@@ -530,7 +530,7 @@ export class CarritoCompraComponent {
       urlIcono: "assets/images/iconos/carrito-aniadir.png",
       title: "Tarta de Queso y Pistacho",
     }
-    
+
 
 
   ];
@@ -554,16 +554,17 @@ export class CarritoCompraComponent {
   // Método para añadir un producto al contenedor
   onAddProduct(producto: any) {
     const index = this.contenedor.findIndex(item => item.nombre === producto.nombre);
+    producto.precio = parseFloat(producto.precio.toFixed(2));
     if (index > -1) {
       // Si ya existe el producto, aumentamos la cantidad
       this.contenedor[index].cantidad++;
-      this.contenedor[index].total = this.contenedor[index].cantidad * producto.precio;
+      this.contenedor[index].total = parseFloat((this.contenedor[index].cantidad * producto.precio).toFixed(2)); // Redondeo
     } else {
       // Si no existe, lo añadimos
       this.contenedor.push({
         ...producto,
         cantidad: 1, // Inicia con una cantidad de 1
-        total: producto.precio,
+        total: parseFloat(producto.precio.toFixed(2)), // Redondeo
         urlImgMenos: "../../assets/images/iconos/signo-menos.png",
         urlImgMas: "../../assets/images/iconos/signo más.png"
       });
@@ -573,24 +574,25 @@ export class CarritoCompraComponent {
   // Método para incrementar la cantidad de un producto
   incrementarCantidad(item: any) {
     item.cantidad++;
-    item.total = item.cantidad * item.precio;
+    item.total = parseFloat((item.cantidad * item.precio).toFixed(2)); // Redondeo
   }
 
   // Método para reducir la cantidad de un producto
   reducirCantidad(item: any) {
     if (item.cantidad > 1) {
       item.cantidad--;
-      item.total = item.cantidad * item.precio;
+      item.total = parseFloat((item.cantidad * item.precio).toFixed(2)); // Redondeo
     } else {
       // Si la cantidad llega a 0, lo eliminamos del contenedor
       this.contenedor = this.contenedor.filter(producto => producto !== item);
     }
   }
-  
+
   calcularSubtotal(): number {
-    return this.contenedor.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
+    // Redondeamos el subtotal final
+    return parseFloat(this.contenedor.reduce((sum, item) => sum + item.total, 0).toFixed(2));
   }
-  
+
   calcularTotal(): number {
     // Puedes agregar impuestos u otras reglas de negocio aquí si es necesario.
     return this.calcularSubtotal();
