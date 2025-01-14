@@ -28,6 +28,10 @@
             </li>
         </ul>
 
+        <div class="divBtnCarrito">
+            <button class="btnCarrito" onclick="document.getElementById('tuPedido').scrollIntoView({behavior: 'smooth'});">Carrito de compra: 1 artículo</button>
+        </div>
+
     <div class="container-fluid">
         <div class="row" id="filaGrande">
             <!--Columna de Productos a la Derecha-->
@@ -50,7 +54,7 @@
 
             <!-- Simulación de Resumen en Carrito de Compra. Columna Izquierda-->
             <div class="col-12 col-lg-4">
-                <div class="encabezado">
+                <div class="encabezado" id="tuPedido">
                     <p><strong>TU PEDIDO</strong></p>
                 </div>
 
