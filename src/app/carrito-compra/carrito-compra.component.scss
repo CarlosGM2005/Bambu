@@ -114,13 +114,26 @@ $terciary-color: #F96D50;
     display: flex;
     gap: 15px;
     align-items: center;
-    justify-content: center;
     margin-bottom: 10px;
+    justify-content: flex-start; 
 }
 
 .pedido-nombre{
+    width: 200px;
     align-items: left !important;
 }
+
+.pedido-precio {
+    width: 80px; /* Ancho fijo para los precios */
+    text-align: right; /* Alinea el precio a la derecha */
+}
+
+.pedido-cantidad {
+    width: 50px; /* Ancho fijo para la cantidad */
+    text-align: center; /* Centra la cantidad */
+}
+
+
 //Botón de Carrito de compra en pantallas reducidas
 .btnCarrito{
     background-color: $primary-color;
@@ -165,14 +178,12 @@ hr{
 }
 
 .precio__subtotal, .precio__final{
-    display: grid;
-    grid-template-columns: 70% 30%;
+    display: flex;
     align-items: center;
-    margin-left: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
+    justify-content: space-between;
 }
-
-
-
 
 .pagar{
     text-align: center;
@@ -223,6 +234,16 @@ a{
         z-index: 1000;
         margin-top: 10 px;
     }
+
+    .infoProducto{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pedido-nombre, .pedido-precio, .pedido-cantidad{
+        width: auto;
+    }
+
 }
 
   
