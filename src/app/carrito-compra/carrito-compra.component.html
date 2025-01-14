@@ -1,40 +1,43 @@
- <!-- Barra de navegación de Categorías -->
+<!-- Barra de navegación de Categorías -->
 
 <div class="container">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/surtidos" (click)="filtrarPorCategoria($event, 'SURTIDOS')">Surtidos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'ENTRANTES')">Entrantes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'ARROZ Y NOODLES')">Arroz y noodles</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'NIGIRIS')">Nigiris</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'ROLLS')">Rolls</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'MAKIS')">Makis</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'BEBIDAS')">Bebidas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'POSTRES')">Postres</a>
-            </li>
-        </ul>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/surtidos" (click)="filtrarPorCategoria($event, 'SURTIDOS')">Surtidos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'ENTRANTES')">Entrantes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'ARROZ Y NOODLES')">Arroz y
+                noodles</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'NIGIRIS')">Nigiris</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'ROLLS')">Rolls</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'MAKIS')">Makis</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'BEBIDAS')">Bebidas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/carta" (click)="filtrarPorCategoria($event, 'POSTRES')">Postres</a>
+        </li>
+    </ul>
 
-        <div class="divBtnCarrito">
-            <button class="btnCarrito" onclick="document.getElementById('tuPedido').scrollIntoView({behavior: 'smooth'});">Carrito de compra: 1 artículo</button>
-        </div>
+    <div class="divBtnCarrito">
+        <button class="btnCarrito"
+            onclick="document.getElementById('tuPedido').scrollIntoView({behavior: 'smooth'});">Carrito de compra: 1
+            artículo</button>
+    </div>
 
     <div class="container-fluid">
         <div class="row" id="filaGrande">
-            <!--Columna de Productos a la Derecha-->
+            <!-- Columna de Productos a la Derecha -->
             <div class="col-12 col-lg-8">
                 <h3 id="titulo">{{ categoria }}</h3>
                 <div class="row">
@@ -45,8 +48,9 @@
                         </div>
                         <div class="infoProducto">
                             <p>{{ producto.nombre }}</p>
-                            <p class="precio__producto">{{ producto.precio }}</p>
-                            <img [src]="producto.urlIcono" alt="Añadir al carrito" class="iconos" />
+                            <p class="precio__producto">{{ producto.precio }}€</p>
+                            <img [src]="producto.urlIcono" alt="Añadir al carrito" class="iconos"
+                                (click)="onAddProduct(producto)" />
                         </div>
                     </div>
                 </div>
@@ -54,34 +58,38 @@
 
             <!-- Simulación de Resumen en Carrito de Compra. Columna Izquierda-->
             <div class="col-12 col-lg-4">
-                <div class="encabezado" id="tuPedido">
-                    <p><strong>TU PEDIDO</strong></p>
+                <div class="encabezado">
+                    <h3><strong>TU PEDIDO</strong></h3>
                 </div>
 
-                <div class="mensajeInicial">
-                    <div>SURTIDO Nº1</div>
-                    <img src="assets/images/iconos/signo más.png" alt="Icono de añadir más productos">
-                    <div>1</div>
-                    <img src="assets/images/iconos/signo-menos.png" alt="Icono de quitar productos">
-                    <div>18.50€</div>
+                <div class="infoProducto">
+                    <div *ngFor="let item of contenedor" class="pedido-item">
+                        <div class="pedido-nombre">{{ item.nombre }}</div>
+                        <img [src]="item.urlImgMenos" alt="" (click)="reducirCantidad(item)" class="iconosCarrito">
+                        <div>{{ item.cantidad }}</div>
+                        <img [src]="item.urlImgMas" alt="" (click)="incrementarCantidad(item)" class="iconosCarrito">
+                        <div class="pedido-precio">{{ item.total }}</div>
+                    </div>
+                    <p *ngIf="contenedor.length === 0" class="mensaje-vacio">El contenedor está vacío.</p>
                 </div>
 
-                <hr>
+                <hr />
 
-                <div id="precios">
-                    <div class="precio__final">
+                <div class="totales">
+                    <div class="subtotal">
                         <p>Subtotal:</p>
-                        <p>18.50€</p>
+                        <p>{{ calcularSubtotal() }}</p>
                     </div>
-                    <div class="precio__final">
+                    <div class="total">
                         <p>Total:</p>
-                        <p>18.50€</p>
+                        <p>{{ calcularTotal() }}</p>
                     </div>
                 </div>
 
-                <div style="text-align: center;">
-                    <button class="btnPagar"><a href="https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA">Ir a
-                            pagar</a></button>
+                <div class="pagar">
+                    <button class="btnPagar">
+                        <a href="https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA">Ir a pagar</a>
+                    </button>
                 </div>
             </div>
         </div>

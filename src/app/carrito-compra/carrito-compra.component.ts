@@ -549,4 +549,51 @@ export class CarritoCompraComponent {
     this.categoria = categoria;
   }
 
+  contenedor: any[] = [];
+
+  // Método para añadir un producto al contenedor
+  onAddProduct(producto: any) {
+    const index = this.contenedor.findIndex(item => item.nombre === producto.nombre);
+    if (index > -1) {
+      // Si ya existe el producto, aumentamos la cantidad
+      this.contenedor[index].cantidad++;
+      this.contenedor[index].total = this.contenedor[index].cantidad * producto.precio;
+    } else {
+      // Si no existe, lo añadimos
+      this.contenedor.push({
+        ...producto,
+        cantidad: 1, // Inicia con una cantidad de 1
+        total: producto.precio,
+        urlImgMenos: "../../assets/images/iconos/signo-menos.png",
+        urlImgMas: "../../assets/images/iconos/signo más.png"
+      });
+    }
+  }
+
+  // Método para incrementar la cantidad de un producto
+  incrementarCantidad(item: any) {
+    item.cantidad++;
+    item.total = item.cantidad * item.precio;
+  }
+
+  // Método para reducir la cantidad de un producto
+  reducirCantidad(item: any) {
+    if (item.cantidad > 1) {
+      item.cantidad--;
+      item.total = item.cantidad * item.precio;
+    } else {
+      // Si la cantidad llega a 0, lo eliminamos del contenedor
+      this.contenedor = this.contenedor.filter(producto => producto !== item);
+    }
+  }
+  
+  calcularSubtotal(): number {
+    return this.contenedor.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
+  }
+  
+  calcularTotal(): number {
+    // Puedes agregar impuestos u otras reglas de negocio aquí si es necesario.
+    return this.calcularSubtotal();
+  }
+
 }
