@@ -31,9 +31,11 @@
 
     <div class="divBtnCarrito">
         <button class="btnCarrito"
-            onclick="document.getElementById('tuPedido').scrollIntoView({behavior: 'smooth'});">Carrito de compra: 1
-            artículo</button>
+            onclick="document.getElementById('tuPedido').scrollIntoView({behavior: 'smooth'});">Carrito de compra: {{
+            calcularCantidadTotal() }} artículo{{ calcularCantidadTotal() === 1 ? '' : 's' }}</button>
     </div>
+
+
 
     <div class="container-fluid">
         <div class="row" id="filaGrande">
@@ -73,7 +75,7 @@
                     <p *ngIf="contenedor.length === 0" class="mensaje-vacio">El contenedor está vacío.</p>
                 </div>
 
-                <hr/>
+                <hr />
 
                 <div class="infoFinal">
                     <div class="precio__subtotal">

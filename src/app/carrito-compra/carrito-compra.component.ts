@@ -598,4 +598,9 @@ export class CarritoCompraComponent {
     return this.calcularSubtotal();
   }
 
+  // Método para calcular la cantidad total de artículos en el carrito
+  calcularCantidadTotal(): number {
+    return this.contenedor.reduce((total, item) => total + item.cantidad, 0);
+  }
+
 }
