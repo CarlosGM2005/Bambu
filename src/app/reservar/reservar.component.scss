@@ -66,6 +66,7 @@ h2{
     animation-play-state: paused;
 }
 
+
 .btn:focus {
     outline: 2px solid #000000; 
     background-color: darken($primary-color, 10%); 
@@ -74,3 +75,4 @@ h2{
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
     transition: all 0.3s ease; 
 }
+
