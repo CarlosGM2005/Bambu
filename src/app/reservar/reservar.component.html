@@ -1,59 +1,86 @@
 <div class="container">
     <h2>¡Bienvenido a Bambú!</h2>
     <h2>Haz tu reserva</h2>
-    
-    <!--Elección del local-->
-    <div class="opcionesReserva">
-        <form action="#">
-            <label for="local">
-                <h5>¿Dónde deseas reservar?</h5>
-            </label><br>
-            <select class="form-select" id="local" required>
-                <option value="">--Selecciona una opción--</option>
-                <option value="opcion1">Bambú Sevilla</option>
-                <option value="opcion2">Bambú Utrera</option>
-            </select>
-        </form>
-    </div>
-    
-    <!--Elección de la fecha-->
-    <div class="opcionesReserva">
-        <form action="#">
-            <label for="fecha" class="form-label">
-                <h5>¿Qué día deseas reservar?</h5>
-            </label>
-            <input type="date" id="fecha" name="fecha" class="form-control" required>
-        </form>
-    </div>
-    
-    <!--Elección de hora-->
-    <div class="opcionesReserva">
-        <form action="#">
-            <label for="local">
-                <h5>¿A qué hora deseas reservar?</h5>
-            </label><br>
-            <select class="form-select" required>
-                <option value="">--Selecciona una opción--</option>
-                <option value="13:30">13:30</option>
-                <option value="14:00">14:00</option>
-                <option value="14:30">14:30</option>
-                <option value="15:00">15:00</option>
-                <option value="15:30">15:30</option>
-                <option value="20:30">20:30</option>
-                <option value="21:00">21:00</option>
-                <option value="21:30">21:30</option>
-                <option value="22:00">22:00</option>
-                <option value="22:30">22:30</option>
-            </select>
-        </form>
-    </div>
 
-    <div class="text-end" style="margin-bottom: 2%;">
-        <button class="btn" (click)="finalizarReserva()"><strong>FINALIZAR</strong></button>
-    </div>
+    <form>
 
+        <!--Elección del local-->
+        <div class="opcionesReserva">
+            <form action="#">
+                <label for="local">
+                    <h5>¿Dónde deseas reservar?</h5>
+                </label><br>
+                <select class="form-select" [(ngModel)]="reserva.local" id="local" name="local" required>
+                    <option value="">--Selecciona una opción--</option>
+                    <option value="Bambú Sevilla">Bambú Sevilla</option>
+                    <option value="Bambú Utrera">Bambú Utrera</option>
+                </select>
+            </form>
+        </div>
+
+        <!--Elección de la fecha-->
+        <div class="opcionesReserva">
+            <form action="#">
+                <label for="fecha" class="form-label">
+                    <h5>¿Qué día deseas reservar?</h5>
+                </label>
+                <input type="date" id="fecha" name="fecha" class="form-control" [(ngModel)]="reserva.fecha" required>
+            </form>
+        </div>
+
+        <!--Elección de hora-->
+        <div class="opcionesReserva">
+            <form action="#">
+                <label for="local">
+                    <h5>¿A qué hora deseas reservar?</h5>
+                </label><br>
+                <select class="form-select" [(ngModel)]="reserva.hora" name="hora" required>
+                    <option value="">--Selecciona una opción--</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                    <option value="22:00">22:00</option>
+                    <option value="22:30">22:30</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="text-end" style="margin-bottom: 2%;">
+            <button class="btn" data-bs-toggle="modal"
+                data-bs-target="#exampleModal"><strong>FINALIZAR</strong></button>
+        </div>
+
+    </form>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Datos de la reserva</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="modalReserva"><strong>Local:</strong> {{ reserva.local }}</p>
+                    <p class="modalReserva"><strong>Día:</strong> {{ reserva.fecha }}</p>
+                    <p class="modalReserva"><strong>Hora:</strong> {{ reserva.hora }}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal"><strong>CANCELAR</strong></button>
+                    <button type="button" class="btn" (click)="finalizarReserva()"
+                        data-bs-dismiss="modal"><strong>CONFIRMAR</strong></button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Mensaje de Confirmación -->
     <div *ngIf="mensajeVisible" class="mensaje-confirmacion">
         <p><strong>Hemos enviado un SMS a tu número de teléfono para confirmar la reserva. <br>
-            ¡Muchas gracias!</strong></p>
+                ¡Muchas gracias!</strong></p>
     </div>

@@ -6,15 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./reservar.component.scss']
 })
 export class ReservarComponent {
-  
+
   mensajeVisible: boolean = false;
 
   finalizarReserva() {
+    this.reserva.local = '';
+    this.reserva.fecha = '';
+    this.reserva.hora = '';
+    
     this.mensajeVisible = true;
 
     setTimeout(() => {
       this.mensajeVisible = false; // Oculta el mensaje después de 5 segundos
     }, 5000);
   }
-  
+
+  reserva = {
+    local: '',
+    fecha: '',
+    hora: ''
+  };
+
 }
