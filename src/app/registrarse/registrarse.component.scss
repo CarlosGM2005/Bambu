@@ -3,6 +3,18 @@ $primary-color: #58A681;
 $secondary-color: #3D3D3D;
 $terciary-color: #F96D50;
 
+.ocultar {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 #seccion{
     margin-top: 2%;
     margin-bottom: 2%;
