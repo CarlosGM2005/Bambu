@@ -7,32 +7,31 @@
 <div class="container">
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" (click)="filtrarPorCategoria($event, 'SURTIDOS')">Surtidos</a>
+            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'SURTIDOS')">Surtidos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" (click)="filtrarPorCategoria($event, 'ENTRANTES')">Entrantes</a>
+            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'ENTRANTES')">Entrantes</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" (click)="filtrarPorCategoria($event, 'ARROZ Y NOODLES')">Arroz y
+            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'ARROZ Y NOODLES')">Arroz y
                 noodles</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" (click)="filtrarPorCategoria($event, 'NIGIRIS')">Nigiris</a>
+            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'NIGIRIS')">Nigiris</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" (click)="filtrarPorCategoria($event, 'ROLLS')">Rolls</a>
+            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'ROLLS')">Rolls</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" (click)="filtrarPorCategoria($event, 'MAKIS')">Makis</a>
+            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'MAKIS')">Makis</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" (click)="filtrarPorCategoria($event, 'BEBIDAS')">Bebidas</a>
+            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'BEBIDAS')">Bebidas</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" (click)="filtrarPorCategoria($event, 'POSTRES')">Postres</a>
+            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'POSTRES')">Postres</a>
         </li>
     </ul>
-
     <div class="divBtnCarrito">
         <button class="btnCarrito"
             onclick="document.getElementById('tuPedido').scrollIntoView({behavior: 'smooth'});">Carrito de compra: {{
@@ -50,13 +49,15 @@
                     <!-- Genero dinámicamente los productos -->
                     <div class="col-md-6 mb-4" *ngFor="let producto of productos">
                         <div class="imagenes__productos">
-                            <img [src]="producto.urlImg" [alt]="'Imagen de ' + producto.nombre" [title]="producto.title" />
+                            <img [src]="producto.urlImg" [alt]="'Imagen de ' + producto.nombre"
+                                [title]="producto.title" />
                         </div>
                         <div class="infoProducto">
                             <p>{{ producto.nombre }}</p>
                             <p class="precio__producto">{{ producto.precio }}€</p>
-                            <img [src]="producto.urlIcono" alt="Añadir al carrito {{ producto.nombre }}" class="iconos"
-                                (click)="onAddProduct(producto)" />
+                            <button (click)="onAddProduct(producto)"><img [src]="producto.urlIcono"
+                                    alt="Añadir al carrito {{ producto.nombre }}" class="iconos" />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -83,12 +84,20 @@
 
                 <div class="infoFinal">
                     <div class="precio__subtotal">
-                        <div><p><b>Subtotal:</b></p></div>
-                        <div><p>{{ calcularSubtotal() }}€</p></div>
+                        <div>
+                            <p><b>Subtotal:</b></p>
+                        </div>
+                        <div>
+                            <p>{{ calcularSubtotal() }}€</p>
+                        </div>
                     </div>
                     <div class="precio__final">
-                        <div><p><b>Total:</b></p></div>
-                        <div><p>{{ calcularTotal() }}€</p></div>
+                        <div>
+                            <p><b>Total:</b></p>
+                        </div>
+                        <div>
+                            <p>{{ calcularTotal() }}€</p>
+                        </div>
                     </div>
                 </div>
 

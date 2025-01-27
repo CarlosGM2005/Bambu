@@ -53,7 +53,15 @@ $terciary-color: #F86649;
 
 .nav-link:hover {
     color: $terciary-color;
+    cursor: pointer;
 }
+
+.nav-link:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+    color: $terciary-color; /* Cambia el color del texto si quieres */
+  }
+
 
 // Estilo de un Producto
 h1 {

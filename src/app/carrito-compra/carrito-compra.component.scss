@@ -56,8 +56,14 @@ $terciary-color: #F86649;
 
 .nav-link:hover {
     color: $terciary-color;
+    cursor: pointer;
 }
 
+.nav-link:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+    color: $terciary-color; /* Cambia el color del texto si quieres */
+  }
 //Estilo de los Productos
 #titulo {
     padding: 1%;
@@ -144,6 +150,11 @@ $terciary-color: #F86649;
     text-align: center; /* Centra la cantidad */
 }
 
+button{
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
 
 //Botón de Carrito de compra en pantallas reducidas
 .btnCarrito{
@@ -217,6 +228,7 @@ hr{
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
     transition: all 0.3s ease; 
 }
+
 
 a{
     text-decoration: none;
