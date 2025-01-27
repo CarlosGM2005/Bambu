@@ -549,6 +549,7 @@ export class CarritoCompraComponent {
     this.categoria = categoria;
   }
 
+  
   contenedor: any[] = [];
 
   // Método para añadir un producto al contenedor
@@ -602,5 +603,6 @@ export class CarritoCompraComponent {
   calcularCantidadTotal(): number {
     return this.contenedor.reduce((total, item) => total + item.cantidad, 0);
   }
+
 
 }
