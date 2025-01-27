@@ -60,10 +60,14 @@ $terciary-color: #F86649;
 }
 
 .nav-link:focus {
-    outline: 2px solid $primary-color;
-    outline-offset: 2px;
-    color: $terciary-color; /* Cambia el color del texto si quieres */
-  }
+    outline: 2px solid $secondary-color;
+    border-radius: 14px;
+    padding: 10px;
+    transform: rotate(0deg) scale(1.05); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
+    transition: all 0.3s ease; 
+}
+
 //Estilo de los Productos
 #titulo {
     padding: 1%;
