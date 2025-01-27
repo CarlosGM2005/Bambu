@@ -36,8 +36,8 @@
         <div class="col-md-6 col-lg-4 mb-4" *ngFor="let producto of productos">
             <div class="menu-item">
                 <img [src]="producto.urlImg" [alt]="'Imagen de ' + producto.nombre" [title]="producto.title">
-                <h2>{{ producto.nombre }}</h2>
-                <p>{{ producto.precio }}</p>
+                <p class="tituloProducto"><b>{{ producto.nombre }}</b></p>
+                <p class="precioProducto"><b>{{ producto.precio }}</b></p>
                 <!-- Botón Más información -->
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#surtidoModal"
                     (click)="productoFiltrado = producto">
