@@ -4,18 +4,13 @@ $secondary-color: #3D3D3D;
 $terciary-color: #E22D08;
 
 
-.ocultar {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: $terciary-color;
+    margin-bottom: 5%;
 }
-
 
 #seccion{
     margin-top: 2%;

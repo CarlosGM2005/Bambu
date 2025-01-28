@@ -1,7 +1,3 @@
-<header class="container">
-    <h1 class="ocultar">Bambú - Carrito de Compra</h1>
-</header>
-
 <!-- Barra de navegación de Categorías -->
 
 <div class="container">
@@ -44,7 +40,7 @@
         <div class="row" id="filaGrande">
             <!-- Columna de Productos a la Derecha -->
             <div class="col-12 col-lg-8">
-                <h2 id="titulo">{{ categoria }}</h2>
+                <h1 id="titulo">{{ categoria }}</h1>
                 <div class="row">
                     <!-- Genero dinámicamente los productos -->
                     <div class="col-md-6 mb-4" *ngFor="let producto of productos">
@@ -66,7 +62,7 @@
             <!-- Simulación de Resumen en Carrito de Compra. Columna Izquierda-->
             <div class="col-12 col-lg-4" id="tuPedido">
                 <div class="encabezado">
-                    <h3><strong>TU PEDIDO</strong></h3>
+                    <h1><strong>TU PEDIDO</strong></h1>
                 </div>
 
                 <div class="infoProducto">
