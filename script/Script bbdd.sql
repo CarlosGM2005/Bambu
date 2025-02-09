@@ -48,8 +48,8 @@ CREATE TABLE PEDIDO (
   FOREIGN KEY (id_local) REFERENCES LOCAL (id_local)
 );
 
--- Tabla CONTIENE
-CREATE TABLE CONTIENE (
+-- Tabla Detalles Pedido
+CREATE TABLE DETALLESPEDIDO (
   nombre_plato varchar(45) NOT NULL,
   num_pedido int(5) NOT NULL,
   cantidad tinyint(2) NOT NULL,
