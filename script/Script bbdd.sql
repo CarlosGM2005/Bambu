@@ -17,12 +17,13 @@ CREATE TABLE PRODUCTO (
 
 -- Tabla USUARIO
 CREATE TABLE USUARIO (
-  dni varchar(9) NOT NULL PRIMARY KEY,  
+  dni varchar(9),  
   nombre varchar(20) NOT NULL,
   apellidos varchar(50) NOT NULL,
-  email varchar(64) NOT NULL,
+  email varchar(64),
   telefono varchar(9) NOT NULL,
   contraseña varchar(15) NOT NULL
+  PRIMARY KEY (dni, email)
 );
 
 -- Tabla LOCAL
@@ -41,8 +42,9 @@ CREATE TABLE PEDIDO (
   fecha date NOT NULL,
   importe_total decimal(5, 2) NOT NULL, 
   dni_usuario varchar(9) NOT NULL,  
+  email varchar(64), 
   id_local smallint(3) NOT NULL,
-  FOREIGN KEY (dni_usuario) REFERENCES USUARIO (dni),
+  FOREIGN KEY (dni_usuario, email) REFERENCES USUARIO (dni, email),
   FOREIGN KEY (id_local) REFERENCES LOCAL (id_local)
 );
 
@@ -63,16 +65,8 @@ CREATE TABLE RESERVA (
   hora time NOT NULL,
   cant_persona tinyint(2) NOT NULL,
   dni_usuario varchar(9) NOT NULL,
+  email varchar(64),
   id_local smallint(3) NOT NULL,
-  FOREIGN KEY (dni_usuario) REFERENCES USUARIO (dni),
+  FOREIGN KEY (dni_usuario, email) REFERENCES USUARIO (dni, email),
   FOREIGN KEY (id_local) REFERENCES LOCAL (id_local)
 );
-
--- Restricciones de clave foránea (ya las has declarado correctamente)
-ALTER TABLE PRODUCTO ADD CONSTRAINT PRODUCTO_tipo_producto_fk FOREIGN KEY (tipo_producto) REFERENCES TIPO_PRODUCTO (nombre);
-ALTER TABLE CONTIENE ADD CONSTRAINT CONTIENE_nombre_plato_fk FOREIGN KEY (nombre_plato) REFERENCES PRODUCTO (nombre_plato);
-ALTER TABLE CONTIENE ADD CONSTRAINT CONTIENE_num_pedido_fk FOREIGN KEY (num_pedido) REFERENCES PEDIDO (num_pedido);
-ALTER TABLE PEDIDO ADD CONSTRAINT PEDIDO_dni_usuario_fk FOREIGN KEY (dni_usuario) REFERENCES USUARIO (dni);
-ALTER TABLE RESERVA ADD CONSTRAINT RESERVA_dni_usuario_fk FOREIGN KEY (dni_usuario) REFERENCES USUARIO (dni);
-ALTER TABLE RESERVA ADD CONSTRAINT RESERVA_id_local_fk FOREIGN KEY (id_local) REFERENCES LOCAL (id_local);
-ALTER TABLE PEDIDO ADD CONSTRAINT PEDIDO_id_local_fk FOREIGN KEY (id_local) REFERENCES LOCAL (id_local);
