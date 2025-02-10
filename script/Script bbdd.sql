@@ -15,20 +15,41 @@ CREATE TABLE PRODUCTO (
   FOREIGN KEY (tipo_producto) REFERENCES TIPO_PRODUCTO (nombre)
 );
 
+-- Tabla USUARIO
+CREATE TABLE USUARIO (
+  dni varchar(9),  
+  nombre varchar(20) NOT NULL,
+  apellidos varchar(50) NOT NULL,
+  email varchar(64),
+  telefono varchar(9) NOT NULL,
+  contraseña varchar(15) NOT NULL
+  PRIMARY KEY (dni, email)
+);
+
+-- Tabla LOCAL
+CREATE TABLE LOCAL (
+  id_local smallint(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,  -- Autoincrementable
+  nombre varchar(20) NOT NULL,  
+  direccion varchar(50) NOT NULL,  
+  telefono varchar(9) NOT NULL, 
+  cant_mesas tinyint(2) NOT NULL
+);
+
 -- Tabla PEDIDO
 CREATE TABLE PEDIDO (
-  num_pedido int(5) NOT NULL PRIMARY KEY,
+  num_pedido int(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,  -- Autoincrementable
   hora time NOT NULL,
   fecha date NOT NULL,
   importe_total decimal(5, 2) NOT NULL, 
   dni_usuario varchar(9) NOT NULL,  
+  email varchar(64), 
   id_local smallint(3) NOT NULL,
-  FOREIGN KEY (dni_usuario) REFERENCES USUARIO (dni),
+  FOREIGN KEY (dni_usuario, email) REFERENCES USUARIO (dni, email),
   FOREIGN KEY (id_local) REFERENCES LOCAL (id_local)
 );
 
--- Tabla CONTIENE
-CREATE TABLE CONTIENE (
+-- Tabla Detalles Pedido
+CREATE TABLE DETALLESPEDIDO (
   nombre_plato varchar(45) NOT NULL,
   num_pedido int(5) NOT NULL,
   cantidad tinyint(2) NOT NULL,
@@ -37,42 +58,15 @@ CREATE TABLE CONTIENE (
   FOREIGN KEY (num_pedido) REFERENCES PEDIDO (num_pedido)
 );
 
--- Tabla USUARIO
-CREATE TABLE USUARIO (
-  dni varchar(9) NOT NULL PRIMARY KEY,  
-  nombre varchar(20) NOT NULL,
-  apellidos varchar(50) NOT NULL,
-  email varchar(64) NOT NULL,
-  telefono varchar(9) NOT NULL,
-  contraseña varchar(15) NOT NULL
-);
-
 -- Tabla RESERVA
 CREATE TABLE RESERVA (
-  num_reserva int(5) NOT NULL PRIMARY KEY,
+  num_reserva int(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,  -- Autoincrementable
   fecha date NOT NULL,
   hora time NOT NULL,
   cant_persona tinyint(2) NOT NULL,
   dni_usuario varchar(9) NOT NULL,
+  email varchar(64),
   id_local smallint(3) NOT NULL,
-  FOREIGN KEY (dni_usuario) REFERENCES USUARIO (dni),
+  FOREIGN KEY (dni_usuario, email) REFERENCES USUARIO (dni, email),
   FOREIGN KEY (id_local) REFERENCES LOCAL (id_local)
 );
-
--- Tabla LOCAL
-CREATE TABLE LOCAL (
-  id_local smallint(3) NOT NULL PRIMARY KEY,
-  nombre varchar(20) NOT NULL,  
-  direccion varchar(50) NOT NULL,  
-  telefono varchar(9) NOT NULL, 
-  cant_mesas tinyint(2) NOT NULL
-);
-
--- Restricciones de clave foránea (ya las has declarado correctamente)
-ALTER TABLE PRODUCTO ADD CONSTRAINT PRODUCTO_tipo_producto_fk FOREIGN KEY (tipo_producto) REFERENCES TIPO_PRODUCTO (nombre);
-ALTER TABLE CONTIENE ADD CONSTRAINT CONTIENE_nombre_plato_fk FOREIGN KEY (nombre_plato) REFERENCES PRODUCTO (nombre_plato);
-ALTER TABLE CONTIENE ADD CONSTRAINT CONTIENE_num_pedido_fk FOREIGN KEY (num_pedido) REFERENCES PEDIDO (num_pedido);
-ALTER TABLE PEDIDO ADD CONSTRAINT PEDIDO_dni_usuario_fk FOREIGN KEY (dni_usuario) REFERENCES USUARIO (dni);
-ALTER TABLE RESERVA ADD CONSTRAINT RESERVA_dni_usuario_fk FOREIGN KEY (dni_usuario) REFERENCES USUARIO (dni);
-ALTER TABLE RESERVA ADD CONSTRAINT RESERVA_id_local_fk FOREIGN KEY (id_local) REFERENCES LOCAL (id_local);
-ALTER TABLE PEDIDO ADD CONSTRAINT PEDIDO_id_local_fk FOREIGN KEY (id_local) REFERENCES LOCAL (id_local);

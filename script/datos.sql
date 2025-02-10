@@ -1,5 +1,3 @@
----- PRODUCTOS ------
--- Surtidos
 INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('surtidos');
 
 INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disponibilidad, tipo_producto) VALUES
@@ -10,8 +8,6 @@ INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disp
 ('Surtido Nº5', '4 unidades de Ebi Roll, 4 de Sésamo Salmón, 2 Nigiris Salmón y 2 Nigiris Gambas', 16.90, 'Cereales con gluten, Crustáceos, Huevos, Moluscos, Mostaza, Pescado, Soja, Sulfitos', 'assets/images/productos/surtidos/SURTIDO5.png', TRUE, 'surtidos'),
 ('Surtido Nº6', '4 unidades de Surimi Roll, 4 de Maki Salmón y 4 Maki atún', 18.50, 'Crustáceos, Huevos, Moluscos, Pescado, Sulfitos', 'assets/images/productos/surtidos/SURTIDO6.png', TRUE, 'surtidos');
 
-
---Entrantes
 INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('entrantes');
 
 INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disponibilidad, tipo_producto) VALUES
@@ -21,8 +17,6 @@ INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disp
 ('Gyozas de Ternera', 'Empanadillas rellenas de carne de ternera y verduras.', 7.90, 'CEREALES CON GLUTEN, SÉSAMO Y SOJA', 'assets/images/productos/entrantes/Gyozas.png', TRUE, 'entrantes'),
 ('Rollitos Mango Langostinos', 'Rollito relleno de langostino y mango.', 7.90, 'CEREALES CON GLUTEN, SÉSAMO Y SOJA', 'assets/images/productos/entrantes/Rollitos_Mango_Langostinos.png', TRUE, 'entrantes');
 
-
--- Arroz y Noodles
 INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('arroz y noodles');
 
 INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disponibilidad, tipo_producto) VALUES
@@ -32,8 +26,6 @@ INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disp
 ('Ramen Cerdo', 'Sopa japonesa de fideos de trigo con base de miso, cebollino, huevo, naruto, cerdo cocido y alga nori.', 8.90, 'Cacahuetes, Huevos, Pescado, Sésamo, Soja', 'assets/images/productos/arrozYNoodles/Ramen_Cerdo.png', TRUE, 'arroz y noodles'),
 ('Ramen Yasai Vegetal', 'Sopa japonesa de fideos de trigo, con base de miso, salsa curry, bambú, setas y alga nori.', 7.95, 'Apio, Cereales con gluten, Huevos, Lácteos, Mostaza, Pescado, Soja', 'assets/images/productos/arrozYNoodles/Ramen_Yasai.png', TRUE, 'arroz y noodles');
 
-
--- Nigiris
 INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('nigiris');
 
 INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disponibilidad, tipo_producto) VALUES
@@ -46,8 +38,6 @@ INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disp
 ('Nigiri Salmón flambeado', '', 4.50, 'PESCADO Y SULFITOS', 'assets/images/productos/nigiris/Nigiri_Salmon_Flambeado.png', TRUE, 'nigiris'),
 ('Nigiri Salmón', 'Dos piezas de arroz de sushi cubiertos de filetes de salmón', 4.50, 'PESCADO Y SULFITOS', 'assets/images/productos/nigiris/Nigiri_Salmon.png', TRUE, 'nigiris');
 
-
--- Rolls
 INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('rolls');
 
 INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disponibilidad, tipo_producto) VALUES
@@ -60,9 +50,6 @@ INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disp
 ('Roll Tropical', 'Salmón, aguacate envuelto en arroz de sushi, cubierto de mango, cacahuete y fideo kadafi crujiente.', 8.50, 'NO TIENE', 'assets/images/productos/rolls/Tropical_Roll.png', TRUE, 'rolls'),
 ('Roll Uramaki Atún', 'Atún cocido y philadelphia enrollado en arroz de sushi y rebozado, cubierto de cebolla crujiente y salsa Kimchi', 8.95, 'CEREALES CON GLUTEN, HUEVOS, LÁCTEOS, MOSTAZA, PESCADO, SOJA, SULFITOS', 'assets/images/productos/rolls/Uramaki_Atun_Roll.png', TRUE, 'rolls');
 
-
-
--- Makis
 INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('makis');
 
 INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disponibilidad, tipo_producto) VALUES
@@ -76,9 +63,6 @@ INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disp
 ('Maki Surimi', 'Arroz de sushi con surimi envuelto en alga nori.', 4.90, 'CRUSTÁCEOS, HUEVOS, MOLUSCOS, PESCADO Y SULFITOS', 'assets/images/productos/maki/Maki_Surimi.png', TRUE, 'makis'),
 ('Maki Atún', 'Arroz de sushi con atún rojo de almadraba envuelto en alga nori.', 5.90, 'PESCADO Y SULFITOS', 'assets/images/productos/maki/Maki_Atun.png', TRUE, 'makis');
 
-
-
--- Bebidas
 INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('bebidas');
 
 INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disponibilidad, tipo_producto) VALUES
@@ -88,8 +72,6 @@ INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disp
 ('Cerveza Kirin Ichiban', '', 3.90, 'NO TIENE', 'assets/images/productos/bebidas/Cerveza_Kirin.png', TRUE, 'bebidas'),
 ('Fanta White Peach', '', 2.00, 'NO TIENE', 'assets/images/productos/bebidas/Fanta_White_Peach.png', TRUE, 'bebidas');
 
-
--- Postres
 INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('postres');
 
 INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disponibilidad, tipo_producto) VALUES
@@ -98,15 +80,10 @@ INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disp
 ('Mochi de Té Matcha', '', 4.60, 'FRUTOS SECOS, LÁCTEOS, SOJA, SULFITOS', 'assets/images/productos/postres/Mochi_De_Té_Verde.png', TRUE, 'postres'),
 ('Tarta de Queso y Pistacho', '', 4.50, 'CEREALES CON GLUTEN, FRUTOS SECOS, HUEVOS, LÁCTEOS, PESCADO, SOJA, SULFITOS', 'assets/images/productos/postres/Tarta_De_Queso_Y_Pistachos.png', TRUE, 'postres');
 
+INSERT INTO LOCAL (id_local, nombre, direccion, telefono, cant_mesas) 
+VALUES (1, 'Sevilla', 'Avenida de Ramón y Cajal 5', '954177177', 20);
 
+INSERT INTO LOCAL (id_local, nombre, direccion, telefono, cant_mesas) 
+VALUES (2, 'Utrera', 'Avenida de María Auxiliadora 80', '954199199', 25);
 commit;
--------------------------------------
-
--- LOCALES --
-INSERT INTO LOCALES (id, nombre, direccion, codigo_postal, telefono, cant_mesas) 
-VALUES (1, 'Sevilla', 'Avenida de Ramón y Cajal 5', '41005', '954177177', 20);
-
-INSERT INTO LOCALES (id, nombre, direccion, codigo_postal, telefono, cant_mesas) 
-VALUES (2, 'Utrera', 'Avenida de María Auxiliadora 80', '41710', '954199199', 25);
-
 
