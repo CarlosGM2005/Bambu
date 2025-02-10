@@ -22,7 +22,7 @@ CREATE TABLE USUARIO (
   apellidos varchar(50) NOT NULL,
   email varchar(64),
   telefono varchar(9) NOT NULL,
-  contraseña varchar(15) NOT NULL,
+  contraseña varchar(60) NOT NULL,
   PRIMARY KEY (dni, email)
 );
 
