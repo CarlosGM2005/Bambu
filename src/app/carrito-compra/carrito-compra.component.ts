@@ -604,5 +604,20 @@ export class CarritoCompraComponent {
     return this.contenedor.reduce((total, item) => total + item.cantidad, 0);
   }
 
+  mostrarModal: boolean = false;
 
+  abrirModal(): void {
+    this.mostrarModal = true;
+  }
+
+  cerrarModal(): void {
+    this.mostrarModal = false;
+  }
+
+  seleccionarUbicacion(ubicacion: string): void {
+    console.log(`Ubicación seleccionada: ${ubicacion}`);
+    this.mostrarModal = false;
+    // Aquí puedes redirigir a otra página o realizar acciones según la ubicación
+    window.location.href = 'https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA';
+  }
 }
