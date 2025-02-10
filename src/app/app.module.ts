@@ -13,6 +13,8 @@ import { CartaComponent } from './carta/carta.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { LoginComponent } from './login/login.component';
 import { ReservarComponent } from './reservar/reservar.component';
+import { AyudaComponent } from './ayuda/ayuda.component';
+import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-privacidad.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ReservarComponent } from './reservar/reservar.component';
     CartaComponent,
     RegistrarseComponent,
     LoginComponent,
-    ReservarComponent
+    ReservarComponent,
+    AyudaComponent,
+    PoliticaPrivacidadComponent
   ],
   imports: [
     BrowserModule,
