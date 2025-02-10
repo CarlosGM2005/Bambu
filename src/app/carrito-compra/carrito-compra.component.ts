@@ -604,7 +604,6 @@ export class CarritoCompraComponent {
   
   // Método para calcular el importe total del carrito
   calcularImporteTotal() {
-    let total = 0;
     for (const producto of this.contenedor[0].productos) {
       total += producto.total; // Sumar el total de cada producto
     }

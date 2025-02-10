@@ -98,25 +98,9 @@
                 </div>
 
                 <div class="pagar">
-                    <button class="btnPagar" (click)="abrirModal()">
-                        Ir a pagar
+                    <button class="btnPagar">
+                        <a href="https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA">Ir a pagar</a>
                     </button>
-                </div>
-                
-                <!-- Modal -->
-                <div id="modalUbicacion" *ngIf="mostrarModal" class="modal-overlay">
-                    <div class="modal-content">
-                        <h2>Selecciona el restaurante</h2>
-                        <div class="modal-buttons">
-                            <div>
-                            <button class="modal-btn" (click)="seleccionarUbicacion('Utrera')">Utrera</button>
-                            </div>
-                            <div>
-                            <button class="modal-btn" (click)="seleccionarUbicacion('Sevilla')">Sevilla</button>
-                            </div>
-                        </div>
-                        <button class="modal-close" (click)="cerrarModal()">Cerrar</button>
-                    </div>
                 </div>
             </div>
         </div>
