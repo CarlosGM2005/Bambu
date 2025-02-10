@@ -66,16 +66,15 @@
                 </div>
 
                 <div class="infoProducto">
-                    <div *ngFor="let item of contenedor" class="pedido-item">
+                    <div *ngFor="let item of contenedor[0].productos" class="pedido-item">
                         <div class="pedido-nombre">{{ item.nombre }}</div>
                         <img [src]="item.urlImgMenos" alt="" (click)="reducirCantidad(item)" class="iconosCarrito">
                         <div>{{ item.cantidad }}</div>
                         <img [src]="item.urlImgMas" alt="" (click)="incrementarCantidad(item)" class="iconosCarrito">
                         <div class="pedido-precio">{{ item.total }}€</div>
                     </div>
-                    <p *ngIf="contenedor.length === 0" class="text-center">El carrito de compra está vacío.</p>
+                    <p *ngIf="contenedor[0].productos.length === 0" class="text-center">El carrito de compra está vacío.</p>
                 </div>
-
                 <hr />
 
                 <div class="infoFinal">
