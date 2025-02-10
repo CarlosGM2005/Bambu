@@ -608,6 +608,7 @@ export class CarritoCompraComponent {
       total += producto.total; // Sumar el total de cada producto
     }
     this.contenedor[0].importeTotal = parseFloat(total.toFixed(2)); // Redondeamos el total
+    return this.calcularSubtotal();
   }
   
   // Método para calcular la cantidad total de artículos en el carrito
