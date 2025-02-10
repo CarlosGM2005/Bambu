@@ -31,7 +31,8 @@ CREATE TABLE LOCAL (
   id_local smallint(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,  -- Autoincrementable
   nombre varchar(20) NOT NULL,  
   direccion varchar(50) NOT NULL,  
-  telefono varchar(9) NOT NULL, 
+  telefono varchar(9) NOT NULL,
+  urlImg varchar(75) NOT NULL,
   cant_mesas tinyint(2) NOT NULL
 );
 
