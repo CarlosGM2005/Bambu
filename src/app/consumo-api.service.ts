@@ -1,0 +1,55 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';  // Importamos HttpClient y HttpHeaders
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ConsumoApiService {
+
+  private apiUrl = 'http://localhost/apiBambu/api.php';
+
+  constructor(private http: HttpClient) { }
+
+  // Método para obtener productos por categoría
+  obtenerProductosPorCategoria(categoria: string): Observable<any> {
+    const params = { accion: 'obtenerTodosProductos', nombreCategoria: categoria };
+    return this.http.get(this.apiUrl, { params });
+  }
+
+  // Método para obtener datos de un producto
+  obtenerDatosProducto(nombreProducto: string): Observable<any> {
+    const params = { accion: 'obtenerDatosProducto', nombreProducto: nombreProducto };
+    return this.http.get(this.apiUrl, { params });
+  }
+
+  // Método para obtener todos los locales
+  obtenerLocales(): Observable<any> {
+    const params = { accion: 'obtenerDatosLocales' };
+    return this.http.get(this.apiUrl, { params });
+  }
+
+  // Método para iniciar sesión
+  iniciarSesion(email: string, password: string): Observable<any> {
+    const body = { accion: 'iniciarSesion', email, password };
+    return this.http.post(this.apiUrl, body);
+  }
+
+  // Método para registrar un nuevo usuario
+  registrarse(nombre: string, apellidos: string, dni: string, email: string, password: string, telefono: string): Observable<any> {
+    const body = { accion: 'registrarse', nombre, apellidos, dni, email, password, telefono };
+    return this.http.post(this.apiUrl, body);
+  }
+
+  // Método para hacer una reserva
+  reservar(local: string, fecha: string, hora: string, cantPersonas: number, email: string, dni: string): Observable<any> {
+    const body = { accion: 'reservar', local, fecha, hora, cantPersonas, email, dni };
+    return this.http.post(this.apiUrl, body);
+  }
+
+  // Método para hacer un pedido
+  pedir(local: string, email: string, dni: string, carrito: any): Observable<any> {
+    const body = { accion: 'pedir', local, email, dni, carrito };
+    return this.http.post(this.apiUrl, body);
+  }
+}
