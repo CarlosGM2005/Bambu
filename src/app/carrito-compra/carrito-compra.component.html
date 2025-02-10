@@ -94,12 +94,25 @@
                             <p>{{  calcularImporteTotal() }}€</p>
                         </div>
                     </div>
+
+                <!-- Checkboxes para Utrera y Sevilla -->
+                <div class="precio__final">
+                    <div>
+                    <div>
+                      <label for="utrera"><b>Utrera</b></label>
+                      <input type="radio" id="utrera" name="location" value="utrera">
+                    </div>
+                    </div>
+                    <div>
+                      <label for="sevilla"><b>Sevilla</b></label>
+                      <input type="radio" id="sevilla" name="location" value="sevilla">
+                    </div>
+                  </div>
                 </div>
+                  
 
                 <div class="pagar">
-                    <button class="btnPagar">
-                        <a href="https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA">Ir a pagar</a>
-                    </button>
+                    <a class="btnPagar" href="https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA" target="_blank">Ir a pagar</a>
                 </div>
             </div>
         </div>
