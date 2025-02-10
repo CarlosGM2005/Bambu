@@ -550,34 +550,44 @@ export class CarritoCompraComponent {
   }
 
   
-  contenedor: any[] = [];
-
+  contenedor: any[] = [{
+    importeTotal: 0,  // Se inicia el importe total en 0
+    productos: []     // La lista de productos estará dentro de este array
+  }];
+  
   // Método para añadir un producto al contenedor
   onAddProduct(producto: any) {
-    const index = this.contenedor.findIndex(item => item.nombre === producto.nombre);
+    const index = this.contenedor[0].productos.findIndex((item: any ) => item.nombre === producto.nombre);
     producto.precio = parseFloat(producto.precio.toFixed(2));
+  
     if (index > -1) {
       // Si ya existe el producto, aumentamos la cantidad
-      this.contenedor[index].cantidad++;
-      this.contenedor[index].total = parseFloat((this.contenedor[index].cantidad * producto.precio).toFixed(2)); // Redondeo
+      this.contenedor[0].productos[index].cantidad++;
+      this.contenedor[0].productos[index].total = parseFloat((this.contenedor[0].productos[index].cantidad * producto.precio).toFixed(2)); // Redondeo
     } else {
       // Si no existe, lo añadimos
-      this.contenedor.push({
+      this.contenedor[0].productos.push({
         ...producto,
         cantidad: 1, // Inicia con una cantidad de 1
         total: parseFloat(producto.precio.toFixed(2)), // Redondeo
         urlImgMenos: "../../assets/images/iconos/signo-menos.png",
-        urlImgMas: "../../assets/images/iconos/signo más.png"
+        urlImgMas: "../../assets/images/iconos/signo-mas.png"
       });
     }
+  
+    // Recalculamos el importe total del carrito
+    this.calcularImporteTotal();
   }
-
+  
   // Método para incrementar la cantidad de un producto
   incrementarCantidad(item: any) {
     item.cantidad++;
     item.total = parseFloat((item.cantidad * item.precio).toFixed(2)); // Redondeo
+  
+    // Recalculamos el importe total después de modificar un producto
+    this.calcularImporteTotal();
   }
-
+  
   // Método para reducir la cantidad de un producto
   reducirCantidad(item: any) {
     if (item.cantidad > 1) {
@@ -585,39 +595,29 @@ export class CarritoCompraComponent {
       item.total = parseFloat((item.cantidad * item.precio).toFixed(2)); // Redondeo
     } else {
       // Si la cantidad llega a 0, lo eliminamos del contenedor
-      this.contenedor = this.contenedor.filter(producto => producto !== item);
+      this.contenedor[0].productos = this.contenedor[0].productos.filter((producto: any )=> producto !== item);
     }
+  
+    // Recalculamos el importe total después de modificar un producto
+    this.calcularImporteTotal();
   }
-
-  calcularSubtotal(): number {
-    // Redondeamos el subtotal final
-    return parseFloat(this.contenedor.reduce((sum, item) => sum + item.total, 0).toFixed(2));
+  
+  // Método para calcular el importe total del carrito
+  calcularImporteTotal() {
+    let total = 0;
+    for (const producto of this.contenedor[0].productos) {
+      total += producto.total; // Sumar el total de cada producto
+    }
+    this.contenedor[0].importeTotal = parseFloat(total.toFixed(2)); // Redondeamos el total
   }
-
-  calcularTotal(): number {
-    // Puedes agregar impuestos u otras reglas de negocio aquí si es necesario.
-    return this.calcularSubtotal();
-  }
-
+  
   // Método para calcular la cantidad total de artículos en el carrito
   calcularCantidadTotal(): number {
-    return this.contenedor.reduce((total, item) => total + item.cantidad, 0);
+    return this.contenedor[0].productos.reduce((total: number, item: any) => total + item.cantidad, 0);
   }
-
-  mostrarModal: boolean = false;
-
-  abrirModal(): void {
-    this.mostrarModal = true;
-  }
-
-  cerrarModal(): void {
-    this.mostrarModal = false;
-  }
-
-  seleccionarUbicacion(ubicacion: string): void {
-    console.log(`Ubicación seleccionada: ${ubicacion}`);
-    this.mostrarModal = false;
-    // Aquí puedes redirigir a otra página o realizar acciones según la ubicación
-    window.location.href = 'https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA';
+  
+  // Método para calcular el subtotal del carrito
+  calcularSubtotal(): number {
+    return parseFloat(this.contenedor[0].productos.reduce((sum: number, item: any) => sum + item.total, 0).toFixed(2));
   }
 }
