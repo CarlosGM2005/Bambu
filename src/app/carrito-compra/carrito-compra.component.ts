@@ -603,12 +603,8 @@ export class CarritoCompraComponent {
   }
   
   // Método para calcular el importe total del carrito
-  calcularImporteTotal() {
-    let total = 0;
-    for (const producto of this.contenedor[0].productos) {
-      total += producto.total; // Sumar el total de cada producto
-    }
-    this.contenedor[0].importeTotal = parseFloat(total.toFixed(2)); // Redondeamos el total
+  calcularImporteTotal() {// Redondeamos el total
+    return this.calcularSubtotal();
   }
   
   // Método para calcular la cantidad total de artículos en el carrito

@@ -80,10 +80,10 @@ INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disp
 ('Mochi de Té Matcha', '', 4.60, 'FRUTOS SECOS, LÁCTEOS, SOJA, SULFITOS', 'assets/images/productos/postres/Mochi_De_Té_Verde.png', TRUE, 'postres'),
 ('Tarta de Queso y Pistacho', '', 4.50, 'CEREALES CON GLUTEN, FRUTOS SECOS, HUEVOS, LÁCTEOS, PESCADO, SOJA, SULFITOS', 'assets/images/productos/postres/Tarta_De_Queso_Y_Pistachos.png', TRUE, 'postres');
 
-INSERT INTO LOCAL (id_local, nombre, direccion, telefono, urlImg, cant_mesas) 
-VALUES (1, 'Sevilla', 'Avenida de Ramón y Cajal 5','954177177','assets/images/inicio/sevillaeditada.jpg', 20);
+INSERT INTO LOCAL (id_local, nombre, direccion, urlImg, telefono, cant_mesas) 
+VALUES (1, 'Sevilla', 'Avenida de Ramón y Cajal 5', 'assets/images/inicio/sevillaeditada.jpg','954177177', 20);
 
-INSERT INTO LOCAL (id_local, nombre, direccion, telefono, urlImg, cant_mesas) 
-VALUES (2, 'Utrera', 'Avenida de María Auxiliadora 80', '954199199', 'assets/images/inicio/utreraeditada.jpg', 25);
+INSERT INTO LOCAL (id_local, nombre, direccion, urlImg, telefono, cant_mesas) 
+VALUES (2, 'Utrera', 'Avenida de María Auxiliadora 80', 'assets/images/inicio/utreraeditada.jpg', '954199199', 25);
 commit;
 

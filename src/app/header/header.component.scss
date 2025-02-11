@@ -91,9 +91,6 @@ nav{
     }
 }
 
-
-
-
 //Modal
 
 .modal-overlay {
@@ -166,6 +163,7 @@ nav{
       color: white;
       padding: 0.75rem 1.5rem;
       transition: background-color 0.3s ease;
+      cursor: pointer;
   
       &:hover {
         background-color: darken($primary-color, 10%);

@@ -66,16 +66,16 @@
                 </div>
 
                 <div class="infoProducto">
-                    <div *ngFor="let item of contenedor" class="pedido-item">
+                    <div *ngFor="let item of contenedor[0].productos" class="pedido-item">
                         <div class="pedido-nombre">{{ item.nombre }}</div>
                         <img [src]="item.urlImgMenos" alt="" (click)="reducirCantidad(item)" class="iconosCarrito">
                         <div>{{ item.cantidad }}</div>
                         <img [src]="item.urlImgMas" alt="" (click)="incrementarCantidad(item)" class="iconosCarrito">
                         <div class="pedido-precio">{{ item.total }}€</div>
                     </div>
-                    <p *ngIf="contenedor.length === 0" class="text-center">El carrito de compra está vacío.</p>
+                    <p *ngIf="contenedor[0].productos.length === 0" class="text-center">El carrito de compra está vacío.
+                    </p>
                 </div>
-
                 <hr />
 
                 <div class="infoFinal">
@@ -92,31 +92,30 @@
                             <p><b>Total:</b></p>
                         </div>
                         <div>
-                            <p>{{ calcularTotal() }}€</p>
+                            <p>{{ calcularImporteTotal() }}€</p>
                         </div>
                     </div>
-                </div>
+
+                    <hr>
+                    <!-- Checkboxes para Utrera y Sevilla -->
+                    <div class="precio__final">
+                        <div>
+                            <h4><strong>Escoge el local para recoger</strong></h4>
+                            <div>
+                                <input type="radio" id="utrera" name="location" value="utrera">
+                                <label for="utrera"><b>Utrera</b></label><br>
+                                <input type="radio" id="sevilla" name="location" value="sevilla">
+                                <label for="sevilla"><b>Sevilla</b></label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div><br>
+
 
                 <div class="pagar">
-                    <button class="btnPagar" (click)="abrirModal()">
-                        Ir a pagar
-                    </button>
-                </div>
-                
-                <!-- Modal -->
-                <div id="modalUbicacion" *ngIf="mostrarModal" class="modal-overlay">
-                    <div class="modal-content">
-                        <h2>Selecciona el restaurante</h2>
-                        <div class="modal-buttons">
-                            <div>
-                            <button class="modal-btn" (click)="seleccionarUbicacion('Utrera')">Utrera</button>
-                            </div>
-                            <div>
-                            <button class="modal-btn" (click)="seleccionarUbicacion('Sevilla')">Sevilla</button>
-                            </div>
-                        </div>
-                        <button class="modal-close" (click)="cerrarModal()">Cerrar</button>
-                    </div>
+                    <a class="btnPagar" href="https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA" target="_blank">Ir a
+                        pagar</a>
                 </div>
             </div>
         </div>
