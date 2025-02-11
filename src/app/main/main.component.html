@@ -79,37 +79,25 @@
 <div class="container" id="seccion">
     <h1>RESTAURANTES</h1>
     <div class="row">
-        <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center mb-4 mb-md-0">
-            <img src="assets/images/inicio/sevillaeditada.jpg" class="restaurante"
-                alt="Foto difuminada de nuestro local en Sevilla">
+        <div *ngFor="let local of locales"
+            class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center mb-4 mb-md-0">
+            <img [src]="local.urlImg" class="restaurante" [alt]="'Foto difuminada de nuestro local en ' + local.nombre">
             <div>
-                <h2>SEVILLA</h2>
+                <h2>{{ local.nombre }}</h2>
                 <div class="datosLocales">
-                    <p><img src="assets/images/iconos/marcador-de-posicion.png" id="icono"
-                            alt="Icono de ubicación">Avenida de Ramón y Cajal 5, 41005</p>
+                    <p>
+                        <img src="assets/images/iconos/marcador-de-posicion.png" id="icono" alt="Icono de ubicación">
+                        {{ local.direccion }}
+                    </p>
                 </div>
                 <div class="datosLocales">
                     <img src="assets/images/iconos/telefono.png" id="icono" alt="Icono de teléfono">
-                    <p>954 17 71 77</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center mb-4 mb-md-0">
-            <img src="assets/images/inicio/utreraeditada.jpg" class="restaurante"
-                alt="Foto difuminada de nuestro local en Utrera">
-            <div>
-                <h2>UTRERA</h2>
-                <div class="datosLocales">
-                    <p><img src="assets/images/iconos/marcador-de-posicion.png" id="icono"
-                            alt="Icono de ubicación">Avenida de María Auxiliadora 80, 41710</p>
-                </div>
-                <div class="datosLocales">
-                    <img src="assets/images/iconos/telefono.png" id="icono" alt="Icono de teléfono">
-                    <p>954 19 91 99</p>
+                    <p>{{ local.telefono }}</p>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 </div>
