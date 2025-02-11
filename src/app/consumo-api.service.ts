@@ -52,4 +52,10 @@ export class ConsumoApiService {
     const body = { accion: 'pedir', local, email, dni, carrito };
     return this.http.post(this.apiUrl, body);
   }
+
+  // Método para actualizar la contraseña
+  actualizarContra(email: string, password: string): Observable<any> {
+    const body = { accion: 'actualizarContra', email, password };
+    return this.http.put(this.apiUrl, body);
+  }
 }

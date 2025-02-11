@@ -31,16 +31,16 @@
 
 <!-- Sección de Productos -->
 <div class="container menu-grid">
-    <h1>{{ categoria }}</h1>
+    <h1>{{ categoria.toUpperCase() }}</h1>
     <div class="row g-0">
-        <div class="col-md-6 col-lg-4 mb-4" *ngFor="let producto of productos">
+        <div class="col-md-6 col-lg-4 mb-4" *ngFor="let producto of productosFiltrados">
             <div class="menu-item">
-                <img [src]="producto.urlImg" [alt]="'Imagen de ' + producto.nombre" [title]="producto.title">
-                <p class="tituloProducto"><b>{{ producto.nombre }}</b></p>
-                <p class="precioProducto"><b>{{ producto.precio }}</b></p>
+                <img [src]="producto.urlImg" [alt]="'Imagen de ' + producto.nombre_plato" [title]="producto.title">
+                <p class="tituloProducto"><b>{{ producto.nombre_plato }}</b></p>
+                <p class="precioProducto"><b>{{ producto.precio }} €</b></p>
                 <!-- Botón Más información -->
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#surtidoModal"
-                    (click)="productoFiltrado = producto">
+                    (click)="obtenerInfoProducto(producto.nombre_plato)">
                     Más información
                 </button>
             </div>
@@ -48,19 +48,20 @@
     </div>
 </div>
 
+
 <!-- Modal (se abre cada vez que seleccionas un producto) -->
 <div class="modal fade" id="surtidoModal" tabindex="-1" aria-labelledby="surtidoModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <img *ngIf="productoFiltrado" [src]="productoFiltrado.urlImg" alt="Imagen del producto"
+                <img *ngIf="infoProducto" [src]="infoProducto.urlImg" alt="Imagen del producto"
                     class="rounded mx-auto d-block" style="max-height: 200px;">
             </div>
             <div class="modal-body">
-                <p><strong>{{ productoFiltrado.nombre }}</strong></p>
-                <p class="precio">{{ productoFiltrado.precio }}</p>
-                <p><strong>Descripción: </strong>{{ productoFiltrado.descripcion }}</p>
-                <p><strong>Alergénos: </strong>{{productoFiltrado.alergenos}}</p>
+                <p><strong>{{ infoProducto.nombre_plato }}</strong></p>
+                <p class="precio">{{ infoProducto.precio }}€</p>
+                <p><strong>Descripción: </strong>{{ infoProducto.descripcion }}</p>
+                <p><strong>Alergénos: </strong>{{infoProducto.alergenos}}</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

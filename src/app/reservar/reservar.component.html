@@ -35,7 +35,7 @@
     <div class="opcionesReserva2">
         <form action="#">
             <label for="comensales">
-                <h2>¿cuantos comensales?</h2><br>
+                <h2>¿Cuántos comensales?</h2><br>
             </label>
             <select class="form-select" id="comensales" [(ngModel)]="reserva.comensales" name="comensales" required>
                 <option value="">--Selecciona una opción--</option>
@@ -95,6 +95,7 @@
                     <p class="modalReserva"><strong>Local:</strong> {{ reserva.local }}</p>
                     <p class="modalReserva"><strong>Día:</strong> {{ reserva.fecha }}</p>
                     <p class="modalReserva"><strong>Hora:</strong> {{ reserva.hora }}</p>
+                    <p class="modalReserva"><strong>Comensales:</strong> {{ reserva.comensales }}</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn" data-bs-dismiss="modal"><strong>CANCELAR</strong></button>

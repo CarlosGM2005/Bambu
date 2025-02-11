@@ -1,12 +1,11 @@
 import { Component, OnInit  } from '@angular/core';
-import { ConsumoApiService } from '../consumo-api.service'; // Asegúrate de importar el servicio
-
+import { ConsumoApiService } from '../consumo-api.service'; 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent {
+export class MainComponent implements OnInit{
   locales: any[] = []; // Variable para almacenar los locales
 
   constructor(private apiService: ConsumoApiService) { }
