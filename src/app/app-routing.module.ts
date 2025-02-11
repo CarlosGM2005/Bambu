@@ -8,6 +8,9 @@ import { CartaComponent } from './carta/carta.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { LoginComponent } from './login/login.component';
 import { ReservarComponent } from './reservar/reservar.component';
+import { CambiarContraseniaComponent } from './cambiar-contrasenia/cambiar-contrasenia.component';
+import { AyudaComponent } from './ayuda/ayuda.component';
+import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-privacidad.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -18,6 +21,9 @@ const routes: Routes = [
   { path: 'registrarse', component: RegistrarseComponent },
   { path: 'login', component: LoginComponent }, 
   { path: 'reservar', component: ReservarComponent }, 
+  { path: 'cambiar-contrasenia', component: CambiarContraseniaComponent},
+  { path: 'ayuda', component: AyudaComponent},
+  { path: 'politica-privacidad', component: PoliticaPrivacidadComponent}
 ];
 
 @NgModule({

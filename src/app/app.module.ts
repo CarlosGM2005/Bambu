@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { ReservarComponent } from './reservar/reservar.component';
 import { AyudaComponent } from './ayuda/ayuda.component';
 import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-privacidad.component';
+import { CambiarContraseniaComponent } from './cambiar-contrasenia/cambiar-contrasenia.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-priv
     LoginComponent,
     ReservarComponent,
     AyudaComponent,
-    PoliticaPrivacidadComponent
+    PoliticaPrivacidadComponent,
+    CambiarContraseniaComponent
   ],
   imports: [
     BrowserModule,
