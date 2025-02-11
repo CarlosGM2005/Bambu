@@ -13,6 +13,7 @@ export class ReservarComponent {
     this.reserva.local = '';
     this.reserva.fecha = '';
     this.reserva.hora = '';
+    this.reserva.comensales = '';
     
     this.mensajeVisible = true;
 
@@ -24,6 +25,7 @@ export class ReservarComponent {
   reserva = {
     local: '',
     fecha: '',
+    comensales: '',
     hora: ''
   };
 

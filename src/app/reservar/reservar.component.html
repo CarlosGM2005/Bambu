@@ -17,8 +17,12 @@
         </form>
     </div>
 
+
+
+
+    <div class="container2">
     <!--Elección de la fecha-->
-    <div class="opcionesReserva">
+    <div class="opcionesReserva2">
         <form action="#">
             <label for="fecha" class="form-label">
                 <h2>¿Qué día deseas reservar?</h2><br>
@@ -26,6 +30,28 @@
             <input type="date" id="fecha" name="fecha" class="form-control" [(ngModel)]="reserva.fecha" required>
         </form>
     </div>
+
+    <!--Eleccion de comensales-->
+    <div class="opcionesReserva2">
+        <form action="#">
+            <label for="comensales">
+                <h2>¿cuantos comensales?</h2><br>
+            </label>
+            <select class="form-select" id="comensales" [(ngModel)]="reserva.comensales" name="comensales" required>
+                <option value="">--Selecciona una opción--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+        </form>
+    </div>
+    </div>
+
 
     <!--Elección de hora-->
     <div class="opcionesReserva">
@@ -52,6 +78,7 @@
     <div class="text-end" style="margin-bottom: 2%;">
         <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>FINALIZAR</strong></button>
     </div>
+
 
 
 
