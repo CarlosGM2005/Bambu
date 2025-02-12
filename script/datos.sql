@@ -30,12 +30,12 @@ INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('nigiris');
 
 INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disponibilidad, tipo_producto) VALUES
 ('Nigiri Anguila', 'Dos piezas de arroz de sushi cubiertos de filetes de anguila.', 4.90, 'CEREALES CON GLUTEN, PESCADO, SÉSAMO, SOJA Y SULFITOS', 'assets/images/productos/nigiris/Nigiri_Anguila.png', TRUE, 'nigiris'),
-('Nigiri Atún Flambeado', '', 4.50, 'PESCADO Y SULFITOS', 'assets/images/productos/nigiris/Nigiri_Atun_Flambeado.png', TRUE, 'nigiris'),
+('Nigiri Atún Flambeado', 'Dos piezas de arroz de sushi cubiertos con atún fresco flambeado, para un sabor ahumado y delicado.', 4.50, 'PESCADO Y SULFITOS', 'assets/images/productos/nigiris/Nigiri_Atun_Flambeado.png', TRUE, 'nigiris'),
 ('Nigiri Atún', 'Dos piezas de arroz de sushi cubiertos de filetes de atún rojo de almadraba.', 4.50, 'CRUSTÁCEOS Y SULFITOS', 'assets/images/productos/nigiris/Nigiri_Atun.png', TRUE, 'nigiris'),
 ('Nigiri Ebi', 'Dos piezas de arroz de sushi cubiertos de dos piezas de gambas.', 4.20, 'CRUSTÁCEOS, SULFITOS', 'assets/images/productos/nigiris/Nigiri_Ebi.png', TRUE, 'nigiris'),
-('Nigiri Pez Mantequilla Flambeado', '', 4.90, 'PESCADO Y SULFITOS', 'assets/images/productos/nigiris/Nigiri_Pez_Mantequilla_Flambeado.png', TRUE, 'nigiris'),
+('Nigiri Pez Mantequilla Flambeado', 'Dos piezas de arroz de sushi cubiertos con pez mantequilla flambeado, para un toque ahumado.', 4.90, 'PESCADO Y SULFITOS', 'assets/images/productos/nigiris/Nigiri_Pez_Mantequilla_Flambeado.png', TRUE, 'nigiris'),
 ('Nigiri Pez Mantequilla', 'Dos piezas de arroz de sushi cubiertos de filetes de pez mantequilla.', 3.90, 'PESCADO Y SULFITOS', 'assets/images/productos/nigiris/Nigiri_Pez_Mantequilla.png', TRUE, 'nigiris'),
-('Nigiri Salmón flambeado', '', 4.50, 'PESCADO Y SULFITOS', 'assets/images/productos/nigiris/Nigiri_Salmon_Flambeado.png', TRUE, 'nigiris'),
+('Nigiri Salmón Flambeado', 'Dos piezas de arroz de sushi cubiertos con salmón fresco flambeado, con un sabor intenso y ahumado.', 4.50, 'PESCADO Y SULFITOS', 'assets/images/productos/nigiris/Nigiri_Salmon_Flambeado.png', TRUE, 'nigiris'),
 ('Nigiri Salmón', 'Dos piezas de arroz de sushi cubiertos de filetes de salmón', 4.50, 'PESCADO Y SULFITOS', 'assets/images/productos/nigiris/Nigiri_Salmon.png', TRUE, 'nigiris');
 
 INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('rolls');
@@ -53,9 +53,9 @@ INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disp
 INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('makis');
 
 INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disponibilidad, tipo_producto) VALUES
-('Maki Aguacate y Mango', '', 4.50, 'SULFITOS', 'assets/images/productos/maki/Maki_Aguacate_Mango.png', TRUE, 'makis'),
+('Maki Aguacate y Mango', 'Arroz de sushi con aguacate y mango envuelto en alga nori', 4.50, 'SULFITOS', 'assets/images/productos/maki/Maki_Aguacate_Mango.png', TRUE, 'makis'),
 ('Maki Aguacate', 'Arroz de sushi con aguacate envuelto en alga nori.', 5.90, 'SULFITOS', 'assets/images/productos/maki/Maki_Aguacate.png', TRUE, 'makis'),
-('Maki Anguila Aguacate', '', 4.90, 'NO TIENE', 'assets/images/productos/maki/Maki_Anguila_Aguacate.png', TRUE, 'makis'),
+('Maki Anguila Aguacate', 'Arroz de sushi con anguila y aguacate envuelto en alga nori.', 4.90, 'NO TIENE', 'assets/images/productos/maki/Maki_Anguila_Aguacate.png', TRUE, 'makis'),
 ('Maki Ebi Aguacate', 'Arroz de sushi con gambas y aguacate envuelto en alga nori.', 4.90, 'CRUSTÁCEOS Y SULFITOS', 'assets/images/productos/maki/Maki_Ebi_Aguacate.png', TRUE, 'makis'),
 ('Maki Pez Mantequilla Trufa', 'Arroz de sushi con pez mantequilla y trufa envuelto en alga nori.', 4.90, 'PESCADO, SULFITOS', 'assets/images/productos/maki/Maki_Pez_Mantequilla_Trufa.png', TRUE, 'makis'),
 ('Maki Salmón Philadelphia', 'Arroz de sushi con salmón y philadelphia envuelto en alga nori.', 5.60, 'LÁCTEOS, PESCADO Y SULFITOS', 'assets/images/productos/maki/Maki_Salmon_Philadelphia.png', TRUE, 'makis'),
@@ -66,19 +66,19 @@ INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disp
 INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('bebidas');
 
 INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disponibilidad, tipo_producto) VALUES
-('Sake Tanrei', '', 4.99, 'NO TIENE', 'assets/images/productos/bebidas/Sake_Tanrei.png', TRUE, 'bebidas'),
-('Sake Kakumasume', '', 19.20, 'NO TIENE', 'assets/images/productos/bebidas/Sake_Kakumasume.png', TRUE, 'bebidas'),
-('Cerveza Estrella Galicia', '', 2.00, 'NO TIENE', 'assets/images/productos/bebidas/Cerveza_Estrella_Galicia_Quinto.png', TRUE, 'bebidas'),
-('Cerveza Kirin Ichiban', '', 3.90, 'NO TIENE', 'assets/images/productos/bebidas/Cerveza_Kirin.png', TRUE, 'bebidas'),
-('Fanta White Peach', '', 2.00, 'NO TIENE', 'assets/images/productos/bebidas/Fanta_White_Peach.png', TRUE, 'bebidas');
+('Sake Tanrei', 'Sake suave y delicado, para disfrutar con sushi o aperitivos.', 4.99, 'NO TIENE', 'assets/images/productos/bebidas/Sake_Tanrei.png', TRUE, 'bebidas'),
+('Sake Kakumasume', 'Sake de sabor intenso y auténtico', 19.20, 'NO TIENE', 'assets/images/productos/bebidas/Sake_Kakumasume.png', TRUE, 'bebidas'),
+('Cerveza Estrella Galicia', 'Cerveza gallega refrescante y ligera', 2.00, 'NO TIENE', 'assets/images/productos/bebidas/Cerveza_Estrella_Galicia_Quinto.png', TRUE, 'bebidas'),
+('Cerveza Kirin Ichiban', 'Cerveza japonesa premium de sabor suave y refrescante', 3.90, 'NO TIENE', 'assets/images/productos/bebidas/Cerveza_Kirin.png', TRUE, 'bebidas'),
+('Fanta White Peach', 'Bebida refrescante con sabor a durazno blanco, dulce y afrutada.', 2.00, 'NO TIENE', 'assets/images/productos/bebidas/Fanta_White_Peach.png', TRUE, 'bebidas');
 
 INSERT INTO TIPO_PRODUCTO (nombre) VALUES ('postres');
 
 INSERT INTO PRODUCTO (nombre_plato, descripcion, precio, alergenos, urlImg, disponibilidad, tipo_producto) VALUES
 ('Mochi de Cheesecake', 'Pastel japonés hecho de mochigome, con sabor a tarta de queso y frutos rojos.', 4.60, 'FRUTOS SECOS, LÁCTEOS, SOJA, SULFITOS', 'assets/images/productos/postres/Mochi_De_Cheesecake.png', TRUE, 'postres'),
 ('Mochi de Mango', 'Pastel japonés hecho de mochigome, con sabor a mango', 4.60, 'CEREALES CON GLUTEN, FRUTOS SECOS, HUEVOS, SULFITOS', 'assets/images/productos/postres/Mochi_De_Mango.png', TRUE, 'postres'),
-('Mochi de Té Matcha', '', 4.60, 'FRUTOS SECOS, LÁCTEOS, SOJA, SULFITOS', 'assets/images/productos/postres/Mochi_De_Té_Verde.png', TRUE, 'postres'),
-('Tarta de Queso y Pistacho', '', 4.50, 'CEREALES CON GLUTEN, FRUTOS SECOS, HUEVOS, LÁCTEOS, PESCADO, SOJA, SULFITOS', 'assets/images/productos/postres/Tarta_De_Queso_Y_Pistachos.png', TRUE, 'postres');
+('Mochi de Té Matcha', 'Pastel japonés hecho de mochigome, con el delicado sabor del té verde matcha.', 4.60, 'FRUTOS SECOS, LÁCTEOS, SOJA, SULFITOS', 'assets/images/productos/postres/Mochi_De_Té_Verde.png', TRUE, 'postres'),
+('Tarta de Queso y Pistacho', 'Deliciosa tarta de queso cremosa con un toque de pistacho', 4.50, 'CEREALES CON GLUTEN, FRUTOS SECOS, HUEVOS, LÁCTEOS, PESCADO, SOJA, SULFITOS', 'assets/images/productos/postres/Tarta_De_Queso_Y_Pistachos.png', TRUE, 'postres');
 
 INSERT INTO LOCAL (id_local, nombre, direccion, urlImg, telefono, cant_mesas) 
 VALUES (1, 'Sevilla', 'Avenida de Ramón y Cajal 5', 'assets/images/inicio/sevillaeditada.jpg','954177177', 20);
@@ -86,4 +86,3 @@ VALUES (1, 'Sevilla', 'Avenida de Ramón y Cajal 5', 'assets/images/inicio/sevil
 INSERT INTO LOCAL (id_local, nombre, direccion, urlImg, telefono, cant_mesas) 
 VALUES (2, 'Utrera', 'Avenida de María Auxiliadora 80', 'assets/images/inicio/utreraeditada.jpg', '954199199', 25);
 commit;
-
