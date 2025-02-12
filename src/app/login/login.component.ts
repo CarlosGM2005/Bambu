@@ -7,7 +7,7 @@ import { ConsumoApiService } from '../consumo-api.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  constructor(private apiService: ConsumoApiService) { }
+  constructor(public apiService: ConsumoApiService) { }
 
   $email: string = '';
   $password: string = '';
@@ -17,7 +17,7 @@ export class LoginComponent {
     this.apiService.iniciarSesion(this.$email, this.$password).subscribe(
       response => {
         if (response.status === 'success') {
-        
+          this.apiService.user = response.data;
         } else {
 
           console.error('Error en el login:', response);

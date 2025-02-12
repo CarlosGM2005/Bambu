@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class ConsumoApiService {
 
   private apiUrl = 'http://localhost/apiBambu/api.php';
+  public user: any = {};
 
   constructor(private http: HttpClient) { }
 
