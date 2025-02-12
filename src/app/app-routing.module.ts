@@ -14,16 +14,16 @@ import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-priv
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  {path: 'header', component:HeaderComponent},
-  {path: 'footer', component:FooterComponent},
+  { path: 'header', component: HeaderComponent },
+  { path: 'footer', component: FooterComponent },
   { path: 'carta', component: CartaComponent },
   { path: 'carrito-compra', component: CarritoCompraComponent },
   { path: 'registrarse', component: RegistrarseComponent },
-  { path: 'login', component: LoginComponent }, 
-  { path: 'reservar', component: ReservarComponent }, 
-  { path: 'cambiar-contrasenia', component: CambiarContraseniaComponent},
-  { path: 'ayuda', component: AyudaComponent},
-  { path: 'politica-privacidad', component: PoliticaPrivacidadComponent}
+  { path: 'login', component: LoginComponent },
+  { path: 'reservar', component: ReservarComponent },
+  { path: 'cambiar-contrasenia', component: CambiarContraseniaComponent },
+  { path: 'ayuda', component: AyudaComponent },
+  { path: 'politica-privacidad', component: PoliticaPrivacidadComponent }
 ];
 
 @NgModule({
