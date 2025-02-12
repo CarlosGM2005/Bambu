@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConsumoApiService } from '../consumo-api.service';
+import { ConsumoApiService } from '../../services/consumo-api.service';
 
 @Component({
   selector: 'app-carrito-compra',
@@ -109,4 +109,9 @@ export class CarritoCompraComponent implements OnInit{
   calcularSubtotal(): number {
     return parseFloat(this.contenedor[0].productos.reduce((sum: number, item: any) => sum + item.total, 0).toFixed(2));
   }
+
+
+  //Controlar que escoje el local
+    //Obtener valores del local elegido
+
 }

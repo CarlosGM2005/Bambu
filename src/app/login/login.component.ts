@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ConsumoApiService } from '../consumo-api.service';
+import { ConsumoApiService } from '../../services/consumo-api.service';
 
 @Component({
   selector: 'app-login',

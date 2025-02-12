@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ConsumoApiService } from '../consumo-api.service';
+import { ConsumoApiService } from '../../services/consumo-api.service';
 
 @Component({
   selector: 'app-registrarse',
