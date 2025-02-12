@@ -2,48 +2,48 @@
     <div class="container" id="seccion">
         <div class="login">
             <h1>Regístrate</h1>
-            <form class="login-form" (ngSubmit)="registrarse()" #formRegistro="ngForm">
+            <form class="login-form" [formGroup]="miFormulario" (ngSubmit)="registrarse()">
 
                 <!-- Registrar Nombre -->
                 <div class="mb">
                     <label for="nombre" class="form-label">Nombre<span class="required-asterisk">*</span></label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required
-                        name="nombre" ngModel>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre"
+                    formControlName="nombre">
                 </div>
                 <!-- Registrar Apellidos -->
                 <div class="mb-3">
                     <label for="apellidos" class="form-label">Apellidos<span class="required-asterisk">*</span></label>
-                    <input type="text" class="form-control" id="apellidos" placeholder="Ingresa tus apellidos" required
-                        name="apellidos" ngModel>
+                    <input type="text" class="form-control" id="apellidos" placeholder="Ingresa tus apellidos"
+                    formControlName="apellidos">
                 </div>
                 <!-- Registrar NIE/CIF -->
                 <div class="mb-3">
                     <label for="dni" class="form-label">NIE/CIF<span class="required-asterisk">*</span></label>
-                    <input type="text" class="form-control" id="dni" placeholder="Ingresa tu NIE/CIF" required
-                        name="dni" ngModel>
+                    <input type="text" class="form-control" id="dni" placeholder="Ingresa tu NIE/CIF"
+                    formControlName="dni">
                 </div>
                 <!-- Registrar Email -->
                 <div class="mb-3">
                     <label for="correo" class="form-label">Correo electrónico<span
                             class="required-asterisk">*</span></label>
                     <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico"
-                        required name="correo" ngModel>
+                    formControlName="correo">
                 </div>
                 <!-- Registrar Contraseña -->
                 <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña<span class="required-asterisk">*</span></label>
-                    <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña"
-                        required name="password" ngModel>
+                    <label for="contraseña" class="form-label">Contraseña<span class="required-asterisk">*</span></label>
+                    <input type="password" class="form-control" id="contraseña" placeholder="Ingresa tu contraseña"
+                    formControlName="contraseña">
                 </div>
                 <!-- Registrar Teléfono -->
                 <div class="mb-3">
                     <label for="telefono" class="form-label">Teléfono<span class="required-asterisk">*</span></label>
-                    <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu teléfono" required
-                        name="telefono" ngModel>
+                    <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu teléfono"
+                    formControlName="telefono">
                 </div>
                 <!-- Botón de Aceptar -->
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn">ACEPTAR</button>
+                    <button type="submit" [disabled]="miFormulario.invalid" class="btn" [ngClass]="{'btn-disabled': miFormulario.invalid}">ACEPTAR</button>
                 </div>
             </form>
 

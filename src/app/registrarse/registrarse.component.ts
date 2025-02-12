@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ConsumoApiService } from '../../services/consumo-api.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registrarse',
@@ -10,38 +11,47 @@ import { ConsumoApiService } from '../../services/consumo-api.service';
 })
 export class RegistrarseComponent {
 
-  @ViewChild('formRegistro') formRegistro!: NgForm; // Obtiene la referencia al formulario
-
+  miFormulario: FormGroup;
   mensajeVisible: boolean = false;
   mensajeError: boolean = false;
 
-  constructor(private apiService: ConsumoApiService, private router: Router) { }
+  constructor(private apiService: ConsumoApiService, private router: Router) { 
+    this.miFormulario = new FormGroup({
+      nombre: new FormControl('', [Validators.required, Validators.minLength(2)]),
+      apellidos: new FormControl('', [Validators.required, Validators.minLength(2)]),
+      dni: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{8}[ABCDEFGHJKLMNPQRSTVWXYZ]{1}$')]),
+      correo: new FormControl('', [Validators.required, Validators.email]),
+      contraseña: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      telefono: new FormControl('', [Validators.required, Validators.minLength(2)])
+    });
+  }
 
   registrarse() {
-    if (!this.formRegistro.valid) {
+    if (this.miFormulario.invalid) {
       this.mensajeError = true;
-    } else {
-
-      /*
-      this.apiService.registrarse().subscribe(
-        response => {
-          if (response.status === 'success') {
-            this.mensajeVisible = true;
-
-            setTimeout(() => {
-              this.mensajeVisible = false;
-              this.router.navigate(['/login']);
-            }, 5000);
-          } else {
-            this.mensajeError = true;
-          }
-        },
-        error => {
-          console.error('Error en la solicitud:', error);
-        }
-      );
-      */
-
+      setTimeout(() => this.mensajeError = false, 3000);
+      return;
     }
+
+    this.apiService.registrarse(
+      this.miFormulario.value.nombre,
+      this.miFormulario.value.apellidos,
+      this.miFormulario.value.dni,
+      this.miFormulario.value.correo,
+      this.miFormulario.value.contraseña,
+      this.miFormulario.value.telefono).subscribe({
+      next: (response) => {
+        console.log('Usuario registrado:', response);
+        this.mensajeVisible = true;
+        setTimeout(() => {
+          this.mensajeVisible = false;
+          this.router.navigate(['/login']);
+        }, 3000);
+      },
+      error: (error) => {
+        console.error('Error al registrar usuario:', error);
+        this.mensajeError = true;
+      }
+    });
   }
 }
