@@ -2,7 +2,6 @@
     <h1>¡Bienvenido a Bambú!</h1>
     <h1>Haz tu reserva</h1>
 
-
     <!--Elección del local-->
     <div class="opcionesReserva">
         <form action="#">
@@ -11,47 +10,43 @@
             </label><br>
             <select class="form-select" [(ngModel)]="reserva.local" id="local" name="local" required>
                 <option value="">--Selecciona una opción--</option>
-                <option value="Bambú Sevilla">Bambú Sevilla</option>
-                <option value="Bambú Utrera">Bambú Utrera</option>
+                <option value="Sevilla">Bambú Sevilla</option>
+                <option value="Utrera">Bambú Utrera</option>
             </select>
         </form>
     </div>
-
-
-
 
     <div class="container2">
-    <!--Elección de la fecha-->
-    <div class="opcionesReserva2">
-        <form action="#">
-            <label for="fecha" class="form-label">
-                <h2>¿Qué día deseas reservar?</h2><br>
-            </label>
-            <input type="date" id="fecha" name="fecha" class="form-control" [(ngModel)]="reserva.fecha" required>
-        </form>
-    </div>
+        <!--Elección de la fecha-->
+        <div class="opcionesReserva2">
+            <form action="#">
+                <label for="fecha" class="form-label">
+                    <h2>¿Qué día deseas reservar?</h2><br>
+                </label>
+                <input type="date" id="fecha" name="fecha" class="form-control" [(ngModel)]="reserva.fecha" required>
+            </form>
+        </div>
 
-    <!--Eleccion de comensales-->
-    <div class="opcionesReserva2">
-        <form action="#">
-            <label for="comensales">
-                <h2>¿Cuántos comensales?</h2><br>
-            </label>
-            <select class="form-select" id="comensales" [(ngModel)]="reserva.comensales" name="comensales" required>
-                <option value="">--Selecciona una opción--</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-            </select>
-        </form>
+        <!--Eleccion de comensales-->
+        <div class="opcionesReserva2">
+            <form action="#">
+                <label for="comensales">
+                    <h2>¿Cuántos comensales?</h2><br>
+                </label>
+                <select class="form-select" id="comensales" [(ngModel)]="reserva.comensales" name="comensales" required>
+                    <option value="">--Selecciona una opción--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </form>
+        </div>
     </div>
-    </div>
-
 
     <!--Elección de hora-->
     <div class="opcionesReserva">
@@ -76,12 +71,12 @@
     </div>
 
     <div class="text-end" style="margin-bottom: 2%;">
-        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>FINALIZAR</strong></button>
+        <button class="btn" (click)="validarReserva()"><strong>FINALIZAR</strong></button>
     </div>
 
-
-
-
+    <div *ngIf="mensajeError" class="alert alert-danger mt-3 text-center">
+        <p><strong>Por favor, completa todos los campos antes de continuar.</strong></p>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -107,7 +102,7 @@
     </div>
     <!-- Mensaje de Confirmación -->
     <div *ngIf="mensajeVisible" class="mensaje-confirmacion">
-        <p><strong>Hemos enviado un SMS a tu número de teléfono para confirmar la reserva. <br>
+        <p><strong>Hemos enviado un correo electronico de confirmación de la reserva. <br>
                 ¡Muchas gracias!</strong></p>
     </div>
 

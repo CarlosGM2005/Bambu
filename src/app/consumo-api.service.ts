@@ -42,14 +42,14 @@ export class ConsumoApiService {
   }
 
   // Método para hacer una reserva
-  reservar(local: string, fecha: string, hora: string, cantPersonas: number, email: string, dni: string): Observable<any> {
-    const body = { accion: 'reservar', local, fecha, hora, cantPersonas, email, dni };
+  reservar(local: string, fecha: string, hora: string, cantPersonas: number): Observable<any> {
+    const body = { accion: 'reservar', local, fecha, hora, cantPersonas };
     return this.http.post(this.apiUrl, body);
   }
 
   // Método para hacer un pedido
-  pedir(local: string, email: string, dni: string, carrito: any): Observable<any> {
-    const body = { accion: 'pedir', local, email, dni, carrito };
+  pedir(local: string, carrito: any): Observable<any> {
+    const body = { accion: 'pedir', local, carrito };
     return this.http.post(this.apiUrl, body);
   }
 
