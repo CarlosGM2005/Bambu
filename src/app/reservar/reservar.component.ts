@@ -13,6 +13,7 @@ export class ReservarComponent{
   
   mensajeVisible: boolean = false;
   mensajeError: boolean = false;
+  mensajeInicioSesion: boolean = false;
 
   reserva = {
     local: '',
@@ -22,23 +23,25 @@ export class ReservarComponent{
   };
 
   validarReserva() {
-    if (this.reserva.local && this.reserva.fecha && this.reserva.comensales && this.reserva.hora) {
-      this.mensajeError = false; 
-      const modal = new bootstrap.Modal(document.getElementById('exampleModal')!);
-      modal.show(); 
+    if (this.apiService.user && this.apiService.user.email){
+      if (this.reserva.local && this.reserva.fecha && this.reserva.comensales && this.reserva.hora) {      
+        this.mensajeError = false; 
+        const modal = new bootstrap.Modal(document.getElementById('exampleModal')!);
+        modal.show(); 
+      } else {
+        this.mensajeError = true;
+      }
     } else {
-      this.mensajeError = true;
+      this.mensajeInicioSesion = true
     }
   }
 
   finalizarReserva() {
-    this.apiService.reservar(this.reserva.local, this.reserva.fecha, this.reserva.hora, this.reserva.comensales).subscribe(
+    this.apiService.reservar(this.reserva.local, this.reserva.fecha, this.reserva.hora, this.reserva.comensales, this.apiService.user.email, this.apiService.user.dni).subscribe(
       response => {
         if (response.status === 'success') {
           //Enviar el correo con nodemail response.data.email y responde.data.nombre
-          
-        } else {
-          console.error('Error al obtener los productos:', response.data);
+  
         }
       },
       error => {

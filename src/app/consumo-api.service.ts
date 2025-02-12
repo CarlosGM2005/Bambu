@@ -43,8 +43,8 @@ export class ConsumoApiService {
   }
 
   // Método para hacer una reserva
-  reservar(local: string, fecha: string, hora: string, cantPersonas: number): Observable<any> {
-    const body = { accion: 'reservar', local, fecha, hora, cantPersonas };
+  reservar(local: string, fecha: string, hora: string, cantPersonas: number, email: string, dni: string,): Observable<any> {
+    const body = { accion: 'reservar', local, fecha, hora, cantPersonas, email, dni };
     return this.http.post(this.apiUrl, body);
   }
 

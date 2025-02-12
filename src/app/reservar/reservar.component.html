@@ -78,6 +78,10 @@
         <p><strong>Por favor, completa todos los campos antes de continuar.</strong></p>
     </div>
 
+    <div *ngIf="mensajeInicioSesion" class="alert alert-danger mt-3 text-center">
+        <p><strong>Por favor, inicie sesion para poder reservar.</strong></p>
+    </div>
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">

@@ -2,45 +2,58 @@
     <div class="container" id="seccion">
         <div class="login">
             <h1>Regístrate</h1>
-            <form class="login-form">
+            <form class="login-form" (ngSubmit)="registrarse()" #formRegistro="ngForm">
+
                 <!-- Registrar Nombre -->
                 <div class="mb">
                     <label for="nombre" class="form-label">Nombre<span class="required-asterisk">*</span></label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required
+                        name="nombre" ngModel>
                 </div>
                 <!-- Registrar Apellidos -->
                 <div class="mb-3">
                     <label for="apellidos" class="form-label">Apellidos<span class="required-asterisk">*</span></label>
-                    <input type="text" class="form-control" id="apellidos" placeholder="Ingresa tus apellidos" required>
+                    <input type="text" class="form-control" id="apellidos" placeholder="Ingresa tus apellidos" required
+                        name="apellidos" ngModel>
                 </div>
                 <!-- Registrar NIE/CIF -->
                 <div class="mb-3">
                     <label for="dni" class="form-label">NIE/CIF<span class="required-asterisk">*</span></label>
-                    <input type="text" class="form-control" id="dni" placeholder="Ingresa tu NIE/CIF" required>
+                    <input type="text" class="form-control" id="dni" placeholder="Ingresa tu NIE/CIF" required
+                        name="dni" ngModel>
                 </div>
                 <!-- Registrar Email -->
                 <div class="mb-3">
                     <label for="correo" class="form-label">Correo electrónico<span
                             class="required-asterisk">*</span></label>
                     <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico"
-                        required>
+                        required name="correo" ngModel>
                 </div>
                 <!-- Registrar Contraseña -->
                 <div class="mb-3">
                     <label for="password" class="form-label">Contraseña<span class="required-asterisk">*</span></label>
                     <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña"
-                        required>
+                        required name="password" ngModel>
                 </div>
                 <!-- Registrar Teléfono -->
                 <div class="mb-3">
                     <label for="telefono" class="form-label">Teléfono<span class="required-asterisk">*</span></label>
-                    <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu contraseña" required>
+                    <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu teléfono" required
+                        name="telefono" ngModel>
                 </div>
                 <!-- Botón de Aceptar -->
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn" routerLink="/login">ACEPTAR</button>
+                    <button type="submit" class="btn">ACEPTAR</button>
                 </div>
             </form>
+
+            <div *ngIf="mensajeError" class="alert alert-danger mt-3 text-center">
+                <p><strong>Por favor, completa todos los campos antes de continuar.</strong></p>
+            </div>
+
+            <div *ngIf="mensajeVisible" class="mensaje-confirmacion">
+                <p><strong>¡Bienvenido a Bambú! Tu cuenta ha sido creada con éxito.</strong></p>
+            </div>
         </div>
     </div>
 

@@ -25,6 +25,10 @@
                     <button type="submit" class="btn">INGRESAR</button>
                 </div>
             </form>
+
+            <div *ngIf="mensajeError" class="alert alert-danger mt-3 text-center">
+                <p><strong>No se ha encontrado el usuario</strong></p>
+            </div>
         </div>
     </div>
 </main>

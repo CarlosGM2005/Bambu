@@ -9,6 +9,7 @@ import { ConsumoApiService } from '../consumo-api.service';
 export class LoginComponent {
   constructor(public apiService: ConsumoApiService) { }
 
+  mensajeError: boolean = false;
   $email: string = '';
   $password: string = '';
 
@@ -19,8 +20,7 @@ export class LoginComponent {
         if (response.status === 'success') {
           this.apiService.user = response.data;
         } else {
-
-          console.error('Error en el login:', response);
+          this.mensajeError = true;
         }
       },
       error => {

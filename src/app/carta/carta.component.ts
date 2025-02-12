@@ -11,7 +11,7 @@ export class CartaComponent implements OnInit{
 
   productosFiltrados: any[] = [];
   infoProducto: any = {};
-
+  
 
   categoria: string = 'surtidos';
 

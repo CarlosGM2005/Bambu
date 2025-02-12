@@ -38,28 +38,28 @@
 
     <div class="container-fluid">
         <div class="row" id="filaGrande">
-            <!-- Columna de Productos a la Derecha -->
+            <!-- Columna de Productos a la Izquierda -->
             <div class="col-12 col-lg-8">
-                <h1 id="titulo">{{ categoria }}</h1>
+                <h1 id="titulo">{{ categoria.toUpperCase() }}</h1>
                 <div class="row">
                     <!-- Genero dinámicamente los productos -->
-                    <div class="col-md-6 mb-4" *ngFor="let producto of productos">
+                    <div class="col-md-6 mb-4" *ngFor="let producto of productosFiltrados">
                         <div class="imagenes__productos">
                             <img [src]="producto.urlImg" [alt]="'Imagen de ' + producto.nombre"
                                 [title]="producto.title" />
                         </div>
                         <div class="infoProducto">
-                            <p>{{ producto.nombre }}</p>
+                            <p>{{ producto.nombre_plato }}</p>
                             <p class="precio__producto">{{ producto.precio }}€</p>
-                            <button (click)="onAddProduct(producto)"><img [src]="producto.urlIcono"
-                                    alt="Añadir al carrito {{ producto.nombre }}" class="iconos" />
+                            <button (click)="onAddProduct(producto)"><img src="assets/images/iconos/carrito-aniadir.png"
+                                    alt="Añadir al carrito {{ producto.nombre_plato }}" class="iconos" />
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Simulación de Resumen en Carrito de Compra. Columna Izquierda-->
+            <!-- Simulación de Resumen en Carrito de Compra. Columna Derecha-->
             <div class="col-12 col-lg-4" id="tuPedido">
                 <div class="encabezado">
                     <h1><strong>TU PEDIDO</strong></h1>
@@ -67,7 +67,7 @@
 
                 <div class="infoProducto">
                     <div *ngFor="let item of contenedor[0].productos" class="pedido-item">
-                        <div class="pedido-nombre">{{ item.nombre }}</div>
+                        <div class="pedido-nombre">{{ item.nombre_plato }}</div>
                         <img [src]="item.urlImgMenos" alt="" (click)="reducirCantidad(item)" class="iconosCarrito">
                         <div>{{ item.cantidad }}</div>
                         <img [src]="item.urlImgMas" alt="" (click)="incrementarCantidad(item)" class="iconosCarrito">
