@@ -112,6 +112,7 @@ export class CarritoCompraComponent implements OnInit {
 
   // Método para calcular la cantidad total de artículos en el carrito
   calcularCantidadTotal(): number {
+    this.contenedor[0].importeTotal = this.calcularSubtotal();
     return this.contenedor[0].productos.reduce((total: number, item: any) => total + item.cantidad, 0);
   }
 
