@@ -3,17 +3,17 @@ $primary-color: #446F5A;
 $secondary-color: #3D3D3D;
 $terciary-color: #E22D08;
 
-h1{
+h1 {
     margin-top: 2%;
     margin-bottom: 2%;
     font-size: 35px;
 }
 
-h2{
+h2 {
     font-size: 20px;
 }
 
-.opcionesReserva{
+.opcionesReserva {
     border: 3px solid $secondary-color;
     border-radius: 10px;
     margin-bottom: 2%;
@@ -21,7 +21,7 @@ h2{
     display: block;
 }
 
-.opcionesReserva2{
+.opcionesReserva2 {
     border: 3px solid $secondary-color;
     border-radius: 10px;
     margin-bottom: 2%;
@@ -29,14 +29,14 @@ h2{
     width: 49%;
 }
 
-.container2{
+.container2 {
     display: flex;
     flex-wrap: wrap;
     gap: 2%;
     justify-content: space-between;
 }
 
-.btn{
+.btn {
     background-color: $primary-color;
     color: white;
     padding: 1rem 2rem;
@@ -44,11 +44,13 @@ h2{
 }
 
 //Estilo del focus de los select y de los inputs
-.opcionesReserva select:focus, 
-.opcionesReserva input:focus {
-    outline: none; 
-    border: 2px solid $primary-color; 
-    box-shadow: 0 0 5px rgba(88, 166, 129, 0.8); 
+.opcionesReserva select:focus,
+.opcionesReserva input:focus,
+.opcionesReserva2 select:focus,
+.opcionesReserva2 input:focus {
+    outline: none;
+    border: 2px solid $primary-color;
+    box-shadow: 0 0 5px rgba(88, 166, 129, 0.8);
 }
 
 .opcionesReserva select option:hover {
@@ -72,31 +74,31 @@ h2{
 }
 
 //Animación de los enlaces
-.btn span{
+.btn span {
     position: absolute;
     display: block;
 }
 
-.btn:hover{
+.btn:hover {
     transition: all .5s;
     transform: rotate(-3deg) scale(1.1);
-    box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, .4);
 }
 
-.btn:hover span{
+.btn:hover span {
     animation-play-state: paused;
 }
 
 
 .btn:focus {
-    outline: 2px solid #000000; 
-    background-color: darken($primary-color, 10%); 
-    color: #FFF; 
-    transform: rotate(0deg) scale(1.05); 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
-    transition: all 0.3s ease; 
+    outline: 2px solid #000000;
+    background-color: darken($primary-color, 10%);
+    color: #FFF;
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
 }
 
-.modalReserva{
+.modalReserva {
     font-size: 18px;
 }

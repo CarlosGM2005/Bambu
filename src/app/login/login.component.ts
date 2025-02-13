@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ConsumoApiService } from '../../services/consumo-api.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service'; // Importamos el servicio de autenticación
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent {
   miFormulario: FormGroup;
   formularioIncorrecto = false;
 
-  constructor(public apiService: ConsumoApiService, private router: Router) { 
+  constructor(public apiService: ConsumoApiService, private router: Router, private authService: AuthService) { 
     this.miFormulario = new FormGroup({
           user: new FormControl('', [Validators.required]),
           password: new FormControl('', [Validators.required]),
@@ -36,6 +37,8 @@ export class LoginComponent {
         if (response.status === 'success') {
           this.apiService.user = response.data;
           this.apiService.token = response.token;
+          this.authService.login(this.apiService.user.nombre);
+         
           this.router.navigate(['']);
         } else {
           this.mensajeError = true;

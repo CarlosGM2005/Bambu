@@ -1,22 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';  // Importamos el servicio de autenticación
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
-  isLoggedIn: boolean = true; // Simula que la sesión está iniciada
-  showModal: boolean = false;
+export class HeaderComponent implements OnInit {
+
+  isLoggedIn: boolean = false; // Estado de sesión
+  showModal: boolean = false;  // Modal para confirmar cierre de sesión
+  nombreUser: string = "";     // Nombre del usuario
+
+  constructor(private authService: AuthService) { }
+
+  ngOnInit(): void {
+    // Nos suscribimos a los observables del servicio para obtener el estado de autenticación
+    this.authService.isLoggedIn$.subscribe(loggedIn => {
+      this.isLoggedIn = loggedIn;
+    });
+
+    this.authService.nombreUser$.subscribe(nombre => {
+      this.nombreUser = nombre;
+    });
+  }
 
   toggleModal() {
     this.showModal = !this.showModal;
   }
 
   logout() {
-    this.isLoggedIn = false; // Simula el cierre de sesión
-    this.showModal = false; // Oculta el modal
-    // Aquí puedes agregar lógica para eliminar el token o redirigir al usuario
-    console.log('Sesión cerrada');
+    this.authService.logout(); // Llamamos al método de logout del servicio
+    this.showModal = false; // Cerramos el modal
   }
 }

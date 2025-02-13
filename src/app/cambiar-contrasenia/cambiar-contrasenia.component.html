@@ -3,21 +3,41 @@
     <div class="container" id="seccion">
         <div class="login">
             <h1>Cambiar la contraseña</h1>
-            <form class="login-form">
+            <form [formGroup]="miFormulario" (ngSubmit)="cambiarContrasenia()">
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo<span class="required-asterisk"><b>*</b></span></label>
-                    <input type="email" class="form-control " id="email" placeholder="Ingresa tu correo" required>
+                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo"
+                        formControlName="email">
+                    <div *ngIf="miFormulario.controls['email'].invalid && miFormulario.controls['email'].touched"
+                        class="text-danger">
+                        Ingresa un correo válido.
+                    </div>
                 </div>
+
                 <div class="mb-3">
                     <label for="password" class="form-label">Nueva Contraseña<span
                             class="required-asterisk"><b>*</b></span></label>
                     <input type="password" class="form-control" id="password" placeholder="Ingresa tu nueva contraseña"
-                        required>
+                        formControlName="password">
+                    <div *ngIf="miFormulario.controls['password'].invalid && miFormulario.controls['password'].touched"
+                        class="text-danger">
+                        La contraseña debe tener al menos 6 caracteres.
+                    </div>
                 </div>
+
                 <div class="d-flex justify-content-end mt-auto">
-                    <button type="submit" class="btn" routerLink="/">CAMBIAR</button>
+                    <button type="submit" class="btn" [disabled]="miFormulario.invalid">CAMBIAR</button>
                 </div>
-            </form>
+                </form>
+
+                <div *ngIf="mensajeError" class="alert alert-danger mt-3 text-center">
+                    <p><strong>Ocurrió un error al cambiar la contraseña. Inténtalo de nuevo.</strong></p>
+                </div>
+
+                <div *ngIf="mensajeExito" class="alert alert-success mt-3 text-center">
+                    <p><strong>¡Contraseña cambiada con éxito!</strong></p>
+                </div>
+
         </div>
     </div>
 </main>

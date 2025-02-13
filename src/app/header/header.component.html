@@ -1,7 +1,7 @@
-<!--Links para la fuente-->
+<!-- Links para la fuente -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200..900&display=swap" rel="stylesheet">
 
 <nav class="navbar navbar-expand-xl">
   <div class="container" id="barra">
@@ -9,12 +9,14 @@
     <a class="navbar-brand" routerLink="/">
       <img src="assets/images/logo/logoFinal.png" id="logo" alt="Logo de nuestra empresa Bambú" />
     </a>
-    <!-- Botón de hamburguesa -->
+
+    <!-- Botón de menú hamburguesa para móviles -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- Enlaces alineados a la derecha -->
+
+    <!-- Menú de navegación -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav gap-4">
         <li class="nav-item">
@@ -26,13 +28,17 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/carrito-compra">PEDIR</a>
         </li>
+
+        <!-- Si el usuario NO está autenticado -->
         <li class="nav-item" *ngIf="!isLoggedIn">
           <a class="nav-link" routerLink="/login">INICIAR SESIÓN</a>
         </li>
+
+        <!-- Si el usuario está autenticado -->
         <li class="nav-item dropdown" *ngIf="isLoggedIn">
           <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            MI CUENTA
+            HOLA {{ nombreUser.toUpperCase() }}
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
             <li><a class="dropdown-item" (click)="toggleModal()">Cerrar Sesión</a></li>
@@ -42,13 +48,13 @@
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal de Confirmación para Cerrar Sesión -->
   <div *ngIf="showModal" class="modal-overlay">
     <div class="modal-content">
       <h3>¿Estás seguro de que quieres cerrar sesión?</h3>
       <div class="button-group">
-        <button (click)="logout()">Cerrar Sesión</button>
-        <button (click)="toggleModal()">Cancelar</button>
+        <button class="btn btn-danger" (click)="logout()">Cerrar Sesión</button>
+        <button class="btn btn-secondary" (click)="toggleModal()">Cancelar</button>
       </div>
     </div>
   </div>
