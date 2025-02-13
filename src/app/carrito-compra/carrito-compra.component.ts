@@ -127,7 +127,7 @@ export class CarritoCompraComponent implements OnInit {
       if (this.miFormulario.invalid) {
         this.mensajeError = true;
       } else {
-        this.apiService.pedir(this.miFormulario.value.location, this.contenedor, this.apiService.token).subscribe(
+        this.apiService.pedir(this.miFormulario.value.location, this.contenedor, this.apiService.user.dni, this.apiService.user.email,  this.apiService.token).subscribe(
           response => {
             if (response.status === 'success') {
               //utilizar nodemail para enviar la compra
