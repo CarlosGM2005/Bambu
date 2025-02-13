@@ -133,7 +133,7 @@ export class CarritoCompraComponent implements OnInit {
           response => {
             if (response.status === 'success') {
               //utilizar nodemail para enviar la compra
-              this.router.navigate(['/carrito-compra']);
+              this.router.navigate(['']);
               window.open('https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA', '_blank');
             } else {
               console.error('Error al obtener los productos:', response.data);
