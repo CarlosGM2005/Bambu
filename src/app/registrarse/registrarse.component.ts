@@ -1,5 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ConsumoApiService } from '../../services/consumo-api.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';

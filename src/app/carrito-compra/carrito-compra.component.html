@@ -97,27 +97,35 @@
                     </div>
 
                     <hr>
+                    
                     <!-- Checkboxes para Utrera y Sevilla -->
                     <div class="precio__final">
-                        <div>
-                            <h4><strong>Escoge el local para recoger</strong></h4>
-                            <div>
-                                <input type="radio" id="utrera" name="location" value="Utrera">
-                                <label for="Utrera"><b>Utrera</b></label><br>
-                                <input type="radio" id="sevilla" name="location" value="Sevilla">
-                                <label for="Sevilla"><b>Sevilla</b></label>
-                            </div>
-                        </div>
-                        
+                        <h4><strong>Escoge el local para recoger</strong></h4>
                     </div>
+
+                    <form [formGroup]="miFormulario" (ngSubmit)="pedir()">
+                        <div style="margin-left: 15px;">
+                            <input type="radio" id="utrera" formControlName="location" value="Utrera">
+                            <label for="utrera"><b>Utrera</b></label><br>
+
+                            <input type="radio" id="sevilla" formControlName="location" value="Sevilla">
+                            <label for="sevilla"><b>Sevilla</b></label>
+                        </div><br>
+
+                        <div class="pagar">
+                            <button type="submit" class="btnPagar">Ir a pagar</button>
+                        </div>
+                    </form>
+
+                    <div *ngIf="mensajeError" class="alert alert-danger mt-3 text-center">
+                        <p><strong>Por favor, completa todos los campos antes de continuar.</strong></p>
+                    </div>
+
+                    <div *ngIf="mensajeInicioSesion" class="alert alert-danger mt-3 text-center">
+                        <p><strong>Por favor, inicie sesion para poder reservar.</strong></p>
+                    </div>
+                
                 </div><br>
-
-                <!-- Mensaje de error si no selecciona el local-->
-
-                <div class="pagar">
-                    <a class="btnPagar" href="https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA" target="_blank">Ir a
-                        pagar</a>
-                </div>
             </div>
         </div>
     </div>
