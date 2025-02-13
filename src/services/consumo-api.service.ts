@@ -9,6 +9,7 @@ export class ConsumoApiService {
 
   private apiUrl = 'http://localhost/apiBambu/api.php';
   public user: any = {};
+  public token: any = "";
 
   constructor(private http: HttpClient) { }
 
@@ -43,14 +44,14 @@ export class ConsumoApiService {
   }
 
   // Método para hacer una reserva
-  reservar(local: string, fecha: string, hora: string, cantPersonas: number, email: string, dni: string,): Observable<any> {
-    const body = { accion: 'reservar', local, fecha, hora, cantPersonas, email, dni };
+  reservar(local: string, fecha: string, hora: string, cantPersonas: number, email: string, dni: string, token:string): Observable<any> {
+    const body = { accion: 'reservar', local, fecha, hora, cantPersonas, email, dni, token};
     return this.http.post(this.apiUrl, body);
   }
 
   // Método para hacer un pedido
-  pedir(local: string, carrito: any): Observable<any> {
-    const body = { accion: 'pedir', local, carrito };
+  pedir(local: string, carrito: any, token:string): Observable<any> {
+    const body = { accion: 'pedir', local, carrito, token };
     return this.http.post(this.apiUrl, body);
   }
 

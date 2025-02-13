@@ -35,6 +35,7 @@ export class LoginComponent {
       response => {
         if (response.status === 'success') {
           this.apiService.user = response.data;
+          this.apiService.token = response.token;
           this.router.navigate(['']);
         } else {
           this.mensajeError = true;

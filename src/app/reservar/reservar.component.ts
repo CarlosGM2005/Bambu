@@ -37,7 +37,7 @@ export class ReservarComponent{
   }
 
   finalizarReserva() {
-    this.apiService.reservar(this.reserva.local, this.reserva.fecha, this.reserva.hora, this.reserva.comensales, this.apiService.user.email, this.apiService.user.dni).subscribe(
+    this.apiService.reservar(this.reserva.local, this.reserva.fecha, this.reserva.hora, this.reserva.comensales, this.apiService.user.email, this.apiService.user.dni, this.apiService.token).subscribe(
       response => {
         if (response.status === 'success') {
           //Enviar el correo con nodemail response.data.email y responde.data.nombre
