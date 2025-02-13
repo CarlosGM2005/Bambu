@@ -50,8 +50,8 @@ export class ConsumoApiService {
   }
 
   // Método para hacer un pedido
-  pedir(local: string, carrito: any, token:string): Observable<any> {
-    const body = { accion: 'pedir', local, carrito, token };
+  pedir(local: string, carrito: any, dni: string, email:string ,token:string): Observable<any> {
+    const body = { accion: 'pedir', local, carrito, dni , email ,token };
     return this.http.post(this.apiUrl, body);
   }
 
