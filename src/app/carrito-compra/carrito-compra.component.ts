@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConsumoApiService } from '../../services/consumo-api.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carrito-compra',
@@ -14,7 +15,7 @@ export class CarritoCompraComponent implements OnInit {
   mensajeError: boolean = false;
   mensajeInicioSesion: boolean = false;
 
-  constructor(private apiService: ConsumoApiService) {
+  constructor(private apiService: ConsumoApiService, private router: Router) {
     this.miFormulario = new FormGroup({
       location: new FormControl('', [Validators.required])
     });
@@ -132,6 +133,7 @@ export class CarritoCompraComponent implements OnInit {
           response => {
             if (response.status === 'success') {
               //utilizar nodemail para enviar la compra
+              this.router.navigate(['/carrito-compra']);
               window.open('https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA', '_blank');
             } else {
               console.error('Error al obtener los productos:', response.data);
