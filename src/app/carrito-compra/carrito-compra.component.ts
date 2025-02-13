@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ConsumoApiService } from '../../services/consumo-api.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { EnvioCorreosService } from '../../services/envio-correos.service';
 
 @Component({
   selector: 'app-carrito-compra',
@@ -15,7 +16,7 @@ export class CarritoCompraComponent implements OnInit {
   mensajeError: boolean = false;
   mensajeInicioSesion: boolean = false;
 
-  constructor(private apiService: ConsumoApiService, private router: Router) {
+  constructor(private apiService: ConsumoApiService, private router: Router, private envioCorreosService: EnvioCorreosService) {
     this.miFormulario = new FormGroup({
       location: new FormControl('', [Validators.required])
     });
@@ -133,6 +134,23 @@ export class CarritoCompraComponent implements OnInit {
           response => {
             if (response.status === 'success') {
               //utilizar nodemail para enviar la compra
+
+              const datos = {
+                carrito: this.contenedor,
+                local: this.miFormulario.value.location,
+                email: this.apiService.user.email,
+                nombre: this.apiService.user.nombre
+              };
+
+              this.envioCorreosService.enviarCorreoCompra(datos).subscribe(
+                respuesta => {
+                  console.log('Correo enviado', respuesta);
+                },
+                error => {
+                  console.error('Error enviando el correo:', error);
+                }
+              );
+
               this.router.navigate(['']);
               window.open('https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA', '_blank');
             } else {

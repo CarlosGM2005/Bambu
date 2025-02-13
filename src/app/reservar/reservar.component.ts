@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { ConsumoApiService } from '../../services/consumo-api.service'; 
+import { ConsumoApiService } from '../../services/consumo-api.service';
+import { EnvioCorreosService } from '../../services/envio-correos.service';
+
 declare var bootstrap: any;
 
 @Component({
@@ -9,7 +11,7 @@ declare var bootstrap: any;
 })
 export class ReservarComponent{
 
-  constructor(private apiService: ConsumoApiService) { }
+  constructor(private apiService: ConsumoApiService, private envioCorreosService: EnvioCorreosService) { }
   
   mensajeVisible: boolean = false;
   mensajeError: boolean = false;
@@ -37,11 +39,27 @@ export class ReservarComponent{
   }
 
   finalizarReserva() {
-    this.apiService.reservar(this.reserva.local, this.reserva.fecha, this.reserva.hora, this.reserva.comensales, this.apiService.user.email, this.apiService.user.dni, this.apiService.token).subscribe(
+    this.apiService.reservar(this.reserva.local, this.reserva.fecha, this.reserva.hora, this.reserva.comensales, 
+      this.apiService.user.email, this.apiService.user.dni, this.apiService.token).subscribe(
       response => {
         if (response.status === 'success') {
           //Enviar el correo con nodemail response.data.email y responde.data.nombre
-  
+          const reservaDatos = {
+            email: this.apiService.user.email,
+            fecha: this.reserva.fecha,
+            hora: this.reserva.hora,
+            cantPersonas: this.reserva.comensales,
+            local: this.reserva.local,
+            nombre: this.apiService.user.nombre
+          };
+          this.envioCorreosService.enviarCorreoReserva(reservaDatos).subscribe(
+            respuesta => {
+              console.log('Correo enviado', respuesta);
+            },
+            error => {
+              console.error('Error enviando el correo:', error);
+            }
+          );
         }
       },
       error => {
