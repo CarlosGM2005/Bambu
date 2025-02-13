@@ -87,10 +87,11 @@ input:focus{
 }
 
 .btn-disabled {
-    background-color: $primary-color;
+    background-color: $primary-color !important;
     color: white;
     padding: 1rem 2rem;
     margin-bottom: 2%;
     font-weight: bold;
-  }
+    opacity: 1;
+}
   
