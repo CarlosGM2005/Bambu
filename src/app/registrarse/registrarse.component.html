@@ -34,6 +34,10 @@
                     <label for="contraseña" class="form-label">Contraseña<span class="required-asterisk">*</span></label>
                     <input type="password" class="form-control" id="contraseña" placeholder="Ingresa tu contraseña"
                     formControlName="contraseña">
+                    <div *ngIf="miFormulario.controls['contraseña'].invalid && miFormulario.controls['contraseña'].touched"
+                        class="text-danger">
+                        La contraseña debe tener al menos 6 caracteres.
+                    </div>
                 </div>
                 <!-- Registrar Teléfono -->
                 <div class="mb-3">
