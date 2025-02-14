@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { ConsumoApiService } from './consumo-api.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class AuthService {
   private isLoggedInSubject = new BehaviorSubject<boolean>(false);
   private nombreUserSubject = new BehaviorSubject<string>("");
 
-  constructor() {
+  constructor(private apiService: ConsumoApiService) {
     const nombreUsuario = sessionStorage.getItem('nombreUser');
     if (nombreUsuario) {
       this.isLoggedInSubject.next(true);  // Usuario logueado
@@ -35,8 +36,11 @@ export class AuthService {
 
   // Cerrar sesión
   logout() {
-    localStorage.removeItem('nombreUser');
+    sessionStorage.removeItem('nombreUser');
     this.isLoggedInSubject.next(false);  
     this.nombreUserSubject.next(""); 
+
+    this.apiService.user = null;
+    this.apiService.token = null;
   }
 }

@@ -3,6 +3,7 @@ import { ConsumoApiService } from '../../services/consumo-api.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EnvioCorreosService } from '../../services/envio-correos.service';
+import { AuthService } from '../../services/auth.service'; // Importamos AuthService
 
 @Component({
   selector: 'app-carrito-compra',
@@ -15,8 +16,9 @@ export class CarritoCompraComponent implements OnInit {
   miFormulario: FormGroup;
   mensajeError: boolean = false;
   mensajeInicioSesion: boolean = false;
+  isLoggedIn: boolean = false;
 
-  constructor(private apiService: ConsumoApiService, private router: Router, private envioCorreosService: EnvioCorreosService) {
+  constructor(private apiService: ConsumoApiService, private router: Router, private envioCorreosService: EnvioCorreosService, private authService: AuthService,) {
     this.miFormulario = new FormGroup({
       location: new FormControl('', [Validators.required])
     });
@@ -36,6 +38,10 @@ export class CarritoCompraComponent implements OnInit {
         console.error('Error en la solicitud:', error);
       }
     );
+
+    this.authService.isLoggedIn$.subscribe(loggedIn => {
+      this.isLoggedIn = loggedIn;
+    });
   }
 
   filtrarPorCategoria(event: Event, categoria: string) {
@@ -126,11 +132,13 @@ export class CarritoCompraComponent implements OnInit {
   //Controlar que escoje el local
   pedir() {
     //Controlamos que haya iniciado sesion
-    if (this.apiService.user.nombre) {
+    if (!this.isLoggedIn || !this.apiService.user) {
+      this.mensajeInicioSesion = true;
+    } else {
       if (this.miFormulario.invalid) {
         this.mensajeError = true;
       } else {
-        this.apiService.pedir(this.miFormulario.value.location, this.contenedor, this.apiService.user.dni, this.apiService.user.email,  this.apiService.token).subscribe(
+        this.apiService.pedir(this.miFormulario.value.location, this.contenedor, this.apiService.user.dni, this.apiService.user.email, this.apiService.token).subscribe(
           response => {
             if (response.status === 'success') {
               //utilizar nodemail para enviar la compra
@@ -162,9 +170,7 @@ export class CarritoCompraComponent implements OnInit {
           }
         );
       } 
-    } else {
-          this.mensajeInicioSesion = true;
     }
   }
 
-  }
+}
