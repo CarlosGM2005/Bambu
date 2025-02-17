@@ -32,9 +32,15 @@ export class ReservarComponent{
         modal.show(); 
       } else {
         this.mensajeError = true;
+        setTimeout(() => {
+          this.mensajeError = false;
+        }, 3000);
       }
     } else {
-      this.mensajeInicioSesion = true
+      this.mensajeInicioSesion = true;
+      setTimeout(() => {
+        this.mensajeInicioSesion = false;
+      }, 3000);
     }
   }
 
@@ -68,6 +74,7 @@ export class ReservarComponent{
     );
 
     this.mensajeVisible = true;
+    
 
     setTimeout(() => {
       this.mensajeVisible = false; // Oculta el mensaje después de 5 segundos

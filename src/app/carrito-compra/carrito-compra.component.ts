@@ -160,9 +160,15 @@ export class CarritoCompraComponent implements OnInit {
     //Controlamos que haya iniciado sesion
     if (!this.isLoggedIn || !this.apiService.user) {
       this.mensajeInicioSesion = true;
+      setTimeout(() => {
+        this.mensajeInicioSesion = false;
+      }, 3000);
     } else {
       if (this.miFormulario.invalid) {
         this.mensajeError = true;
+        setTimeout(() => {
+          this.mensajeError = false;
+        }, 3000);
       } else {
         this.apiService.pedir(this.miFormulario.value.location, this.contenedor, this.apiService.user.dni, this.apiService.user.email, this.apiService.token).subscribe(
           response => {
