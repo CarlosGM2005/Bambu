@@ -97,6 +97,7 @@ h1{
 }
 
 .infoProducto {
+
     padding: 3%;
     font-weight: bold;
     text-align: left; 
@@ -241,7 +242,6 @@ a{
     }
 
     .infoProducto{
-        display: flex;
         gap: 15px;
         justify-content: center;
         align-items: center;

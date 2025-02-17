@@ -31,6 +31,10 @@ export class ConsumoApiService {
     return this.http.get(this.apiUrl, { params });
   }
 
+  obtenerCategorias(): Observable<any> {
+    const params = { accion: 'obtenerCategorias' };
+    return this.http.get(this.apiUrl, { params });
+  }
   // Método para iniciar sesión
   iniciarSesion(email: string, password: string): Observable<any> {
     const body = { accion: 'iniciarSesion', email, password };
@@ -61,3 +65,4 @@ export class ConsumoApiService {
     return this.http.put(this.apiUrl, body);
   }
 }
+

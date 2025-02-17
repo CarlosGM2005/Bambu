@@ -2,32 +2,12 @@
 
 <div class="container">
     <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'SURTIDOS')">Surtidos</a>
+        <li class="nav-item" *ngFor="let categoria of categorias">
+          <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, categoria.nombre)">
+            {{ categoria.nombre | titlecase }}
+          </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'ENTRANTES')">Entrantes</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'ARROZ Y NOODLES')">Arroz y
-                noodles</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'NIGIRIS')">Nigiris</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'ROLLS')">Rolls</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'MAKIS')">Makis</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'BEBIDAS')">Bebidas</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" tabindex="0" (click)="filtrarPorCategoria($event, 'POSTRES')">Postres</a>
-        </li>
-    </ul>
+      </ul>
     <div class="divBtnCarrito">
         <button class="btnCarrito"
             onclick="document.getElementById('tuPedido').scrollIntoView({behavior: 'smooth'});">Carrito de compra: {{
