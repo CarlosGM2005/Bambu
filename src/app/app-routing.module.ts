@@ -11,6 +11,7 @@ import { ReservarComponent } from './reservar/reservar.component';
 import { CambiarContraseniaComponent } from './cambiar-contrasenia/cambiar-contrasenia.component';
 import { AyudaComponent } from './ayuda/ayuda.component';
 import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-privacidad.component';
+import { AvisoLegalComponent } from './aviso-legal/aviso-legal.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'reservar', component: ReservarComponent },
   { path: 'cambiar-contrasenia', component: CambiarContraseniaComponent },
   { path: 'ayuda', component: AyudaComponent },
+  { path: 'aviso-legal', component: AvisoLegalComponent},
   { path: 'politica-privacidad', component: PoliticaPrivacidadComponent }
 ];
 

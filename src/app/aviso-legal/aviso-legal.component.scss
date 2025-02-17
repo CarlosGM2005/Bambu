@@ -1,0 +1,39 @@
+//Variables
+$primary-color: #446F5A;
+$secondary-color: #3D3D3D;
+$terciary-color: #E22D08;
+
+.aviso-legal {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: $terciary-color;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h2 {
+    color: $primary-color;
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h3 {
+    color: $primary-color;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.propiedadIntelectual{
+    color: $primary-color;
+}

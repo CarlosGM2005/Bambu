@@ -18,6 +18,7 @@ import { ReservarComponent } from './reservar/reservar.component';
 import { AyudaComponent } from './ayuda/ayuda.component';
 import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-privacidad.component';
 import { CambiarContraseniaComponent } from './cambiar-contrasenia/cambiar-contrasenia.component';
+import { AvisoLegalComponent } from './aviso-legal/aviso-legal.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CambiarContraseniaComponent } from './cambiar-contrasenia/cambiar-contr
     ReservarComponent,
     AyudaComponent,
     PoliticaPrivacidadComponent,
-    CambiarContraseniaComponent
+    CambiarContraseniaComponent,
+    AvisoLegalComponent
   ],
   imports: [
     BrowserModule,
