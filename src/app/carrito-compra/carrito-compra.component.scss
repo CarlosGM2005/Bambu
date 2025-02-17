@@ -97,6 +97,7 @@ h1{
 }
 
 .infoProducto {
+
     padding: 3%;
     font-weight: bold;
     text-align: left; 
@@ -129,7 +130,7 @@ h1{
     gap: 15px;
     align-items: center;
     margin-bottom: 10px;
-    justify-content: flex-start; 
+    justify-content: flex-start;
 }
 
 .pedido-nombre{
@@ -241,7 +242,6 @@ a{
     }
 
     .infoProducto{
-        display: flex;
         gap: 15px;
         justify-content: center;
         align-items: center;

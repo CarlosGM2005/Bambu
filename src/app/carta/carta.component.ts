@@ -11,11 +11,37 @@ export class CartaComponent implements OnInit{
 
   productosFiltrados: any[] = [];
   infoProducto: any = {};
-  
+  categorias: any[] = [];
+  categoriasOrdenadas = [
+    'surtidos',
+    'entrantes',
+    'arroz y noodles',
+    'nigiris',
+    'rolls',
+    'makis',
+    'bebidas',
+    'postres'
+  ];
 
   categoria: string = 'surtidos';
 
   ngOnInit(): void {
+    this.apiService.obtenerCategorias().subscribe(
+      response => {
+        if (response.status === 'success') {
+          this.categorias = response.data.sort((a: any, b: any) => {
+            return this.categoriasOrdenadas.indexOf(a.nombre) - this.categoriasOrdenadas.indexOf(b.nombre);
+          });
+        } else {
+          console.error('Error al obtener los productos:', response.data);
+        }
+      },
+      error => {
+        console.error('Error en la solicitud:', error);
+      }
+    )
+
+
     this.apiService.obtenerProductosPorCategoria(this.categoria).subscribe(
       response => {
         if (response.status === 'success') {

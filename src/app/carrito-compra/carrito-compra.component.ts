@@ -17,6 +17,17 @@ export class CarritoCompraComponent implements OnInit {
   mensajeError: boolean = false;
   mensajeInicioSesion: boolean = false;
   isLoggedIn: boolean = false;
+  categorias: any[] = [];
+  categoriasOrdenadas = [
+    'surtidos',
+    'entrantes',
+    'arroz y noodles',
+    'nigiris',
+    'rolls',
+    'makis',
+    'bebidas',
+    'postres'
+  ];
 
   constructor(private apiService: ConsumoApiService, private router: Router, private envioCorreosService: EnvioCorreosService, private authService: AuthService,) {
     this.miFormulario = new FormGroup({
@@ -26,6 +37,21 @@ export class CarritoCompraComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.apiService.obtenerCategorias().subscribe(
+      response => {
+        if (response.status === 'success') {
+          this.categorias = response.data.sort((a: any, b: any) => {
+            return this.categoriasOrdenadas.indexOf(a.nombre) - this.categoriasOrdenadas.indexOf(b.nombre);
+          });
+        } else {
+          console.error('Error al obtener los productos:', response.data);
+        }
+      },
+      error => {
+        console.error('Error en la solicitud:', error);
+      }
+    )
+
     this.apiService.obtenerProductosPorCategoria(this.categoria).subscribe(
       response => {
         if (response.status === 'success') {
