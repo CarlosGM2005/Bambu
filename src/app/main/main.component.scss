@@ -6,44 +6,44 @@ $terciary-color: #E22D08;
 
 //Estilo correspondiente a Sección 1 -> Carrusel
 .carousel-inner {
-    height: 550px; 
+    height: 550px;
 }
 
 .carousel-inner img {
-    width: 100%; 
-    height: 550px; 
-    object-fit: cover; 
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
 }
 
-#seccion{
+#seccion {
     margin-top: 4%;
     margin-bottom: 4%;
 }
 
 //Estilo correspondiente a Sección 4 -> Datos de los locales
-h1{
+h1 {
     font-weight: bold;
     text-align: center;
     margin-bottom: 3%;
 }
 
-h2{
+h2 {
     font-weight: bold;
     text-align: center;
 }
 
-#icono{
+#icono {
     margin-right: 1.5%;
 }
 
-.datosLocales{
+.datosLocales {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.restaurante{
+.restaurante {
     display: block;
     margin: auto;
     margin-bottom: 2%;
@@ -51,23 +51,80 @@ h2{
     height: auto;
 }
 
-p{
+p {
     margin-bottom: 0;
     margin-top: 2%;
 }
 
-.textoIntroductorio{
+.textoIntroductorio {
     font-size: 20px;
 }
 
 @media (max-width: 767px) {
     .carousel-inner {
-        height: auto; 
+        height: auto;
     }
 
     .carousel-inner img {
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
         object-fit: contain;
     }
 }
+
+.fondoOscurecido {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    /* Fondo oscuro semi-transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Ubica el contenido en la parte inferior */
+    align-items: center;
+    z-index: 9999;
+    /* Para que esté por encima de todo */
+}
+
+.contCookie {
+    background-color: #fff;
+    padding: 1%;
+    text-align: center;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.aceptarCookies {
+    background-color: $primary-color;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.aceptarCookies:hover {
+    background-color: #365a48;
+}
+
+.contBotonesCookies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (max-width: 600px) {
+    .contCookie {
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto;
+      text-align: left;
+      padding: 5%;
+    }
+  }
