@@ -98,10 +98,24 @@
         </div>
     </div>
 
-
-
 </div>
 
-
+<!--Cookies-->
+<div class="fondoOscurecido" *ngIf="mostrarCookieBanner">
+    <div class="contCookie">
+        <div style="text-align: left; margin-left: 3%;">
+            <h3>Cookies</h3>
+            <p>Utilizamos cookies propias y de terceros con finalidades analíticas y para mejorar tu experiencia de
+                compra
+                según tus preferencias, mediante el análisis de tus hábitos de navegación y tu perfil. Puedes aceptar
+                todas las
+                cookies pulsando el botón “Aceptar” o gestionar tus preferencias en el panel de configuración.</p>
+        </div>
+        <div class="contBotonesCookies">
+            <button class="aceptarCookies" (click)="aceptarCookies()">Aceptar todas</button>
+            <button class="aceptarCookies" (click)="rechazarCookies()">Rechazar todas</button>
+        </div>
+    </div>
+</div>
 
 </html>
