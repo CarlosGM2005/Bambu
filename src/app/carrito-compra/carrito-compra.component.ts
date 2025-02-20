@@ -107,8 +107,8 @@ export class CarritoCompraComponent implements OnInit {
         ...producto,
         cantidad: 1, // Inicia con una cantidad de 1
         total: parseFloat(producto.precio.toFixed(2)), // Redondeo
-        urlImgMenos: "../../assets/images/iconos/signo-menos.png",
-        urlImgMas: "../../assets/images/iconos/signo-mas.png"
+        urlImgMenos: "../../assets/images/iconos/signoMenos.png",
+        urlImgMas: "../../assets/images/iconos/signoMas.png"
       });
     }
 
