@@ -21,7 +21,7 @@ export class RegistrarseComponent {
       dni: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{8}[ABCDEFGHJKLMNPQRSTVWXYZ]{1}$')]),
       correo: new FormControl('', [Validators.required, Validators.email]),
       contraseña: new FormControl('', [Validators.required, Validators.minLength(6)]),
-      telefono: new FormControl('', [Validators.required, Validators.minLength(2)])
+      telefono: new FormControl('', [Validators.required, Validators.pattern('^[6789]\\d{8}$')])
     });
   }
 
