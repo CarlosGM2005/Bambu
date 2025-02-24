@@ -5,12 +5,23 @@
             <h1>Iniciar sesión</h1>
             <form class="login-form" [formGroup]="miFormulario" (ngSubmit)="iniciarSesion()">
                 <div class="mb-3">
-                    <label for="email" class="form-label">Correo<span class="required-asterisk"><b>*</b></span></label>
-                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" formControlName="user">
+                    <label for="correo" class="form-label">Correo electrónico<span
+                        class="required-asterisk">*</span></label>
+                <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico"
+                formControlName="correo">
+                <div *ngIf="miFormulario.controls['correo'].invalid && miFormulario.controls['correo'].touched"
+                class="text-danger">
+                Correo eléctronico no válido.
+                </div>
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña<span class="required-asterisk"><b>*</b></span></label>
-                    <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" formControlName="password">
+                    <label for="contraseña" class="form-label">Contraseña<span class="required-asterisk">*</span></label>
+                    <input type="password" class="form-control" id="contraseña" placeholder="Ingresa tu contraseña"
+                    formControlName="contraseña">
+                    <div *ngIf="miFormulario.controls['contraseña'].invalid && miFormulario.controls['contraseña'].touched"
+                        class="text-danger">
+                        La contraseña debe tener al menos 6 caracteres.
+                    </div>
                 </div>
                 <div class="mb-3">
                     <a class="opcionCambiar" routerLink="/cambiar-contrasenia"><p>¿Has olvidado la contraseña?</p></a>
