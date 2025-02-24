@@ -5,39 +5,42 @@
             <h1>Iniciar sesión</h1>
             <form class="login-form" [formGroup]="miFormulario" (ngSubmit)="iniciarSesion()">
                 <div class="mb-3">
-                    <label for="correo" class="form-label">Correo electrónico<span
-                        class="required-asterisk">*</span></label>
-                <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico"
-                formControlName="correo">
-                <div *ngIf="miFormulario.controls['correo'].invalid && miFormulario.controls['correo'].touched"
-                class="text-danger">
-                Correo eléctronico no válido.
-                </div>
+                    <label for="email" class="form-label">Correo electrónico<span
+                            class="required-asterisk">*</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico"
+                        formControlName="user">
+                    <div *ngIf="miFormulario.controls['user'].invalid && miFormulario.controls['user'].touched"
+                        class="text-danger">
+                        Correo eléctronico no válido.
+                    </div>
                 </div>
                 <div class="mb-3">
-                    <label for="contraseña" class="form-label">Contraseña<span class="required-asterisk">*</span></label>
-                    <input type="password" class="form-control" id="contraseña" placeholder="Ingresa tu contraseña"
-                    formControlName="contraseña">
-                    <div *ngIf="miFormulario.controls['contraseña'].invalid && miFormulario.controls['contraseña'].touched"
+                    <label for="password" class="form-label">Contraseña<span class="required-asterisk">*</span></label>
+                    <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña"
+                        formControlName="password">
+                    <div *ngIf="miFormulario.controls['password'].invalid && miFormulario.controls['password'].touched"
                         class="text-danger">
                         La contraseña debe tener al menos 6 caracteres.
                     </div>
                 </div>
                 <div class="mb-3">
-                    <a class="opcionCambiar" routerLink="/cambiar-contrasenia"><p>¿Has olvidado la contraseña?</p></a>
+                    <a class="opcionCambiar" routerLink="/cambiar-contrasenia">
+                        <p>¿Has olvidado la contraseña?</p>
+                    </a>
                 </div>
                 <div class="mb-3">
-                    <p>¿Aún no estás registrado? <a class="opcionRegistrar" routerLink="/registrarse"><b>Regístrate</b></a></p>
+                    <p>¿Aún no estás registrado? <a class="opcionRegistrar"
+                            routerLink="/registrarse"><b>Regístrate</b></a></p>
                 </div>
                 <div class="d-flex justify-content-end mt-auto">
                     <button type="submit" class="btn">INGRESAR</button>
                 </div>
             </form>
-            
+
             <div *ngIf="formularioIncorrecto" class="alert alert-danger mt-3 text-center">
                 <p><strong>Por favor, completa todos los campos antes de continuar.</strong></p>
             </div>
-            
+
             <div *ngIf="mensajeError" class="alert alert-danger mt-3 text-center">
                 <p><strong>Usuario o contraseña incorrectos.</strong></p>
             </div>

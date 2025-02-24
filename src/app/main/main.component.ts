@@ -12,6 +12,10 @@ export class MainComponent implements OnInit{
   constructor(private apiService: ConsumoApiService) { }
 
   ngOnInit(): void {
+    if (localStorage.getItem('cookie') !== null) {
+      this.mostrarCookieBanner = false;
+    }
+
     this.apiService.obtenerLocales().subscribe(
       response => {
         if (response.status === 'success') {
@@ -24,9 +28,6 @@ export class MainComponent implements OnInit{
         console.error('Error en la solicitud:', error);
       }
     );
-    if (localStorage.getItem('cookiesAccepted') !== null) {
-      this.mostrarCookieBanner = false;
-    }
   }
 
   aceptarCookies(): void {
@@ -35,6 +36,7 @@ export class MainComponent implements OnInit{
   }
 
   rechazarCookies(): void {
+    localStorage.setItem('cookie', 'false'); 
     this.mostrarCookieBanner = false;
   }
 

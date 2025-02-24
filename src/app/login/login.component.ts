@@ -16,9 +16,8 @@ export class LoginComponent {
 
   constructor(public apiService: ConsumoApiService, private router: Router, private authService: AuthService) { 
     this.miFormulario = new FormGroup({
-          user: new FormControl('', [Validators.required]),
-          contraseña: new FormControl('', [Validators.required, Validators.minLength(6)]),
-          correo: new FormControl('', [Validators.required, Validators.email]),
+          user: new FormControl('', [Validators.required, Validators.email]),
+          password: new FormControl('', [Validators.required, Validators.minLength(6)]),
     });
   }
 
