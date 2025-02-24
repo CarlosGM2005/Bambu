@@ -78,6 +78,10 @@
             <div *ngIf="mensajeVisible" class="mensaje-confirmacion">
                 <p><strong>¡Bienvenido a Bambú! Tu cuenta ha sido creada con éxito.</strong></p>
             </div>
+
+            <div *ngIf="mensajeBaseDatos" class="alert alert-danger mt-3 text-center">
+                <p><strong>Ya existe una cuenta de usuario con ese email y DNI</strong></p>
+            </div>
         </div>
     </div>
 

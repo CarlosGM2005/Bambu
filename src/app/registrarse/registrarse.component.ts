@@ -13,8 +13,9 @@ export class RegistrarseComponent {
   miFormulario: FormGroup;
   mensajeVisible: boolean = false;
   mensajeError: boolean = false;
+  mensajeBaseDatos: boolean = false;
 
-  constructor(private apiService: ConsumoApiService, private router: Router) { 
+  constructor(private apiService: ConsumoApiService, private router: Router) {
     this.miFormulario = new FormGroup({
       nombre: new FormControl('', [Validators.required, Validators.minLength(2)]),
       apellidos: new FormControl('', [Validators.required, Validators.minLength(2)]),
@@ -39,18 +40,24 @@ export class RegistrarseComponent {
       this.miFormulario.value.correo,
       this.miFormulario.value.contraseña,
       this.miFormulario.value.telefono).subscribe({
-      next: (response) => {
-        console.log('Usuario registrado:', response);
-        this.mensajeVisible = true;
-        setTimeout(() => {
-          this.mensajeVisible = false;
-          this.router.navigate(['/login']);
-        }, 3000);
-      },
-      error: (error) => {
-        console.error('Error al registrar usuario:', error);
-        this.mensajeError = true;
-      }
-    });
+        next: (response) => {
+          if (response.status === "success") {
+            console.log('Usuario registrado:', response);
+            this.mensajeVisible = true;
+            setTimeout(() => {
+              this.mensajeVisible = false;
+              this.router.navigate(['/login']);
+            }, 3000);
+          } else {
+            console.error('Error en el registro:', response.data);
+            this.mensajeBaseDatos = true;
+          }
+
+        },
+        error: (error) => {
+          console.error('Error al registrar usuario:', error);
+          this.mensajeError = true;
+        }
+      });
   }
 }
