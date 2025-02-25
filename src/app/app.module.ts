@@ -19,6 +19,7 @@ import { AyudaComponent } from './ayuda/ayuda.component';
 import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-privacidad.component';
 import { CambiarContraseniaComponent } from './cambiar-contrasenia/cambiar-contrasenia.component';
 import { AvisoLegalComponent } from './aviso-legal/aviso-legal.component';
+import { PoliticaCookiesComponent } from './politica-cookies/politica-cookies.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AvisoLegalComponent } from './aviso-legal/aviso-legal.component';
     AyudaComponent,
     PoliticaPrivacidadComponent,
     CambiarContraseniaComponent,
-    AvisoLegalComponent
+    AvisoLegalComponent,
+    PoliticaCookiesComponent
   ],
   imports: [
     BrowserModule,

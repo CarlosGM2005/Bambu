@@ -1,0 +1,48 @@
+//Variables
+$primary-color: #446F5A;
+$secondary-color: #3D3D3D;
+$terciary-color: #E22D08;
+
+.cookie-policy {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: $terciary-color;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  h2 {
+    color: $primary-color;
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+  
+  .cookie-policy ul {
+    padding-left: 20px;
+  }
+  
+  .cookie-policy ul li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .cookie-policy a:hover {
+    text-decoration: underline;
+  }
