@@ -20,22 +20,22 @@ import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-priv
 import { CambiarContraseniaComponent } from './cambiar-contrasenia/cambiar-contrasenia.component';
 import { AvisoLegalComponent } from './aviso-legal/aviso-legal.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    MainComponent,
-    CarritoCompraComponent,
-    CartaComponent,
-    RegistrarseComponent,
-    LoginComponent,
-    ReservarComponent,
-    AyudaComponent,
-    PoliticaPrivacidadComponent,
-    CambiarContraseniaComponent,
-    AvisoLegalComponent
-  ],
+  @NgModule({
+    declarations: [
+      AppComponent,
+      HeaderComponent,
+      FooterComponent,
+      MainComponent,
+      CarritoCompraComponent,
+      CartaComponent,
+      RegistrarseComponent,
+      LoginComponent,
+      ReservarComponent,
+      AyudaComponent,
+      PoliticaPrivacidadComponent,
+      CambiarContraseniaComponent,
+      AvisoLegalComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
