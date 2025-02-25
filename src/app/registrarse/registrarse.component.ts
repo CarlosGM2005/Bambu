@@ -51,6 +51,9 @@ export class RegistrarseComponent {
           } else {
             console.error('Error en el registro:', response.data);
             this.mensajeBaseDatos = true;
+            setTimeout(() => {
+              this.mensajeBaseDatos = false;
+            }, 3000);
           }
 
         },
