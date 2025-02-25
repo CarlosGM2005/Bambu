@@ -12,6 +12,7 @@ import { CambiarContraseniaComponent } from './cambiar-contrasenia/cambiar-contr
 import { AyudaComponent } from './ayuda/ayuda.component';
 import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-privacidad.component';
 import { AvisoLegalComponent } from './aviso-legal/aviso-legal.component';
+import { PoliticaCookiesComponent } from './politica-cookies/politica-cookies.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'cambiar-contrasenia', component: CambiarContraseniaComponent },
   { path: 'ayuda', component: AyudaComponent },
   { path: 'aviso-legal', component: AvisoLegalComponent},
-  { path: 'politica-privacidad', component: PoliticaPrivacidadComponent }
+  { path: 'politica-privacidad', component: PoliticaPrivacidadComponent },
+  { path: 'politica-cookies', component: PoliticaCookiesComponent}
 ];
 
 @NgModule({
