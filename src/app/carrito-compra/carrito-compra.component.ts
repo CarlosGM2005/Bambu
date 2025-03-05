@@ -192,7 +192,7 @@ export class CarritoCompraComponent implements OnInit {
               );
 
               this.router.navigate(['']);
-              window.open('https://buy.stripe.com/test_7sIcOgf0h4A2gYo9AA', '_blank');
+              window.open('https://buy.stripe.com/test_dR66pSaK11nQ7nO5km', '_blank');
             } else {
               console.error('Error al obtener los productos:', response.data);
             }
