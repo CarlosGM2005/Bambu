@@ -33,10 +33,15 @@
                 <div *ngIf="mensajeError" class="alert alert-danger mt-3 text-center">
                     <p><strong>Por favor, introduce todos los campos antes de continuar.</strong></p>
                 </div>
+                
+                <div *ngIf="mensajeNoEncontrado" class="alert alert-danger mt-3 text-center">
+                    <p><strong>Usuario no encontrado.</strong></p>
+                </div>
 
                 <div *ngIf="mensajeExito" class="alert alert-success mt-3 text-center">
                     <p><strong>¡Contraseña cambiada con éxito!</strong></p>
                 </div>
+
 
         </div>
     </div>

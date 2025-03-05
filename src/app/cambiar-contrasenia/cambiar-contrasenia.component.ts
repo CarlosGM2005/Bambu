@@ -13,6 +13,7 @@ export class CambiarContraseniaComponent {
   miFormulario: FormGroup;
   mensajeError: boolean = false;
   mensajeExito: boolean = false;
+  mensajeNoEncontrado: boolean = false;
 
   constructor(private apiService: ConsumoApiService, private router: Router) {
     this.miFormulario = new FormGroup({
@@ -37,8 +38,8 @@ export class CambiarContraseniaComponent {
             this.router.navigate(['/login']); // Redirige al login después de 3 segundos
           }, 3000);
         } else {
-          this.mensajeError = true;
-          setTimeout(() => this.mensajeError = false, 3000);
+          this.mensajeNoEncontrado = true;
+          setTimeout(() => this.mensajeNoEncontrado = false, 3000);
         }
       },
       error => {
